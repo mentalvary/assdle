@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>assdle</title>
+        <style>
+            :root {
+                --main-font-color: #ffbba0;
+                --bg-color: #0a0a0a;
+                --correct-color: #297729;
+                --wrong-color: #dd3c3c;
+                --pick-color: gold;
+                --btn-hover-color: rgb(48, 48, 48);
+            }
+
+            html, body {
+                text-align: center;
+                margin: 0;
+                padding: 0;
+                font-family: Arial, Helvetica, sans-serif;
+                background-color: var(--bg-color);
+                color: var(--main-font-color);
+                font-size: 1em;
+            }
+
+            body {
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh;
+            }
+
+            main {
+                flex: 1;
+            }
+
+            footer {
+                font-size: 0.8em;
+                opacity: 0.4;
+            }
+
+            section {
+                display: inline-block;
+            }
+
+            .hidden {
+                display: none;
+            }
+
+            #result-container {
+                position: relative;
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 1em;
+            }
+
+            #result-container::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 50%;
+                border-top: 3px dotted var(--main-font-color);
+            }
+
+            .result-box {
+                display: inline-block;
+                width: 24px;
+                height: 24px;
+                background-color: lightgray;
+                z-index: 1;
+            }
+
+            .result-box.correct {
+                background-color: var(--correct-color);
+            }
+
+            .result-box.wrong {
+                background-color: var(--wrong-color);
+            }
+
+            .result-box.picked {
+                background-color: var(--pick-color);
+            }
+
+            #result-section {
+                display: block;
+            }
+
+            #choice-section {
+                display: block;
+            }
+
+            .player-wrapper {
+                position: relative;
+            }
+
+            .player-overlay {
+                display: block;
+                position: absolute;
+                inset: 0;
+                z-index: 10;
+                background: transparent;
+                cursor: default;
+            }
+
+            #choice-container {
+                display: flex;
+                flex-direction: column;
+                align-items: stretch;
+                width: fit-content;
+                margin-inline: auto;
+            }
+
+            .choice-btn {
+                width: 100%;
+                margin-top: 0.5em;
+                font-size: 1.2em;
+                border-radius: 6px;
+                background-color: var(--bg-color);
+                color: var(--main-font-color);
+                border: 2px solid gray;
+                padding: 0.2em 0.5em;
+                transition: background-color 0.15s ease;
+            }
+
+            .choice-btn:hover {
+                background-color: var(--btn-hover-color)
+            }
+
+            .choice-btn:disabled {
+                color: gray;
+            }
+
+            .choice-btn.correct {
+                background-color: var(--correct-color);
+                color: black;
+            }
+
+            .choice-btn.wrong {
+                background-color: var(--wrong-color);
+                color: black;
+            }
+
+            .choice-btn.picked {
+                border-color: var(--pick-color);
+            }
+
+            #end-results {
+                font-size: 1.5em;
+                margin-bottom: 1em;
+            }
+
+            #end-results.good {
+                color: var(--correct-color);
+            }
+
+            #end-results.bad {
+                color: var(--wrong-color);
+            }
+
+            .nav-btn {
+                font-size: 1.5em;
+                border-radius: 10px;
+                background-color: var(--bg-color);
+                color: var(--main-font-color);
+                border: 2px solid gray;
+                padding: 0.2em 0.5em;
+                transition: background-color 0.15s ease;
+            }
+
+            .nav-btn:hover {
+                background-color: var(--btn-hover-color)
+            }
+
+            .description {
+                margin-bottom: 1em;
+                font-size: 1.2em;
+            }
+
+            .nav-btns {
+                position: relative;
+            }
+
+            #skip {
+                position: absolute;
+                left: 0;
+                font-size: 1.3em;
+            }
+
+            #next {
+                position: absolute;
+                right: 0;
+                font-size: 1.3em;
+            }
+        </style>
+	</head>
+	<body>
+		<header>
+			<h1>assdle</h1>
+		</header>
+
+		<main>
+            <section id="intro">
+                <div id="end-results" class="hidden"></div>
+                <div class="description">
+                    Watch a short Elajjaz clip and guess the ass quote he will say next.
+                </div>
+                <input type="button" class="nav-btn" value="Play" onclick="startGame()"/>
+            </section>
+            <section id="game" class="hidden">
+                <section id="result-section">
+                    <div id="result-container"></div>
+                </section>
+                <section>
+                    <div class="player-wrapper">
+                        <div id="preview-player"></div>
+                        <div id="ass-player"></div>
+                        <div class="player-overlay"></div>
+                    </div>
+                </section>
+
+                <section id="choice-section">
+                    <div class="nav-btns">
+                        <input type="button" id="next" class="nav-btn hidden float-right" onclick="nextRound()" value="Next" />
+                        <input type="button" id="skip" class="nav-btn float-left" onclick="skipRound()" value="Skip" />
+                    </div>
+                    <div id="num"></div>
+                    <div id="choice-container">
+                        <input type="button" id="text1" class="choice-btn" onclick="choose(this, 0)" />
+                        <input type="button" id="text2" class="choice-btn" onclick="choose(this, 1)" />
+                        <input type="button" id="text3" class="choice-btn" onclick="choose(this, 2)" />
+                    </div>
+                </section>
+            </section>
+		</main>
+
+		<footer>
+			<p>by mentalvary</p>
+		</footer>
+
+		<script>
+            const numRounds = 5;
+            let introSection;
+            let gameSection;
+			let previewPlayer;
+			let assPlayer;
+            let previewPlayerContainer;
+            let assPlayerContainer;
+            let text1;
+            let text2;
+            let text3;
+            let num;
+            let rounds;
+            let roundIndex;
+            let currentRound;
+            let choicePicked;
+            let wins;
+            let next;
+            let skip;
+
+            function startGame() {
+                hide(introSection);
+                show(gameSection);
+                rounds = generateRounds(numRounds)
+                roundIndex = 0
+                wins = 0
+
+                const resultContainer = document.getElementById('result-container');
+                resultContainer.replaceChildren();
+                for (let i = 0; i < numRounds; i++) {
+                    const res = document.createElement("div")
+                    res.classList.add('result-box');
+                    res.id = 'result' + i;
+                    resultContainer.appendChild(res);
+                }
+
+                startRound(rounds[0])
+            }
+
+            function endGame() {
+                hide(gameSection)
+                show(introSection);
+                endResults.textContent = `You got ${wins} / ${numRounds} asses right.`;
+                endResults.classList.remove('good', 'bad');
+                if (wins / numRounds > 0.5) {
+                    endResults.classList.add('good');
+                }
+                else {
+                    endResults.classList.add('bad');
+                }
+                show(endResults);
+            }
+
+            function startRound(round) {
+                choicePicked = -1;
+                currentRound = round;
+
+                hide(assPlayerContainer);
+                show(previewPlayerContainer);
+
+                previewPlayer.loadVideoById({
+                    videoId: round.mainClip.vid, 
+                    startSeconds: round.mainClip.time - 12,
+                    endSeconds: round.mainClip.time - 5,
+                });
+                assPlayer.cueVideoById({
+                    videoId: round.mainClip.vid,
+                    startSeconds: round.mainClip.time - 5,
+                    endSeconds: round.mainClip.time + 7,
+                });
+
+                Array.from(document.getElementsByClassName('choice-btn')).forEach(e => {
+                    e.classList.remove('correct', 'wrong', 'picked');
+                });
+                hide(next);
+                show(skip);
+                toggleChoiceButtons(false);
+
+                document.getElementById('result' + roundIndex).classList.add('picked')
+
+                text1.value = '...' + round.clips[0].text + '...';
+                text2.value = '...' +round.clips[1].text + '...';
+                text3.value = '...' +round.clips[2].text + '...';
+                num.textContent = `Clip #${round.mainClip.index} / ${clips.length}`;
+            }
+
+            function nextRound() {
+                roundIndex++;
+                if (roundIndex < numRounds) {
+                    startRound(rounds[roundIndex])
+                }
+                else {
+                    endGame();
+                }
+            }
+
+            function skipRound() {
+                trackRoundResult(false);
+                nextRound();
+            }
+
+            function choose(ele, index) {
+                ele.classList.add('picked');
+                choicePicked = index;
+                hide(skip);
+                hide(previewPlayerContainer);
+                show(assPlayerContainer);
+                toggleChoiceButtons(false);
+                assPlayer.playVideo();
+            }
+
+            function toggleChoiceButtons(enabled) {
+                Array.from(document.getElementsByClassName('choice-btn')).forEach(e => {
+                    e.disabled = !enabled;
+                });
+            }
+
+            function showChoiceResult() {
+                if (choicePicked < 0) return;
+
+                const buttons = Array.from(document.getElementsByClassName('choice-btn'));
+                buttons.forEach((e, i) => {
+                    e.classList.add(currentRound.clips[i].isMain ? 'correct' : 'wrong');
+                })
+
+                if (currentRound.clips[choicePicked].isMain) {
+                    trackRoundResult(true);
+                }
+                else {
+                    trackRoundResult(false);
+                }
+                
+                show(next);
+            }
+
+            function trackRoundResult(win) {
+                if (win) {
+                    currentRound.result = 'CORRECT';
+                    wins++;
+                }
+                else {
+                    currentRound.result = 'WRONG';
+                }
+                document.getElementById('result' + roundIndex).classList.add(
+                    win ? 'correct' : 'wrong'
+                )
+                document.getElementById('result' + roundIndex).classList.remove('picked');
+            }
+
+            function generateRounds(numRounds) {
+                const generateRounds = [];
+                const usedClips = [];
+                for (let i = 0; i < numRounds; i++) {
+                    const clips = [
+                        {
+                            ...pickClip(usedClips/*, i == 0 ? 2026 : -1 */),
+                            isMain: true,
+                        },
+                        pickClip(usedClips),
+                        pickClip(usedClips),
+                    ]
+                    generateRounds.push({
+                        mainClip: clips[0],
+                        clips: shuffle(clips),
+                        result: 'NOT_PLAYED',
+                    });
+                }
+                return generateRounds
+            }
+
+            function pickClip(usedClips, overrideIndex = -1) {
+                let chosenIndex;
+                let chosenClip;
+                do {
+                    chosenIndex = overrideIndex >= 0 ? overrideIndex : getRandomInt(clips.length);
+                    chosenClip = clips[chosenIndex];
+                }
+                while (usedClips.some(c => c.vid === chosenClip.vid))
+                
+                usedClips.push(chosenClip)
+                return {
+                    ...chosenClip,
+                    index: chosenIndex
+                }
+            }
+
+			function onPreviewPlayerStateChange(event) {
+				if (event.data === YT.PlayerState.PLAYING || event.data === YT.PlayerState.BUFFERING) {
+                    toggleChoiceButtons(false);
+				}
+				if (event.data === YT.PlayerState.ENDED) {
+                    toggleChoiceButtons(true);
+				}
+			}
+
+            function onAssPlayerStateChange(event) {
+				if (event.data === YT.PlayerState.ENDED) {
+					showChoiceResult();
+				}
+			}
+
+			function onYouTubeIframeAPIReady() {
+                const width = 960;
+                const height = 540;
+				previewPlayer = new YT.Player('preview-player', {
+                    width,
+                    height,
+					playerVars: {
+						playsinline: 1,
+                        controls: 0,
+					},
+					events: {
+						onStateChange: onPreviewPlayerStateChange
+					}
+				});
+
+				assPlayer = new YT.Player('ass-player', {
+                    width,
+                    height,
+					playerVars: {
+						playsinline: 1,
+                        controls: 0,
+					},
+					events: {
+						onStateChange: onAssPlayerStateChange
+					}
+				});
+
+                introSection = document.getElementById('intro');
+                gameSection = document.getElementById('game');
+                previewPlayerContainer = document.getElementById('preview-player');
+                assPlayerContainer = document.getElementById('ass-player');
+                text1 = document.getElementById("text1");
+                text2 = document.getElementById("text2");
+                text3 = document.getElementById("text3");
+                num = document.getElementById("num");
+                next = document.getElementById("next");
+                skip = document.getElementById("skip");
+                endResults = document.getElementById('end-results');
+			}
+
+            function getRandomInt(max) {
+                return Math.floor(Math.random() * max);
+            }
+
+            function shuffle(array) {
+                const result = array.slice();
+                let currentIndex = result.length;
+
+                // While there remain elements to shuffle...
+                while (currentIndex != 0) {
+
+                    // Pick a remaining element...
+                    let randomIndex = Math.floor(Math.random() * currentIndex);
+                    currentIndex--;
+
+                    // And swap it with the current element.
+                    [result[currentIndex], result[randomIndex]] = [
+                    result[randomIndex], result[currentIndex]];
+                }
+
+                return result
+            }
+
+            function hide(ele) {
+                ele.classList.add('hidden');
+            }
+
+            function show(ele) {
+                ele.classList.remove('hidden');
+            }
+		</script>
+        <script src="clips.js"></script>
+		<script src="https://www.youtube.com/iframe_api"></script>
+	</body>
+</html>
+
