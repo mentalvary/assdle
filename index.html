@@ -351,9 +351,11 @@
                 endResults.classList.remove('good', 'bad');
                 if (wins / numRounds > 0.5) {
                     endResults.classList.add('good');
+                    playSound('assrehab.mp3');
                 }
                 else {
                     endResults.classList.add('bad');
+                    playSound('megaassofhell.mp3');
                 }
                 show(endResults);
             }
@@ -403,6 +405,8 @@
             }
 
             function skipRound() {
+                previewPlayer.stopVideo();
+                assPlayer.stopVideo();
                 trackRoundResult(false);
                 nextRound();
             }
@@ -594,6 +598,12 @@
 
             function show(ele) {
                 ele.classList.remove('hidden');
+            }
+
+            function playSound(file) {
+                var audio = new Audio(file);
+                audio.volume = 0.6;
+                audio.play();
             }
 		</script>
         <script src="clips.js"></script>
