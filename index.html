@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+    <!-- web design is my passion -->
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -318,6 +319,7 @@
 
 		<script>
             const numRounds = 5;
+            const minWinsForGood = 4;
             let introSection;
             let gameSection;
 			let previewPlayer;
@@ -362,7 +364,7 @@
                 show(introSection);
                 endResults.textContent = `You got ${wins} / ${numRounds} asses right.`;
                 endResults.classList.remove('good', 'bad');
-                if (wins / numRounds > 0.5) {
+                if (wins >= minWinsForGood) {
                     endResults.classList.add('good');
                     playSound('assrehab.mp3');
                 }
