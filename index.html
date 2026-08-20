@@ -483,7 +483,7 @@
                 for (let i = 0; i < numRounds; i++) {
                     const clips = [
                         {
-                            ...pickClip(usedClips/*, i == 0 ? 2026 : -1 */),
+                            ...pickClip(usedClips/*, i == 0 ? 7669  : 0 */),
                             isMain: true,
                         },
                         pickClip(usedClips),
@@ -498,11 +498,11 @@
                 return generateRounds
             }
 
-            function pickClip(usedClips, overrideIndex = -1) {
+            function pickClip(usedClips, overrideClipNumber = 0) {
                 let chosenIndex;
                 let chosenClip;
                 do {
-                    chosenIndex = overrideIndex >= 0 ? overrideIndex : getRandomInt(clips.length);
+                    chosenIndex = overrideClipNumber > 0 ? overrideClipNumber - 1 : getRandomInt(clips.length);
                     chosenClip = clips[chosenIndex];
                 }
                 while (usedClips.some(c => c.vid === chosenClip.vid))
@@ -622,7 +622,7 @@
                 audio.play();
             }
         </script>
-        <script src="clips-e676c7e987ce989c76d41d519139f745cdfceebc0ea936a4007622f9aa3adb14.js"></script>
+        <script src="clips-ab642ab8abe026c775ff360c9ad9b23e66a2a57674d4fdf7563248ed2f7c52a0.js"></script>
         <script src="https://www.youtube.com/iframe_api"></script>
     </body>
 </html>
