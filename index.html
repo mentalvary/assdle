@@ -22,12 +22,18 @@
                 background-color: var(--bg-color);
                 color: var(--main-font-color);
                 font-size: 1em;
-            }
-
-            body {
                 display: flex;
                 flex-direction: column;
                 min-height: 100vh;
+            }
+
+            a {
+                color: var(--pick-color);
+                text-decoration: none;
+            }
+
+            a:hover {
+                text-decoration: underline;
             }
 
             main {
@@ -44,7 +50,7 @@
             }
 
             .hidden {
-                display: none;
+                display: none !important;
             }
 
             #result-container {
@@ -96,7 +102,9 @@
             }
 
             .player-overlay {
-                display: block;
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 position: absolute;
                 inset: 0;
                 z-index: 10;
@@ -140,6 +148,7 @@
             .choice-btn.wrong {
                 background-color: var(--wrong-color);
                 color: black;
+                text-decoration: line-through;
             }
 
             .choice-btn.picked {
@@ -193,6 +202,47 @@
                 right: 0;
                 font-size: 1.3em;
             }
+
+            .hint {
+                font-size: 0.8em;
+            }
+
+            .highlight {
+                color: var(--pick-color);
+                font-style: oblique;
+            }
+
+            .lds-dual-ring {
+                color: white;
+            }
+            .lds-dual-ring,
+            .lds-dual-ring:after {
+                box-sizing: border-box;
+            }
+            .lds-dual-ring {
+                display: inline-block;
+                width: 80px;
+                height: 80px;
+            }
+            .lds-dual-ring:after {
+                content: " ";
+                display: block;
+                width: 64px;
+                height: 64px;
+                margin: 8px;
+                border-radius: 50%;
+                border: 6.4px solid currentColor;
+                border-color: currentColor transparent currentColor transparent;
+                animation: lds-dual-ring 1.2s linear infinite;
+            }
+            @keyframes lds-dual-ring {
+                0% {
+                    transform: rotate(0deg);
+                }
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
         </style>
 	</head>
 	<body>
@@ -204,7 +254,8 @@
             <section id="intro">
                 <div id="end-results" class="hidden"></div>
                 <div class="description">
-                    Watch a short Elajjaz clip and guess the ass quote he will say next.
+                    Watch a short Elajjaz clip and guess the <span class="highlight">ass</span> quote he will say next.<br/>
+                    <span class="hint">For best experience, use ad-free Youtube (Premium or <i>other</i> options).</span>
                 </div>
                 <input type="button" class="nav-btn" value="Play" onclick="startGame()"/>
             </section>
@@ -216,7 +267,9 @@
                     <div class="player-wrapper">
                         <div id="preview-player"></div>
                         <div id="ass-player"></div>
-                        <div class="player-overlay"></div>
+                        <div class="player-overlay">
+                            <div id="loader" class="lds-dual-ring"></div>
+                        </div>
                     </div>
                 </section>
 
@@ -225,7 +278,10 @@
                         <input type="button" id="next" class="nav-btn hidden float-right" onclick="nextRound()" value="Next" />
                         <input type="button" id="skip" class="nav-btn float-left" onclick="skipRound()" value="Skip" />
                     </div>
-                    <div id="num"></div>
+                    <div>
+                        <span id="num"></span>
+                        <a id="link" target="_blank" class="hidden">Watch full video</a>
+                    </div>
                     <div id="choice-container">
                         <input type="button" id="text1" class="choice-btn" onclick="choose(this, 0)" />
                         <input type="button" id="text2" class="choice-btn" onclick="choose(this, 1)" />
@@ -258,6 +314,8 @@
             let wins;
             let next;
             let skip;
+            let loader;
+            let link;
 
             function startGame() {
                 hide(introSection);
@@ -323,6 +381,7 @@
                 text2.value = '...' +round.clips[1].text + '...';
                 text3.value = '...' +round.clips[2].text + '...';
                 num.textContent = `Clip #${round.mainClip.index} / ${clips.length}`;
+                hide(link);
             }
 
             function nextRound() {
@@ -372,6 +431,8 @@
                 }
                 
                 show(next);
+                link.href = `https://youtu.be/${currentRound.mainClip.vid}?t=${currentRound.mainClip.time - 10}`;
+                show(link);
             }
 
             function trackRoundResult(win) {
@@ -426,6 +487,13 @@
             }
 
 			function onPreviewPlayerStateChange(event) {
+                if (event.data !== YT.PlayerState.PLAYING && event.data !== YT.PlayerState.ENDED) {
+                    show(loader);
+                }
+                else {
+                    hide(loader);
+                }
+
 				if (event.data === YT.PlayerState.PLAYING || event.data === YT.PlayerState.BUFFERING) {
                     toggleChoiceButtons(false);
 				}
@@ -435,6 +503,13 @@
 			}
 
             function onAssPlayerStateChange(event) {
+                if (event.data !== YT.PlayerState.PLAYING && event.data !== YT.PlayerState.ENDED) {
+                    show(loader);
+                }
+                else {
+                    hide(loader);
+                }
+
 				if (event.data === YT.PlayerState.ENDED) {
 					showChoiceResult();
 				}
@@ -478,6 +553,8 @@
                 next = document.getElementById("next");
                 skip = document.getElementById("skip");
                 endResults = document.getElementById('end-results');
+                loader = document.getElementById("loader");
+                link = document.getElementById("link")
 			}
 
             function getRandomInt(max) {
@@ -515,4 +592,5 @@
 		<script src="https://www.youtube.com/iframe_api"></script>
 	</body>
 </html>
+
 
