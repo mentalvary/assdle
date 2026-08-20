@@ -128,6 +128,7 @@
             }
 
             .choice-btn {
+                cursor: pointer;
                 width: 100%;
                 margin-top: 0.5em;
                 font-size: 1.2em;
@@ -176,6 +177,7 @@
             }
 
             .nav-btn {
+                cursor: pointer;
                 font-size: 1.5em;
                 border-radius: 10px;
                 background-color: var(--bg-color);
@@ -196,6 +198,15 @@
 
             .nav-btns {
                 position: relative;
+            }
+
+            .play-btn {
+                background-image: url('elass11.webp');
+                background-size: cover;
+                background-color: #0f1110;
+                width: 96px;
+                height: 48px;
+                text-shadow: 2px 2px 2px black;
             }
 
             #skip {
@@ -265,7 +276,9 @@
                     <span class="hint">Expect some rounds to be <span class="highlight">wonky</span> because of scuffed Youtube subtitles.</span><br/>
                     <span class="hint">For best experience, use <span class="highlight">ad-free</span> Youtube (Premium or <i>other</i> options).</span><br/>
                 </div>
-                <input type="button" class="nav-btn" value="Play" onclick="startGame()"/>
+                <button class="nav-btn play-btn" onclick="startGame()">                    
+                    Play
+                </button>
             </section>
             <section id="game" class="hidden">
                 <section id="result-section">
