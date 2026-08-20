@@ -1,16 +1,17 @@
 <!doctype html>
 <html lang="en">
     <!-- web design is my passion -->
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>assdle</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>assdle</title>
+        <link rel="icon" type="image/x-icon" href="teaser.png">
 
-		<meta property="og:title" content="assdle">
-		<meta property="og:description" content="Guess the Elajjaz ass quote">
-		<meta property="og:type" content="website">
-		<meta property="og:image" content="https://mentalvary.github.io/assdle/teaser.png">
-		<meta property="og:site_name" content="assdle">
+        <meta property="og:title" content="assdle">
+        <meta property="og:description" content="Guess the Elajjaz ass quote">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="https://mentalvary.github.io/assdle/teaser.png">
+        <meta property="og:site_name" content="assdle">
 
         <style>
             :root {
@@ -263,13 +264,13 @@
                 }
             }
         </style>
-	</head>
-	<body>
-		<header>
-			<h1>assdle</h1>
-		</header>
+    </head>
+    <body>
+        <header>
+            <h1>assdle</h1>
+        </header>
 
-		<main>
+        <main>
             <section id="intro">
                 <div id="end-results" class="hidden"></div>
                 <div class="description">
@@ -311,19 +312,19 @@
                     </div>
                 </section>
             </section>
-		</main>
+        </main>
 
-		<footer>
-			<p>by mentalvary</p>
-		</footer>
+        <footer>
+            <p>by mentalvary</p>
+        </footer>
 
-		<script>
+        <script>
             const numRounds = 5;
             const minWinsForGood = 4;
             let introSection;
             let gameSection;
-			let previewPlayer;
-			let assPlayer;
+            let previewPlayer;
+            let assPlayer;
             let previewPlayerContainer;
             let assPlayerContainer;
             let text1;
@@ -513,7 +514,7 @@
                 }
             }
 
-			function onPreviewPlayerStateChange(event) {
+            function onPreviewPlayerStateChange(event) {
                 if (event.data !== YT.PlayerState.PLAYING && event.data !== YT.PlayerState.ENDED) {
                     show(loader);
                 }
@@ -521,13 +522,13 @@
                     hide(loader);
                 }
 
-				if (event.data === YT.PlayerState.PLAYING || event.data === YT.PlayerState.BUFFERING) {
+                if (event.data === YT.PlayerState.PLAYING || event.data === YT.PlayerState.BUFFERING) {
                     toggleChoiceButtons(false);
-				}
-				if (event.data === YT.PlayerState.ENDED) {
+                }
+                if (event.data === YT.PlayerState.ENDED) {
                     toggleChoiceButtons(true);
-				}
-			}
+                }
+            }
 
             function onAssPlayerStateChange(event) {
                 if (event.data !== YT.PlayerState.PLAYING && event.data !== YT.PlayerState.ENDED) {
@@ -537,37 +538,37 @@
                     hide(loader);
                 }
 
-				if (event.data === YT.PlayerState.ENDED) {
-					showChoiceResult();
-				}
-			}
+                if (event.data === YT.PlayerState.ENDED) {
+                    showChoiceResult();
+                }
+            }
 
-			function onYouTubeIframeAPIReady() {
+            function onYouTubeIframeAPIReady() {
                 const width = 960;
                 const height = 540;
-				previewPlayer = new YT.Player('preview-player', {
+                previewPlayer = new YT.Player('preview-player', {
                     width,
                     height,
-					playerVars: {
-						playsinline: 1,
+                    playerVars: {
+                        playsinline: 1,
                         controls: 0,
-					},
-					events: {
-						onStateChange: onPreviewPlayerStateChange
-					}
-				});
+                    },
+                    events: {
+                        onStateChange: onPreviewPlayerStateChange
+                    }
+                });
 
-				assPlayer = new YT.Player('ass-player', {
+                assPlayer = new YT.Player('ass-player', {
                     width,
                     height,
-					playerVars: {
-						playsinline: 1,
+                    playerVars: {
+                        playsinline: 1,
                         controls: 0,
-					},
-					events: {
-						onStateChange: onAssPlayerStateChange
-					}
-				});
+                    },
+                    events: {
+                        onStateChange: onAssPlayerStateChange
+                    }
+                });
 
                 introSection = document.getElementById('intro');
                 gameSection = document.getElementById('game');
@@ -582,7 +583,7 @@
                 endResults = document.getElementById('end-results');
                 loader = document.getElementById("loader");
                 link = document.getElementById("link")
-			}
+            }
 
             function getRandomInt(max) {
                 return Math.floor(Math.random() * max);
@@ -620,10 +621,10 @@
                 audio.volume = 0.6;
                 audio.play();
             }
-		</script>
+        </script>
         <script src="clips-9777f43f19038f2d405b20add1a66ed0fa3f8208cfd4922570aceb8249e5f1ae.js"></script>
-		<script src="https://www.youtube.com/iframe_api"></script>
-	</body>
+        <script src="https://www.youtube.com/iframe_api"></script>
+    </body>
 </html>
 
 
