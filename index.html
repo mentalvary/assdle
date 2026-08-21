@@ -281,6 +281,17 @@
                 margin-top: 0.5em;
                 font-weight: bold;
             }
+
+            #share-btn {
+                margin-top: 0.6em;
+                font-size: 1em;
+                background-color: rgb(49, 153, 101);
+                color: black;
+            }
+
+            #share-btn:hover {
+                background-color: rgb(61, 187, 124);
+            }
         </style>
     </head>
     <body>
@@ -300,7 +311,8 @@
                 <button id="start-daily-btn" class="nav-btn play-btn" onclick="startDaily()">Daily ass</button>
                 <div id="daily-result-container" class="hidden">
                     <span id="daily-result">You got 5/5 daily asses.</span><br/>
-                    <span>Next daily in </span><span id="daily-countdown">00:10:51</span>
+                    <span>Next daily in </span><span id="daily-countdown">00:10:51</span><br/>
+                    <button class="nav-btn" id="share-btn" onclick="shareDaily()">Share</button>
                 </div>
             </section>
             <section id="game" class="hidden">
@@ -366,6 +378,7 @@
             let dailyResult;
             let dailyCountdown;
             let dailyWins;
+            let dailyRoundRes;
             let lastDaily;
             let playingDaily;
             let today;
@@ -380,6 +393,7 @@
                 
                 lastDaily = localStorage.getItem("lastDaily");
                 dailyWins = localStorage.getItem("dailyWins");
+                dailyRoundRes = localStorage.getItem("dailyRoundRes").split(",").map(r => r === 'true');
 
                 if (lastDaily === today) {
                     startDailyBtn.disabled = true;
@@ -412,7 +426,22 @@
 
             function saveDailyStats() {
                 localStorage.setItem("lastDaily", today);
-                localStorage.setItem("dailyWins", wins);                
+                localStorage.setItem("dailyWins", wins);
+                localStorage.setItem("dailyRoundRes", rounds.map(r => r.result === 'CORRECT'));
+            }
+
+            function shareDaily() {
+                const roundColors = dailyRoundRes.map(r => r ? '🟩' : '🟥').join('')
+                const shareText = `assdle 🍑 ${today}
+${roundColors}
+I got ${dailyWins}/${numRounds} daily asses`;
+                navigator.clipboard.writeText(shareText);
+
+                const shareBtn = document.getElementById("share-btn");
+                shareBtn.textContent = 'Copied';
+                setTimeout(() => {
+                    shareBtn.textContent = 'Share';
+                }, 1000);
             }
 
             function startDaily() {
