@@ -431,7 +431,7 @@
             }
 
             function shareDaily() {
-                const roundColors = dailyRoundRes.map(r => r ? '🟩' : '🟥').join('')
+                const roundColors = dailyRoundRes.map(r => r ? '🟩' : '🟥').join(' ')
                 const shareText = `assdle 🍑 ${today}
 ${roundColors}
 I got ${dailyWins}/${numRounds} daily asses`;
