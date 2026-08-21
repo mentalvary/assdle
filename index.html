@@ -62,6 +62,12 @@
                 display: none !important;
             }
 
+            #intro {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
             #result-container {
                 position: relative;
                 display: flex;
@@ -140,6 +146,7 @@
                 border: 2px solid gray;
                 padding: 0.2em 0.5em;
                 transition: background-color 0.15s ease;
+                transition: border-color 0.15s ease;
             }
 
             .choice-btn:hover {
@@ -187,14 +194,20 @@
                 border: 2px solid gray;
                 padding: 0.2em 0.5em;
                 transition: background-color 0.15s ease;
+                transition: border-color 0.15s ease;
             }
 
             .nav-btn:hover {
-                background-color: var(--btn-hover-color)
+                background-color: var(--btn-hover-color);
+                border-color: rgb(161, 161, 161);
+            }
+
+            .play-btn:disabled {
+                color: gray;
+                background-image: inherit;
             }
 
             .description {
-                margin-bottom: 1em;
                 font-size: 1.2em;
             }
 
@@ -204,11 +217,11 @@
 
             .play-btn {
                 background-image: url('elass11.webp');
-                background-size: cover;
+                background-size: contain;
                 background-color: #0f1110;
-                width: 96px;
-                height: 48px;
                 text-shadow: 2px 2px 2px black;
+                padding: 0.3em 0.3em;
+                margin-top: 1em;
             }
 
             #skip {
@@ -263,6 +276,11 @@
                     transform: rotate(360deg);
                 }
             }
+
+            #daily-result-container {
+                margin-top: 0.5em;
+                font-weight: bold;
+            }
         </style>
     </head>
     <body>
@@ -278,9 +296,12 @@
                     <span class="hint">Expect some rounds to be <span class="highlight">wonky</span> because of scuffed Youtube subtitles.</span><br/>
                     <span class="hint">For best experience, use <span class="highlight">ad-free</span> Youtube (Premium or <i>other</i> options).</span><br/>
                 </div>
-                <button class="nav-btn play-btn" onclick="startGame()">                    
-                    Play
-                </button>
+                <button class="nav-btn play-btn" onclick="startRegular()">Play</button>
+                <button id="start-daily-btn" class="nav-btn play-btn" onclick="startDaily()">Daily ass</button>
+                <div id="daily-result-container" class="hidden">
+                    <span id="daily-result">You got 5/5 daily asses.</span><br/>
+                    <span>Next daily in </span><span id="daily-countdown">00:10:51</span>
+                </div>
             </section>
             <section id="game" class="hidden">
                 <section id="result-section">
@@ -340,6 +361,73 @@
             let skip;
             let loader;
             let link;
+            let dailyResultContainer;
+            let startDailyBtn;
+            let dailyResult;
+            let dailyCountdown;
+            let dailyWins;
+            let lastDaily;
+            let playingDaily;
+            let today;
+            let tomorrow;
+            let rng;
+
+            function loadDailyStats() {
+                today = new Date().toISOString().slice(0, 10);
+                tomorrow = new Date();
+                tomorrow.setUTCDate(tomorrow.getUTCDate() + 1);
+                tomorrow.setUTCHours(0, 0, 0, 0);
+                
+                lastDaily = localStorage.getItem("lastDaily");
+                dailyWins = localStorage.getItem("dailyWins");
+
+                if (lastDaily === today) {
+                    startDailyBtn.disabled = true;
+                    dailyResult.textContent = `You got ${dailyWins}/${numRounds} daily asses.`;
+                    updateDailyCountdown();
+                    setInterval(updateDailyCountdown, 200);
+                    show(dailyResultContainer);
+                }
+                else {
+                    hide(dailyResultContainer);
+                    startDailyBtn.disabled = false;
+                }
+            }
+
+            function updateDailyCountdown() {
+                const remainingMs = tomorrow - new Date();
+
+                if (remainingMs <= 0) {
+                    dailyCountdown.textContent = 'NOW. Refresh.';
+                } 
+                else {
+                    const totalSeconds = Math.floor(remainingMs / 1000);
+                    const hours = Math.floor(totalSeconds / 3600);
+                    const minutes = Math.floor((totalSeconds % 3600) / 60);
+                    const seconds = totalSeconds % 60;
+
+                    dailyCountdown.textContent = `${hours}h ${minutes}m ${seconds}s`
+                }
+            }
+
+            function saveDailyStats() {
+                localStorage.setItem("lastDaily", today);
+                localStorage.setItem("dailyWins", wins);                
+            }
+
+            function startDaily() {
+                playingDaily = true;
+                seedInput = today + '5';
+                const seed = cyrb128(seedInput);
+                rng = sfc32(seed[0], seed[1], seed[2], seed[3]);
+                startGame();
+            }
+
+            function startRegular() {
+                playingDaily = false;
+                rng = null;
+                startGame();
+            }
 
             function startGame() {
                 hide(introSection);
@@ -374,6 +462,12 @@
                     playSound('megaassofhell.mp3');
                 }
                 show(endResults);
+
+                if (playingDaily) {
+                    saveDailyStats();
+                    loadDailyStats();
+                    playingDaily = false;
+                }
             }
 
             function startRound(round) {
@@ -582,11 +676,18 @@
                 skip = document.getElementById("skip");
                 endResults = document.getElementById('end-results');
                 loader = document.getElementById("loader");
-                link = document.getElementById("link")
+                link = document.getElementById("link");
+                dailyResultContainer = document.getElementById("daily-result-container");
+                dailyResult = document.getElementById("daily-result");
+                dailyCountdown = document.getElementById("daily-countdown");
+                startDailyBtn = document.getElementById("start-daily-btn");
+
+                loadDailyStats();
             }
 
             function getRandomInt(max) {
-                return Math.floor(Math.random() * max);
+                const r = rng ? rng() : Math.random();
+                return Math.floor(r * max);
             }
 
             function shuffle(array) {
@@ -597,7 +698,7 @@
                 while (currentIndex != 0) {
 
                     // Pick a remaining element...
-                    let randomIndex = Math.floor(Math.random() * currentIndex);
+                    let randomIndex = getRandomInt(currentIndex);
                     currentIndex--;
 
                     // And swap it with the current element.
@@ -621,8 +722,40 @@
                 audio.volume = 0.6;
                 audio.play();
             }
+
+            // Credit: https://stackoverflow.com/a/47593316
+            function cyrb128(str) {
+                let h1 = 1779033703, h2 = 3144134277,
+                    h3 = 1013904242, h4 = 2773480762;
+                for (let i = 0, k; i < str.length; i++) {
+                    k = str.charCodeAt(i);
+                    h1 = h2 ^ Math.imul(h1 ^ k, 597399067);
+                    h2 = h3 ^ Math.imul(h2 ^ k, 2869860233);
+                    h3 = h4 ^ Math.imul(h3 ^ k, 951274213);
+                    h4 = h1 ^ Math.imul(h4 ^ k, 2716044179);
+                }
+                h1 = Math.imul(h3 ^ (h1 >>> 18), 597399067);
+                h2 = Math.imul(h4 ^ (h2 >>> 22), 2869860233);
+                h3 = Math.imul(h1 ^ (h3 >>> 17), 951274213);
+                h4 = Math.imul(h2 ^ (h4 >>> 19), 2716044179);
+                h1 ^= (h2 ^ h3 ^ h4), h2 ^= h1, h3 ^= h1, h4 ^= h1;
+                return [h1>>>0, h2>>>0, h3>>>0, h4>>>0];
+            }
+
+            function sfc32(a, b, c, d) {
+                return function() {
+                    a |= 0; b |= 0; c |= 0; d |= 0;
+                    let t = (a + b | 0) + d | 0;
+                    d = d + 1 | 0;
+                    a = b ^ b >>> 9;
+                    b = c + (c << 3) | 0;
+                    c = (c << 21 | c >>> 11);
+                    c = c + t | 0;
+                    return (t >>> 0) / 4294967296;
+                }
+            }
         </script>
-        <script src="clips-ec091296249bc1963408563aef56771c03cf2a9a9127f082b99716acb5cd10b9.js"></script>
+        <script src="clips-266195f6a80241e0cdf74a7a08bea7b95fec192f62a093a6b9cad727e49b910e.js"></script>
         <script src="https://www.youtube.com/iframe_api"></script>
     </body>
 </html>
