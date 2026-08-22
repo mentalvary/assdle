@@ -2862,7 +2862,6 @@ const clips = [
 {"vid": "kC70rKzdKEU", "time": 14590, "duration": 9, "text": "stats are so ass."},
 {"vid": "kC70rKzdKEU", "time": 16045, "duration": 8, "text": "get your flat ass off my bench."},
 {"vid": "kC70rKzdKEU", "time": 17831, "duration": 6, "text": "all that juicy ass XP [__]"},
-{"vid": "kC70rKzdKEU", "time": 19339, "duration": 1, "text": "he's that buzzkill ass."},
 {"vid": "kC70rKzdKEU", "time": 19615, "duration": 2, "text": "let a loser ass [__] of a hero "},
 {"vid": "kC70rKzdKEU", "time": 22882, "duration": 1, "text": "Bunch of drunk ass Z Teeameers. Please,"},
 {"vid": "kC70rKzdKEU", "time": 22914, "duration": 2, "text": "go walk your ass around a mall, Grandpa? "},
