@@ -9,15 +9,9 @@ daily_name="daily-clips-$today.js"
 if [ ! -f $daily_name ]; then
     rm -f daily-clips*.js
     echo "const dailyClipDate = '$today';" > $daily_name
-    sed -e 's/const clips/const dailyClips/' clips-*.js >> $daily_name
+    sed -e 's/const clips/const dailyClips/' clips.js >> $daily_name
 
     # update reference in index.html
     sed -e 's/src="daily-clips.*.js"/src="'$daily_name'"/' -i index.html
 fi
 
-# regular clips list
-rm -f clips-*.js
-new_name="clips-$(sha256sum clips.js | awk '{print $1}').js"
-mv clips.js $new_name
-# update reference in index.html
-sed -e 's/src="clips.*.js"/src="'$new_name'"/' -i index.html
