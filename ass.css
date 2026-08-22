@@ -190,7 +190,7 @@ section {
 
 .clip-description {
     /* Should match overall height of skip/next button */
-    line-height: 2em;
+    height: 2em;
 }
 
 .play-btn:disabled {
