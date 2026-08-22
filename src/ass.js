@@ -1,6 +1,9 @@
 // #region constants
 const numRounds = 5;
 const minWinsForGood = 4;
+const fixedDailySeeds = {
+    '2026-08-23': '2026-08-227'
+}
 // #endregion
 
 // #region game state
@@ -134,7 +137,7 @@ function initWebElements() {
 // #region main game logic
 function startDaily() {
     playingDaily = true;
-    seedInput = today + '7';
+    seedInput = fixedDailySeeds[today] || today + '7';
     const seed = cyrb128(seedInput);
     rng = sfc32(seed[0], seed[1], seed[2], seed[3]);
     activeClipList = dailyClipDate === today ? dailyClips : clips;
