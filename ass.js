@@ -49,8 +49,9 @@ function onYouTubeIframeAPIReady() {
 }
 
 function initPlayers() {
-    const width = 960;
-    const height = 540;
+    let vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
+    const width = Math.min(960, vw);
+    const height = width * 0.5625;
     previewPlayer = new YT.Player('preview-player', {
         width,
         height,
