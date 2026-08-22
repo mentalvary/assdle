@@ -220,7 +220,8 @@ function startRound(round) {
     assPlayer.cueVideoById({
         videoId: round.mainClip.vid,
         startSeconds: round.mainClip.time - 5,
-        endSeconds: round.mainClip.time + 7,
+        // usually show 7s past clip time, but some take a longer time to get to 'ass'. Max is 14s.
+        endSeconds: round.mainClip.time + bounded(round.mainClip.duration || 0, 7, 14),
     });
 
     Array.from(document.getElementsByClassName('choice-btn')).forEach(e => {
@@ -404,6 +405,10 @@ I got ${dailyWins}/${numRounds} daily asses`;
 function getRandomInt(max) {
     const r = rng ? rng() : Math.random();
     return Math.floor(r * max);
+}
+
+function bounded(val, min, max) {
+    return Math.min(max, Math.max(min, val))
 }
 
 // credit: https://stackoverflow.com/a/2450976/32727753
