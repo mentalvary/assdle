@@ -281,7 +281,7 @@ function showChoiceResult() {
     link.href = `https://youtu.be/${currentRound.mainClip.vid}?t=${currentRound.mainClip.time - 10}`;
     show(link);
 
-    reportBtn.value = 'Report bad clip';
+    reportBtn.value = 'Report clip';
     reportBtn.disabled = false;
     show(reportBtn);
 }
