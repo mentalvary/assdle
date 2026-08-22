@@ -38,6 +38,7 @@ let dailyResultContainer;
 let startDailyBtn;
 let dailyResult;
 let dailyCountdown;
+let reportBtn;
 // #endregion
 
 // #region init
@@ -124,6 +125,7 @@ function initWebElements() {
     dailyResult = document.getElementById("daily-result");
     dailyCountdown = document.getElementById("daily-countdown");
     startDailyBtn = document.getElementById("start-daily-btn");
+    reportBtn = document.getElementById("report-btn");
 }
 
 // #endregion
@@ -224,6 +226,7 @@ function startRound(round) {
         e.classList.remove('correct', 'wrong', 'picked');
     });
     hide(next);
+    hide(reportBtn);
     show(skip);
     toggleChoiceButtons(false);
 
@@ -274,8 +277,13 @@ function showChoiceResult() {
     trackRoundResult(currentRound.clips[choicePicked].isMain);
 
     show(next);
+    
     link.href = `https://youtu.be/${currentRound.mainClip.vid}?t=${currentRound.mainClip.time - 10}`;
     show(link);
+
+    reportBtn.value = 'Report bad clip';
+    reportBtn.disabled = false;
+    show(reportBtn);
 }
 
 function trackRoundResult(win) {
@@ -318,6 +326,12 @@ function endGame() {
         loadDailyStats();
         playingDaily = false;
     }
+}
+
+function reportClip() {
+    fetch(`https://assdle.com/api/report?vid=${currentRound.mainClip.vid}&time=${currentRound.mainClip.time}`, {method: 'POST'});
+    reportBtn.value = 'Thanks!';
+    reportBtn.disabled = true;
 }
 
 // #endregion

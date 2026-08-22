@@ -220,15 +220,21 @@ section {
 }
 
 #skip {
-    position: absolute;
-    left: 0;
     font-size: 1.3em;
 }
 
 #next {
+    font-size: 1.3em;
+}
+
+.float-left {
+    position: absolute;
+    left: 0;
+}
+
+.float-right {
     position: absolute;
     right: 0;
-    font-size: 1.3em;
 }
 
 .hint {
@@ -292,4 +298,9 @@ section {
 
 #share-btn:hover {
     background-color: rgb(61, 187, 124);
+}
+
+#report-btn {
+    font-size: 1em;
+    color: orange;
 }
