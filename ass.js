@@ -47,6 +47,7 @@ function onYouTubeIframeAPIReady() {
     initPlayers();
     initWebElements();
     loadDailyStats();
+    document.getElementById('intro-clip-count').textContent = clips.length;
 }
 
 function initPlayers() {
