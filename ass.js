@@ -4,6 +4,7 @@ const minWinsForGood = 4;
 // #endregion
 
 // #region game state
+let activeClipList;
 let rounds;
 let roundIndex;
 let currentRound;
@@ -132,12 +133,14 @@ function startDaily() {
     seedInput = today + '7';
     const seed = cyrb128(seedInput);
     rng = sfc32(seed[0], seed[1], seed[2], seed[3]);
+    activeClipList = dailyClipDate === today ? dailyClips : clips;
     startGame();
 }
 
 function startRegular() {
     playingDaily = false;
     rng = null;
+    activeClipList = clips;
     startGame();
 }
 
@@ -164,7 +167,7 @@ function generateRounds(numRounds) {
     const generateRounds = [];
     const usedClips = [];
     for (let i = 0; i < numRounds; i++) {
-        const clips = [
+        const roundClips = [
             {
                 ...pickRandomClip(usedClips/*, i == 0 ? 7669  : 0 */),
                 isMain: true,
@@ -173,8 +176,8 @@ function generateRounds(numRounds) {
             pickRandomClip(usedClips),
         ]
         generateRounds.push({
-            mainClip: clips[0],
-            clips: shuffle(clips),
+            mainClip: roundClips[0],
+            clips: shuffle(roundClips),
             result: 'NOT_PLAYED',
         });
     }
@@ -185,10 +188,10 @@ function pickRandomClip(usedClips, overrideClipNumber = 0) {
     let chosenIndex;
     let chosenClip;
     do {
-        chosenIndex = overrideClipNumber > 0 ? overrideClipNumber - 1 : getRandomInt(clips.length);
-        chosenClip = clips[chosenIndex];
+        chosenIndex = overrideClipNumber > 0 ? overrideClipNumber - 1 : getRandomInt(activeClipList.length);
+        chosenClip = activeClipList[chosenIndex];
     }
-    while (usedClips.some(c => c.vid === chosenClip.vid))
+    while (usedClips.includes(chosenClip))
 
     usedClips.push(chosenClip)
     return {
@@ -198,6 +201,7 @@ function pickRandomClip(usedClips, overrideClipNumber = 0) {
 }
 
 function startRound(round) {
+    console.log('starting round', round);
     choicePicked = -1;
     currentRound = round;
 
@@ -227,7 +231,7 @@ function startRound(round) {
     choice1.value = '...' + round.clips[0].text + '...';
     choice2.value = '...' + round.clips[1].text + '...';
     choice3.value = '...' + round.clips[2].text + '...';
-    num.textContent = `Clip #${round.mainClip.index + 1} / ${clips.length}`;
+    num.textContent = `Clip #${round.mainClip.index + 1} / ${activeClipList.length}`;
     hide(link);
 }
 
