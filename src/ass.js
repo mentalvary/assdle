@@ -4,6 +4,7 @@ const minWinsForGood = 4;
 // #endregion
 
 // #region game state
+let queryParams;
 let activeClipList;
 let rounds;
 let roundIndex;
@@ -44,6 +45,7 @@ let reportBtn;
 // #region init
 
 function onYouTubeIframeAPIReady() {
+    queryParams = new URLSearchParams(window.location.search);
     initPlayers();
     initWebElements();
     loadDailyStats();
@@ -352,7 +354,7 @@ function reportClip() {
 // #region daily
 
 function loadDailyStats() {
-    today = new Date().toISOString().slice(0, 10);
+    today = queryParams.get("today") || new Date().toISOString().slice(0, 10);
     tomorrow = new Date();
     tomorrow.setUTCDate(tomorrow.getUTCDate() + 1);
     tomorrow.setUTCHours(0, 0, 0, 0);
