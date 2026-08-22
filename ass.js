@@ -129,7 +129,7 @@ function initWebElements() {
 // #region main game logic
 function startDaily() {
     playingDaily = true;
-    seedInput = today + '5';
+    seedInput = today + '7';
     const seed = cyrb128(seedInput);
     rng = sfc32(seed[0], seed[1], seed[2], seed[3]);
     startGame();
