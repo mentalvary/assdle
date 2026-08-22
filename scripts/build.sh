@@ -4,13 +4,13 @@ function main() {
     echo "Building..."
     rm -rf build
     mkdir build
-    cp -r media *.js *.css *.html build/
+    cp -r src/media src/*.js src/*.css src/*.html build/
 
     # update version query string to bust cache
-    ass_js_checksum=$(checksum ass.js)
-    ass_css_checksum=$(checksum ass.css)
-    clips_js_checksum=$(checksum clips.js)
-    daily_clips_js_checksum=$(checksum daily-clips*js)
+    ass_js_checksum=$(checksum src/ass.js)
+    ass_css_checksum=$(checksum src/ass.css)
+    clips_js_checksum=$(checksum src/clips.js)
+    daily_clips_js_checksum=$(checksum src/daily-clips*js)
     
     sed -r -i build/index.html \
         -e 's|src="(ass.js)"|src="\1?v='$ass_js_checksum'"|' \
