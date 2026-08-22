@@ -1,9 +1,6 @@
 // #region constants
 const numRounds = 5;
 const minWinsForGood = 4;
-const fixedDailySeeds = {
-    '2026-08-23': '2026-08-227'
-}
 // #endregion
 
 // #region game state
@@ -137,24 +134,35 @@ function initWebElements() {
 // #region main game logic
 function startDaily() {
     playingDaily = true;
-    seedInput = fixedDailySeeds[today] || today + '7';
-    const seed = cyrb128(seedInput);
-    rng = sfc32(seed[0], seed[1], seed[2], seed[3]);
+
+    // Use today's clip snapshot, in case the clip list was changed during the day.
     activeClipList = dailyClipDate === today ? dailyClips : clips;
-    startGame();
+
+    let _rounds = fixedDailies[today];
+    if (!_rounds) {
+        // If no fixed daily rounds, use a fixed seed so everyone gets the same
+        seedInput = today + '7';
+        const seed = cyrb128(seedInput);
+        rng = sfc32(seed[0], seed[1], seed[2], seed[3]);
+        _rounds = generateRounds(numRounds);
+    }
+
+    startGame(_rounds);
 }
 
 function startRegular() {
     playingDaily = false;
     rng = null;
     activeClipList = clips;
-    startGame();
+    const _rounds = generateRounds(numRounds);
+    startGame(_rounds);
 }
 
-function startGame() {
+function startGame(_rounds) {
     hide(introSection);
     show(gameSection);
-    rounds = generateRounds(numRounds)
+    rounds = _rounds
+    console.log('starting game', rounds)
     roundIndex = 0
     wins = 0
 
