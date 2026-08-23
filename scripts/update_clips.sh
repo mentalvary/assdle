@@ -1,3 +1,5 @@
+pushd src > /dev/null
+
 if [ ! -f clips.js ]; then
     echo "no clips.js"
     exit 1
@@ -15,3 +17,4 @@ if [ ! -f $daily_name ]; then
     sed -e 's/src="daily-clips.*.js"/src="'$daily_name'"/' -i index.html
 fi
 
+popd > /dev/null

@@ -1,4 +1,5 @@
-const clips = [
+const dailyClipDate = '2026-08-23';
+const dailyClips = [
 {"vid": "tX_lss5FH18", "time": 210, "duration": 5, "text": "nowadays. It's so ass. I hate it."},
 {"vid": "VSa4aL6FNXg", "time": 660, "duration": 2, "text": "ass. Well, it might "},
 {"vid": "VSa4aL6FNXg", "time": 967, "duration": 8, "text": "That is unfortunate ass right there."},
