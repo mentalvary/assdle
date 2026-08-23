@@ -1,4 +1,181 @@
 const fixedDailies = {
+    "2026-08-24": [
+        {
+            "mainClip": {
+                "vid": "dC0rFLUqkfc",
+                "time": 19496,
+                "duration": 5,
+                "text": "hit in my ass.",
+                "index": 2578,
+                "isMain": true
+            },
+            "clips": [
+                {
+                    "vid": "oB5qGxbQuv8",
+                    "time": 25787,
+                    "duration": 5,
+                    "text": "right on my ass. [__] That guy ",
+                    "index": 4541
+                },
+                {
+                    "vid": "dC0rFLUqkfc",
+                    "time": 19496,
+                    "duration": 5,
+                    "text": "hit in my ass.",
+                    "index": 2578,
+                    "isMain": true
+                },
+                {
+                    "vid": "Py-0ssXl1PM",
+                    "time": 4330,
+                    "duration": 3,
+                    "text": "shitty ass red nine which is ",
+                    "index": 5772
+                }
+            ],
+            "result": "WRONG"
+        },
+        {
+            "mainClip": {
+                "vid": "9OQLnYegV5Q",
+                "time": 5896,
+                "duration": 10,
+                "text": "this [__] tight ass base here?",
+                "index": 516,
+                "isMain": true
+            },
+            "clips": [
+                {
+                    "vid": "DmLOeWyjWCA",
+                    "time": 11985,
+                    "duration": 20,
+                    "text": "that grab is ass.",
+                    "index": 3517
+                },
+                {
+                    "vid": "9OQLnYegV5Q",
+                    "time": 5896,
+                    "duration": 10,
+                    "text": "this [__] tight ass base here?",
+                    "index": 516,
+                    "isMain": true
+                },
+                {
+                    "vid": "Ya2hHPIiQBE",
+                    "time": 11703,
+                    "duration": 4,
+                    "text": "mode. It's pretty ass, but you are ",
+                    "index": 6892
+                }
+            ],
+            "result": "NOT_PLAYED"
+        },
+        {
+            "mainClip": {
+                "vid": "nQGeVEw3At4",
+                "time": 7317,
+                "duration": 7,
+                "text": "it's most definitely ass.",
+                "index": 972,
+                "isMain": true
+            },
+            "clips": [
+                {
+                    "vid": "nQGeVEw3At4",
+                    "time": 7317,
+                    "duration": 7,
+                    "text": "it's most definitely ass.",
+                    "index": 972,
+                    "isMain": true
+                },
+                {
+                    "vid": "8u59fjj_XKg",
+                    "time": 10962,
+                    "duration": 4,
+                    "text": "just saved my ass by going in here ",
+                    "index": 8076
+                },
+                {
+                    "vid": "A6jdedUxmAQ",
+                    "time": 3073,
+                    "duration": 10,
+                    "text": "[__] dumb ass. All",
+                    "index": 4720
+                }
+            ],
+            "result": "NOT_PLAYED"
+        },
+        {
+            "mainClip": {
+                "vid": "9N21h23U0GI",
+                "time": 14742,
+                "duration": 4,
+                "text": "kill him cosmetic ass damage all right hit ",
+                "index": 7176,
+                "isMain": true
+            },
+            "clips": [
+                {
+                    "vid": "9N21h23U0GI",
+                    "time": 14742,
+                    "duration": 4,
+                    "text": "kill him cosmetic ass damage all right hit ",
+                    "index": 7176,
+                    "isMain": true
+                },
+                {
+                    "vid": "sMbtYjqq6m0",
+                    "time": 5494,
+                    "duration": 10,
+                    "text": "what a weird ass game dude that",
+                    "index": 6049
+                },
+                {
+                    "vid": "Ya2hHPIiQBE",
+                    "time": 21199,
+                    "duration": 24,
+                    "text": "Yeah, that'll be ass.",
+                    "index": 6895
+                }
+            ],
+            "result": "NOT_PLAYED"
+        },
+        {
+            "mainClip": {
+                "vid": "YbjC7hyu5eQ",
+                "time": 544,
+                "duration": 5,
+                "text": "wait is it ass is the first time ",
+                "index": 5649,
+                "isMain": true
+            },
+            "clips": [
+                {
+                    "vid": "DmLOeWyjWCA",
+                    "time": 7419,
+                    "duration": 16,
+                    "text": "god. Interrupt my ass. Okay, it's fine.",
+                    "index": 3516
+                },
+                {
+                    "vid": "YbjC7hyu5eQ",
+                    "time": 544,
+                    "duration": 5,
+                    "text": "wait is it ass is the first time ",
+                    "index": 5649,
+                    "isMain": true
+                },
+                {
+                    "vid": "VQhcCzwmPCo",
+                    "time": 16995,
+                    "duration": 16,
+                    "text": "rip my [__] ass ass hey",
+                    "index": 6600
+                }
+            ],
+            "result": "WRONG"
+        }
+    ],
     "2026-08-23": [
         {
             "mainClip": {
