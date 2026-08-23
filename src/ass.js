@@ -361,7 +361,8 @@ function loadDailyStats() {
 
     lastDaily = localStorage.getItem("lastDaily");
     dailyWins = localStorage.getItem("dailyWins");
-    dailyRoundRes = localStorage.getItem("dailyRoundRes").split(",").map(r => r === 'true');
+    const res = localStorage.getItem("dailyRoundRes");
+    dailyRoundRes = res ? res.split(",").map(r => r === 'true') : null;
 
     if (lastDaily === today) {
         startDailyBtn.disabled = true;
