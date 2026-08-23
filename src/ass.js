@@ -1,6 +1,6 @@
 // #region constants
-const numRounds = 5;
-const minWinsForGood = 4;
+const NUM_ROUNDS = 5;
+const MIN_WINS_FOR_GOOD = 4;
 // #endregion
 
 // #region game state
@@ -17,7 +17,6 @@ let lastDaily;
 let playingDaily;
 let today;
 let tomorrow;
-let rng;
 // #endregion
 
 // #region web elements
@@ -40,6 +39,7 @@ let startDailyBtn;
 let dailyResult;
 let dailyCountdown;
 let reportBtn;
+let choiceBtns;
 // #endregion
 
 // #region init
@@ -53,7 +53,7 @@ function onYouTubeIframeAPIReady() {
 }
 
 function initPlayers() {
-    let vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
+    const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
     const width = Math.min(960, vw);
     const height = width * 0.5625;
     previewPlayer = new YT.Player('preview-player', {
@@ -82,13 +82,7 @@ function initPlayers() {
 }
 
 function onPreviewPlayerStateChange(event) {
-    if (event.data !== YT.PlayerState.PLAYING && event.data !== YT.PlayerState.ENDED) {
-        show(loader);
-    }
-    else {
-        hide(loader);
-    }
-
+    showLoaderIfNotReady(event);
     if (event.data === YT.PlayerState.PLAYING || event.data === YT.PlayerState.BUFFERING) {
         toggleChoiceButtons(false);
     }
@@ -98,15 +92,18 @@ function onPreviewPlayerStateChange(event) {
 }
 
 function onAssPlayerStateChange(event) {
+    showLoaderIfNotReady(event);
+    if (event.data === YT.PlayerState.ENDED) {
+        endRound();
+    }
+}
+
+function showLoaderIfNotReady(event) {
     if (event.data !== YT.PlayerState.PLAYING && event.data !== YT.PlayerState.ENDED) {
         show(loader);
     }
     else {
         hide(loader);
-    }
-
-    if (event.data === YT.PlayerState.ENDED) {
-        showChoiceResult();
     }
 }
 
@@ -129,84 +126,76 @@ function initWebElements() {
     dailyCountdown = document.getElementById("daily-countdown");
     startDailyBtn = document.getElementById("start-daily-btn");
     reportBtn = document.getElementById("report-btn");
+    choiceBtns = Array.from(document.getElementsByClassName('choice-btn'));
 }
 
-// #endregion
+// #endregion init
 
 // #region main game logic
 function startDaily() {
     playingDaily = true;
-
     // Use today's clip snapshot, in case the clip list was changed during the day.
-    activeClipList = dailyClipDate === today ? dailyClips : clips;
-
-    let _rounds = fixedDailies[today];
-    if (!_rounds) {
-        // If no fixed daily rounds, use a fixed seed so everyone gets the same
-        seedInput = today + '7';
-        const seed = cyrb128(seedInput);
-        rng = sfc32(seed[0], seed[1], seed[2], seed[3]);
-        _rounds = generateRounds(numRounds);
-    }
-
-    startGame(_rounds);
+    const dailyClipList = dailyClipDate === today ? dailyClips : clips;
+    const _rounds = generateDailyRounds(dailyClipList);
+    startGame(_rounds, dailyClipList);
 }
 
 function startRegular() {
     playingDaily = false;
-    rng = null;
-    activeClipList = clips;
-    const _rounds = generateRounds(numRounds);
-    startGame(_rounds);
+    const _rounds = generateRounds(NUM_ROUNDS, clips);
+    startGame(_rounds, clips);
 }
 
-function startGame(_rounds) {
+function startGame(_rounds, clipList) {
     hide(introSection);
     show(gameSection);
     rounds = _rounds
+    activeClipList = clipList
     console.log('starting game', rounds)
     roundIndex = 0
     wins = 0
+    resetResultBoxes();
+    startRound(rounds[0])
+}
 
-    const resultContainer = document.getElementById('result-container');
+function resetResultBoxes() {
+    const resultContainer = document.getElementById('result-box-container');
     resultContainer.replaceChildren();
-    for (let i = 0; i < numRounds; i++) {
+    for (let i = 0; i < NUM_ROUNDS; i++) {
         const res = document.createElement("div")
         res.classList.add('result-box');
         res.id = 'result' + i;
         resultContainer.appendChild(res);
     }
-
-    startRound(rounds[0])
 }
 
-function generateRounds(numRounds) {
-    const generateRounds = [];
+function generateRounds(numRounds, clipList, rng = null) {
+    const generatedRounds = [];
     const usedClips = [];
     for (let i = 0; i < numRounds; i++) {
         const roundClips = [
             {
-                ...pickRandomClip(usedClips/*, i == 0 ? 7669  : 0 */),
+                ...pickRandomClip(usedClips, clipList, rng),
                 isMain: true,
             },
-            pickRandomClip(usedClips),
-            pickRandomClip(usedClips),
+            pickRandomClip(usedClips, clipList, rng),
+            pickRandomClip(usedClips, clipList, rng),
         ]
-        generateRounds.push({
+        generatedRounds.push({
             mainClip: roundClips[0],
-            clips: shuffle(roundClips),
+            clips: shuffle(roundClips, rng),
             result: 'NOT_PLAYED',
         });
     }
-    return generateRounds
+    return generatedRounds
 }
 
-function pickRandomClip(usedClips, overrideClipNumber = 0) {
+function pickRandomClip(usedClips, clipList, rng) {
     let chosenIndex;
     let chosenClip;
     do {
-        chosenIndex = overrideClipNumber > 0 ? overrideClipNumber - 1 : getRandomInt(activeClipList.length);
-        chosenClip = activeClipList[chosenIndex];
+        chosenIndex = getRandomInt(clipList.length, rng);
+        chosenClip = clipList[chosenIndex];
     }
     while (usedClips.includes(chosenClip))
 
@@ -219,8 +208,8 @@ function pickRandomClip(usedClips, overrideClipNumber = 0) {
 
 function startRound(round) {
     console.log('starting round', round);
-    choicePicked = -1;
     currentRound = round;
+    choicePicked = -1;
 
     hide(assPlayerContainer);
     show(previewPlayerContainer);
@@ -237,9 +226,7 @@ function startRound(round) {
         endSeconds: round.mainClip.time + bounded(round.mainClip.duration || 0, 7, 14),
     });
 
-    Array.from(document.getElementsByClassName('choice-btn')).forEach(e => {
-        e.classList.remove('correct', 'wrong', 'picked');
-    });
+    choiceBtns.forEach(e => e.classList.remove('correct', 'wrong', 'picked'));
     hide(next);
     hide(reportBtn);
     show(skip);
@@ -256,7 +243,7 @@ function startRound(round) {
 
 function nextRound() {
     roundIndex++;
-    if (roundIndex < numRounds) {
+    if (roundIndex < NUM_ROUNDS) {
         startRound(rounds[roundIndex])
     }
     else {
@@ -281,13 +268,8 @@ function choose(ele, index) {
     assPlayer.playVideo();
 }
 
-function showChoiceResult() {
+function endRound() {
     if (choicePicked < 0) return;
-
-    const buttons = Array.from(document.getElementsByClassName('choice-btn'));
-    buttons.forEach((e, i) => {
-        e.classList.add(currentRound.clips[i].isMain ? 'correct' : 'wrong');
-    })
 
     trackRoundResult(currentRound.clips[choicePicked].isMain);
 
@@ -302,6 +284,10 @@ function showChoiceResult() {
 }
 
 function trackRoundResult(win) {
+    choiceBtns.forEach((e, i) => {
+        e.classList.add(currentRound.clips[i].isMain ? 'correct' : 'wrong');
+    });
+
     if (win) {
         currentRound.result = 'CORRECT';
         wins++;
@@ -316,17 +302,15 @@ function trackRoundResult(win) {
 }
 
 function toggleChoiceButtons(enabled) {
-    Array.from(document.getElementsByClassName('choice-btn')).forEach(e => {
-        e.disabled = !enabled;
-    });
+    choiceBtns.forEach(e => e.disabled = !enabled);
 }
 
 function endGame() {
     hide(gameSection)
     show(introSection);
-    endResults.textContent = `You got ${wins} / ${numRounds} asses right.`;
+    endResults.textContent = `You got ${wins} / ${NUM_ROUNDS} asses right.`;
     endResults.classList.remove('good', 'bad');
-    if (wins >= minWinsForGood) {
+    if (wins >= MIN_WINS_FOR_GOOD) {
         endResults.classList.add('good');
         playSound('media/assrehab.mp3');
     }
@@ -349,7 +333,7 @@ function reportClip() {
     reportBtn.disabled = true;
 }
 
-// #endregion
+// #endregion main game logic
 
 // #region daily
 
@@ -366,7 +350,7 @@ function loadDailyStats() {
 
     if (lastDaily === today) {
         startDailyBtn.disabled = true;
-        dailyResult.textContent = `You got ${dailyWins}/${numRounds} daily asses.`;
+        dailyResult.textContent = `You got ${dailyWins}/${NUM_ROUNDS} daily asses.`;
         updateDailyCountdown();
         setInterval(updateDailyCountdown, 200);
         show(dailyResultContainer);
@@ -401,9 +385,10 @@ function saveDailyStats() {
 
 function shareDaily() {
     const roundColors = dailyRoundRes.map(r => r ? '🟩' : '🟥').join(' ')
-    const shareText = `assdle 🍑 ${today}
+    const shareText = `\
+assdle 🍑 ${today}
 ${roundColors}
-I got ${dailyWins}/${numRounds} daily asses`;
+I got ${dailyWins}/${NUM_ROUNDS} daily asses`;
     navigator.clipboard.writeText(shareText);
 
     const shareBtn = document.getElementById("share-btn");
@@ -413,10 +398,22 @@ I got ${dailyWins}/${numRounds} daily asses`;
     }, 1000);
 }
 
-// #endregion
+function generateDailyRounds(clipList) {
+    let _rounds = fixedDailies[today];
+    if (!_rounds) {
+        // If no fixed daily rounds, use a fixed seed so everyone gets the same
+        seedInput = today + '7';
+        const seed = cyrb128(seedInput);
+        const rng = sfc32(seed[0], seed[1], seed[2], seed[3]);
+        _rounds = generateRounds(NUM_ROUNDS, clipList, rng);
+    }
+    return _rounds;
+}
+
+// #endregion daily
 
 // #region helpers
-function getRandomInt(max) {
+function getRandomInt(max, rng) {
     const r = rng ? rng() : Math.random();
     return Math.floor(r * max);
 }
@@ -426,7 +423,7 @@ function bounded(val, min, max) {
 }
 
 // credit: https://stackoverflow.com/a/2450976/32727753
-function shuffle(array) {
+function shuffle(array, rng) {
     const result = array.slice();
     let currentIndex = result.length;
 
@@ -434,7 +431,7 @@ function shuffle(array) {
     while (currentIndex != 0) {
 
         // Pick a remaining element...
-        let randomIndex = getRandomInt(currentIndex);
+        let randomIndex = getRandomInt(currentIndex, rng);
         currentIndex--;
 
         // And swap it with the current element.
@@ -491,4 +488,4 @@ function sfc32(a, b, c, d) {
     }
 }
 
-// #endregion
+// #endregion helpers

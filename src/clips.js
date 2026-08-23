@@ -8246,4 +8246,5 @@ const clips = [
 {"vid": "guuzrHIXzQU", "time": 18258, "duration": 3, "text": "or on her ass this is"},
 {"vid": "GQuZQ4Dy9dE", "time": 4758, "duration": 3, "text": "to the Rainy ass rainy"},
 {"vid": "GQuZQ4Dy9dE", "time": 4759, "duration": 8, "text": "ass rainy ass pog"},
+{"vid": "nE6fw103iNw", "time": 1062, "duration": 4, "text": "that. Okay, daily ass delay."},
 ];

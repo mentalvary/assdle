@@ -58,14 +58,14 @@ section {
     align-items: center;
 }
 
-#result-container {
+#result-box-container {
     position: relative;
     display: flex;
     justify-content: space-between;
     margin-bottom: 1em;
 }
 
-#result-container::after {
+#result-box-container::after {
     content: "";
     position: absolute;
     left: 0;
