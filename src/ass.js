@@ -4,6 +4,7 @@ const MIN_WINS_FOR_GOOD = 4;
 // #endregion
 
 // #region game state
+let debugAllowed;
 let queryParams;
 let activeClipList;
 let rounds;
@@ -46,6 +47,7 @@ let choiceBtns;
 
 function onYouTubeIframeAPIReady() {
     queryParams = new URLSearchParams(window.location.search);
+    debugAllowed = window.location.hostname === 'localhost';
     initPlayers();
     initWebElements();
     loadDailyStats();
@@ -155,7 +157,46 @@ function startGame(_rounds, clipList) {
     roundIndex = 0
     wins = 0
     resetResultBoxes();
-    startRound(rounds[0])
+
+    if (debugAllowed && queryParams.get("vid") && queryParams.get("time")) {
+        startRound(makeDebugRound(queryParams.get("vid"), parseInt(queryParams.get("time"))))
+    }
+    else {
+        startRound(rounds[0])
+    }
+}
+
+function makeDebugRound(vid, time) {
+    const clip = clips.find(c => c.vid === vid && c.time === time);
+    return {
+        "mainClip": {
+            ...clip,
+            "index": 1234,
+            "isMain": true
+        },
+        "clips": [
+            {
+                "vid": "BaLSG_mAH6E",
+                "time": 767,
+                "duration": 4,
+                "text": "old ass games all right we're ",
+                "index": 8284
+            },
+            {
+                ...clip,
+                "index": 1234,
+                "isMain": true
+            },
+            {
+                "vid": "MZrUDCX7mEY",
+                "time": 8314,
+                "duration": 2,
+                "text": "Move it, fat ass.",
+                "index": 4064
+            }
+        ],
+        "result": "NOT_PLAYED"
+    }
 }
 
 function resetResultBoxes() {
@@ -274,7 +315,7 @@ function endRound() {
     trackRoundResult(currentRound.clips[choicePicked].isMain);
 
     show(next);
-    
+
     link.href = `https://youtu.be/${currentRound.mainClip.vid}?t=${currentRound.mainClip.time - 10}`;
     show(link);
 
@@ -328,7 +369,7 @@ function endGame() {
 }
 
 function reportClip() {
-    fetch(`https://assdle.com/api/report?vid=${currentRound.mainClip.vid}&time=${currentRound.mainClip.time}`, {method: 'POST'});
+    fetch(`https://assdle.com/api/report?vid=${currentRound.mainClip.vid}&time=${currentRound.mainClip.time}`, { method: 'POST' });
     reportBtn.value = 'Thanks!';
     reportBtn.disabled = true;
 }
@@ -338,7 +379,7 @@ function reportClip() {
 // #region daily
 
 function loadDailyStats() {
-    today = queryParams.get("today") || new Date().toISOString().slice(0, 10);
+    today = (debugAllowed && queryParams.get("today")) || new Date().toISOString().slice(0, 10);
     tomorrow = new Date();
     tomorrow.setUTCDate(tomorrow.getUTCDate() + 1);
     tomorrow.setUTCHours(0, 0, 0, 0);
