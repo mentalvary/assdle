@@ -309,3 +309,9 @@ section {
     font-size: 1em;
     color: orange;
 }
+
+#countdown-bar {
+    width: 100%;
+    height: 6px;
+    background-color: lightgray;
+}

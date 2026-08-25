@@ -1,9 +1,16 @@
 // #region constants
 const NUM_ROUNDS = 5;
 const MIN_WINS_FOR_GOOD = 4;
+const TIMEOUT_CHOICE = 99;
+const CHOOSE_TIME_MILLIS = 7000;
+const STATE_SHOWING_PREVIEW = 'SHOWING_PREVIEW';
+const STATE_CHOOSING = 'CHOOSING';
+const STATE_SHOWING_ASS = 'SHOWING_ASS';
+const STATE_ROUND_RESULT = 'ROUND_RESULT';
 // #endregion
 
 // #region game state
+let gameState;
 let debugAllowed;
 let queryParams;
 let activeClipList;
@@ -18,6 +25,8 @@ let lastDaily;
 let playingDaily;
 let today;
 let tomorrow;
+let previewPlayerPrevState;
+let assPlayerPrevState;
 // #endregion
 
 // #region web elements
@@ -41,6 +50,7 @@ let dailyResult;
 let dailyCountdown;
 let reportBtn;
 let choiceBtns;
+let countdownBar;
 // #endregion
 
 // #region init
@@ -88,16 +98,20 @@ function onPreviewPlayerStateChange(event) {
     if (event.data === YT.PlayerState.PLAYING || event.data === YT.PlayerState.BUFFERING) {
         toggleChoiceButtons(false);
     }
-    if (event.data === YT.PlayerState.ENDED) {
-        toggleChoiceButtons(true);
+    if (event.data === YT.PlayerState.ENDED && previewPlayerPrevState !== -1) {
+        startChoosing();
     }
+
+    previewPlayerPrevState = event.data;
 }
 
 function onAssPlayerStateChange(event) {
     showLoaderIfNotReady(event);
-    if (event.data === YT.PlayerState.ENDED) {
+    if (event.data === YT.PlayerState.ENDED && assPlayerPrevState !== -1) {
         endRound();
     }
+
+    assPlayerPrevState = event.data;
 }
 
 function showLoaderIfNotReady(event) {
@@ -129,11 +143,23 @@ function initWebElements() {
     startDailyBtn = document.getElementById("start-daily-btn");
     reportBtn = document.getElementById("report-btn");
     choiceBtns = Array.from(document.getElementsByClassName('choice-btn'));
+    countdownBar = document.getElementById("countdown-bar");
+    countdownBar.addEventListener("transitionend", () => {
+        if (gameState === STATE_CHOOSING) {
+            choose(null, TIMEOUT_CHOICE);
+        }
+    });
+
 }
 
 // #endregion init
 
 // #region main game logic
+function changeState(newState) {
+    console.log(`State: ${gameState} -> ${newState}`);
+    gameState = newState;
+}
+
 function startDaily() {
     playingDaily = true;
     // Use today's clip snapshot, in case the clip list was changed during the day.
@@ -249,11 +275,13 @@ function pickRandomClip(usedClips, clipList, rng) {
 
 function startRound(round) {
     console.log('starting round', round);
+    changeState(STATE_SHOWING_PREVIEW);
     currentRound = round;
     choicePicked = -1;
 
     hide(assPlayerContainer);
     show(previewPlayerContainer);
+    stopCountdownBar();
 
     previewPlayer.loadVideoById({
         videoId: round.mainClip.vid,
@@ -282,6 +310,12 @@ function startRound(round) {
     hide(link);
 }
 
+function startChoosing() {
+    changeState(STATE_CHOOSING);
+    toggleChoiceButtons(true);
+    startCountdownBar();
+}
+
 function nextRound() {
     roundIndex++;
     if (roundIndex < NUM_ROUNDS) {
@@ -300,7 +334,11 @@ function skipRound() {
 }
 
 function choose(ele, index) {
-    ele.classList.add('picked');
+    changeState(STATE_SHOWING_ASS);
+    stopCountdownBar();
+    if (ele) {
+        ele.classList.add('picked');
+    }
     choicePicked = index;
     hide(skip);
     hide(previewPlayerContainer);
@@ -309,10 +347,25 @@ function choose(ele, index) {
     assPlayer.playVideo();
 }
 
-function endRound() {
-    if (choicePicked < 0) return;
+function startCountdownBar() {
+    countdownBar.style.transition = "none";
+    countdownBar.style.width = "100%";
+    countdownBar.offsetWidth; // force layout/reflow
+    countdownBar.style.transition = `width ${CHOOSE_TIME_MILLIS}ms linear`;
+    countdownBar.style.width = "0%";
+}
 
-    trackRoundResult(currentRound.clips[choicePicked].isMain);
+function stopCountdownBar() {
+    countdownBar.style.transition = "none";
+    countdownBar.style.width = "0%";
+    countdownBar.offsetWidth;
+}
+
+function endRound() {
+    if (gameState !== STATE_SHOWING_ASS) return;
+
+    changeState(STATE_ROUND_RESULT);
+    trackRoundResult(choicePicked !== TIMEOUT_CHOICE && currentRound.clips[choicePicked].isMain);
 
     show(next);
 
