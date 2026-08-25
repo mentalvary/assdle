@@ -291,8 +291,8 @@ function startRound(round) {
     assPlayer.cueVideoById({
         videoId: round.mainClip.vid,
         startSeconds: round.mainClip.time - 5,
-        // usually show 7s past clip time, but some take a longer time to get to 'ass'. Max is 14s.
-        endSeconds: round.mainClip.time + bounded(round.mainClip.duration || 0, 7, 14),
+        // usually show 7s past clip time, but some take a longer time to get to 'ass'. Max is 10s.
+        endSeconds: round.mainClip.time + bounded(round.mainClip.duration || 0, 7, 10),
     });
 
     choiceBtns.forEach(e => e.classList.remove('correct', 'wrong', 'picked'));
