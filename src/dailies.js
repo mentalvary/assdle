@@ -1,4 +1,181 @@
 const fixedDailies = {
+    "2026-08-26": [
+        {
+            "mainClip": {
+                "vid": "0KPNMPLIdck",
+                "time": 18091,
+                "duration": 6,
+                "text": "I have my ass no okay just don't ",
+                "index": 8061,
+                "isMain": true
+            },
+            "clips": [
+                {
+                    "vid": "0KPNMPLIdck",
+                    "time": 18091,
+                    "duration": 6,
+                    "text": "I have my ass no okay just don't ",
+                    "index": 8061,
+                    "isMain": true
+                },
+                {
+                    "vid": "evVyaXUcb6w",
+                    "time": 5684,
+                    "duration": 3,
+                    "text": "to get your ass over here. Are all ",
+                    "index": 1640
+                },
+                {
+                    "vid": "kC70rKzdKEU",
+                    "time": 25294,
+                    "duration": 39,
+                    "text": "Whatever. [__] The ass roll doesn't need more",
+                    "index": 2804
+                }
+            ],
+            "result": "NOT_PLAYED"
+        },
+        {
+            "mainClip": {
+                "vid": "El2yKub4P_w",
+                "time": 18789,
+                "duration": 4,
+                "text": "doing get your ass down from here now",
+                "index": 5955,
+                "isMain": true
+            },
+            "clips": [
+                {
+                    "vid": "k3nw3K0TFqk",
+                    "time": 22518,
+                    "duration": 8,
+                    "text": "what uh holy ass gun yeah it is ",
+                    "index": 5339
+                },
+                {
+                    "vid": "_YonwaRR9so",
+                    "time": 14560,
+                    "duration": 34,
+                    "text": "is kicking my ass.",
+                    "index": 2432
+                },
+                {
+                    "vid": "El2yKub4P_w",
+                    "time": 18789,
+                    "duration": 4,
+                    "text": "doing get your ass down from here now",
+                    "index": 5955,
+                    "isMain": true
+                }
+            ],
+            "result": "NOT_PLAYED"
+        },
+        {
+            "mainClip": {
+                "vid": "XGnrMMmxfSQ",
+                "time": 7144,
+                "duration": 7,
+                "text": "class I my ass for [__] sake",
+                "index": 7873,
+                "isMain": true
+            },
+            "clips": [
+                {
+                    "vid": "WTp2aEiCAK0",
+                    "time": 3147,
+                    "duration": 4,
+                    "text": "can cover your ass with it. But other ",
+                    "index": 35
+                },
+                {
+                    "vid": "XGnrMMmxfSQ",
+                    "time": 7144,
+                    "duration": 7,
+                    "text": "class I my ass for [__] sake",
+                    "index": 7873,
+                    "isMain": true
+                },
+                {
+                    "vid": "oRxfiwvqxLw",
+                    "time": 27090,
+                    "duration": 10,
+                    "text": "be in the ass.",
+                    "index": 4359
+                }
+            ],
+            "result": "NOT_PLAYED"
+        },
+        {
+            "mainClip": {
+                "vid": "p7U7_lH3AnA",
+                "time": 8262,
+                "duration": 8,
+                "text": "I threw my ass. Ah.",
+                "index": 490,
+                "isMain": true
+            },
+            "clips": [
+                {
+                    "vid": "SuqcxJRHUHI",
+                    "time": 27574,
+                    "duration": 11,
+                    "text": "two soul like ass. Damn.",
+                    "index": 1876
+                },
+                {
+                    "vid": "p7U7_lH3AnA",
+                    "time": 8262,
+                    "duration": 12,
+                    "text": "I threw my ass. Ah.",
+                    "index": 490,
+                    "isMain": true
+                },
+                {
+                    "vid": "GBB-TkXYz1o",
+                    "time": 34318,
+                    "duration": 12,
+                    "text": "you leave my ass alone? Please.",
+                    "index": 1257
+                }
+            ],
+            "result": "NOT_PLAYED"
+        },
+        {
+            "mainClip": {
+                "vid": "6Wb2V7PED08",
+                "time": 1209,
+                "duration": 7,
+                "text": "fat ass? Oh.",
+                "index": 1589,
+                "isMain": true
+            },
+            "clips": [
+                {
+                    "vid": "Oc346mt07UE",
+                    "time": 23465,
+                    "duration": 4,
+                    "text": "pies in my ass. Yum, yum. Yeah, ",
+                    "index": 684
+                },
+                {
+                    "vid": "6Wb2V7PED08",
+                    "time": 1209,
+                    "duration": 9,
+                    "text": "fat ass? Oh.",
+                    "index": 1589,
+                    "isMain": true
+                },
+                {
+                    "vid": "jj65amhegnA",
+                    "time": 19441,
+                    "duration": 6,
+                    "text": "just kicked your ass like what what what ",
+                    "index": 4851
+                }
+            ],
+            "result": "NOT_PLAYED"
+        },
+    ],
     "2026-08-25": [
         {
             "mainClip": {
@@ -175,183 +352,6 @@ const fixedDailies = {
                 }
             ],
             "result": "NOT_PLAYED"
-        }
-    ],
-    "2026-08-24": [
-        {
-            "mainClip": {
-                "vid": "dC0rFLUqkfc",
-                "time": 19496,
-                "duration": 5,
-                "text": "hit in my ass.",
-                "index": 2578,
-                "isMain": true
-            },
-            "clips": [
-                {
-                    "vid": "oB5qGxbQuv8",
-                    "time": 25787,
-                    "duration": 5,
-                    "text": "right on my ass. [__] That guy ",
-                    "index": 4541
-                },
-                {
-                    "vid": "dC0rFLUqkfc",
-                    "time": 19496,
-                    "duration": 5,
-                    "text": "hit in my ass.",
-                    "index": 2578,
-                    "isMain": true
-                },
-                {
-                    "vid": "Py-0ssXl1PM",
-                    "time": 4330,
-                    "duration": 3,
-                    "text": "shitty ass red nine which is ",
-                    "index": 5772
-                }
-            ],
-            "result": "WRONG"
-        },
-        {
-            "mainClip": {
-                "vid": "9OQLnYegV5Q",
-                "time": 5896,
-                "duration": 10,
-                "text": "this [__] tight ass base here?",
-                "index": 516,
-                "isMain": true
-            },
-            "clips": [
-                {
-                    "vid": "DmLOeWyjWCA",
-                    "time": 11985,
-                    "duration": 20,
-                    "text": "that grab is ass.",
-                    "index": 3517
-                },
-                {
-                    "vid": "9OQLnYegV5Q",
-                    "time": 5896,
-                    "duration": 10,
-                    "text": "this [__] tight ass base here?",
-                    "index": 516,
-                    "isMain": true
-                },
-                {
-                    "vid": "Ya2hHPIiQBE",
-                    "time": 11703,
-                    "duration": 4,
-                    "text": "mode. It's pretty ass, but you are ",
-                    "index": 6892
-                }
-            ],
-            "result": "NOT_PLAYED"
-        },
-        {
-            "mainClip": {
-                "vid": "nQGeVEw3At4",
-                "time": 7317,
-                "duration": 7,
-                "text": "it's most definitely ass.",
-                "index": 972,
-                "isMain": true
-            },
-            "clips": [
-                {
-                    "vid": "nQGeVEw3At4",
-                    "time": 7317,
-                    "duration": 7,
-                    "text": "it's most definitely ass.",
-                    "index": 972,
-                    "isMain": true
-                },
-                {
-                    "vid": "8u59fjj_XKg",
-                    "time": 10962,
-                    "duration": 4,
-                    "text": "just saved my ass by going in here ",
-                    "index": 8076
-                },
-                {
-                    "vid": "A6jdedUxmAQ",
-                    "time": 3073,
-                    "duration": 10,
-                    "text": "[__] dumb ass. All",
-                    "index": 4720
-                }
-            ],
-            "result": "NOT_PLAYED"
-        },
-        {
-            "mainClip": {
-                "vid": "9N21h23U0GI",
-                "time": 14742,
-                "duration": 4,
-                "text": "kill him cosmetic ass damage all right hit ",
-                "index": 7176,
-                "isMain": true
-            },
-            "clips": [
-                {
-                    "vid": "9N21h23U0GI",
-                    "time": 14742,
-                    "duration": 4,
-                    "text": "kill him cosmetic ass damage all right hit ",
-                    "index": 7176,
-                    "isMain": true
-                },
-                {
-                    "vid": "sMbtYjqq6m0",
-                    "time": 5494,
-                    "duration": 10,
-                    "text": "what a weird ass game dude that",
-                    "index": 6049
-                },
-                {
-                    "vid": "Ya2hHPIiQBE",
-                    "time": 21199,
-                    "duration": 24,
-                    "text": "Yeah, that'll be ass.",
-                    "index": 6895
-                }
-            ],
-            "result": "NOT_PLAYED"
-        },
-        {
-            "mainClip": {
-                "vid": "YbjC7hyu5eQ",
-                "time": 544,
-                "duration": 5,
-                "text": "wait is it ass is the first time ",
-                "index": 5649,
-                "isMain": true
-            },
-            "clips": [
-                {
-                    "vid": "DmLOeWyjWCA",
-                    "time": 7419,
-                    "duration": 16,
-                    "text": "god. Interrupt my ass. Okay, it's fine.",
-                    "index": 3516
-                },
-                {
-                    "vid": "YbjC7hyu5eQ",
-                    "time": 544,
-                    "duration": 5,
-                    "text": "wait is it ass is the first time ",
-                    "index": 5649,
-                    "isMain": true
-                },
-                {
-                    "vid": "VQhcCzwmPCo",
-                    "time": 16995,
-                    "duration": 16,
-                    "text": "rip my [__] ass ass hey",
-                    "index": 6600
-                }
-            ],
-            "result": "WRONG"
         }
     ],
 }
