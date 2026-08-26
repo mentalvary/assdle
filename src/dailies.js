@@ -1,4 +1,181 @@
 const fixedDailies = {
+    "2026-08-27": [
+        {
+            "mainClip": {
+                "vid": "1HJoOLaGhzE",
+                "time": 7064,
+                "duration": 7,
+                "text": "plank in my ass oh my God",
+                "index": 7992,
+                "isMain": true
+            },
+            "clips": [
+                {
+                    "vid": "ZODPQFJWpqk",
+                    "time": 12448,
+                    "duration": 10,
+                    "text": "stabbed in the ass by orstein and I ",
+                    "index": 5817
+                },
+                {
+                    "vid": "1HJoOLaGhzE",
+                    "time": 7064,
+                    "duration": 7,
+                    "text": "plank in my ass oh my God",
+                    "index": 7992,
+                    "isMain": true
+                },
+                {
+                    "vid": "m33F2LZNgsA",
+                    "time": 13273,
+                    "duration": 5,
+                    "text": "like that. Goo ass.",
+                    "index": 8520
+                }
+            ],
+            "result": "NOT_PLAYED"
+        },
+        {
+            "mainClip": {
+                "vid": "dPAsvwxw4ys",
+                "time": 10951,
+                "duration": 6,
+                "text": "gonna burn my ass I gotta go faster",
+                "index": 8592,
+                "isMain": true
+            },
+            "clips": [
+                {
+                    "vid": "SOZHY_e7ozY",
+                    "time": 4412,
+                    "duration": 11,
+                    "text": "Just break his ass. HOLY.",
+                    "index": 3764
+                },
+                {
+                    "vid": "dPAsvwxw4ys",
+                    "time": 10951,
+                    "duration": 6,
+                    "text": "gonna burn my ass I gotta go faster",
+                    "index": 8592,
+                    "isMain": true
+                },
+                {
+                    "vid": "CexocQ9MrbA",
+                    "time": 9666,
+                    "duration": 4,
+                    "text": "I'm getting my ass handed to me just",
+                    "index": 1026
+                }
+            ],
+            "result": "NOT_PLAYED"
+        },
+        {
+            "mainClip": {
+                "vid": "TgPjTYy_DmM",
+                "time": 22615,
+                "duration": 4,
+                "text": "with uh my ass dude I was",
+                "index": 1234,
+                "isMain": true
+            },
+            "clips": [
+                {
+                    "vid": "BaLSG_mAH6E",
+                    "time": 767,
+                    "duration": 4,
+                    "text": "old ass games all right we're ",
+                    "index": 8284
+                },
+                {
+                    "vid": "TgPjTYy_DmM",
+                    "time": 22615,
+                    "duration": 4,
+                    "text": "with uh my ass dude I was",
+                    "index": 1234,
+                    "isMain": true
+                },
+                {
+                    "vid": "MZrUDCX7mEY",
+                    "time": 8314,
+                    "duration": 2,
+                    "text": "Move it, fat ass.",
+                    "index": 4064
+                }
+            ],
+            "result": "NOT_PLAYED"
+        },
+        {
+            "mainClip": {
+                "vid": "xycEp0h86xc",
+                "time": 2098,
+                "duration": 7,
+                "text": "daily in the ass. [Music]",
+                "index": 3741,
+                "isMain": true
+            },
+            "clips": [
+                {
+                    "vid": "3srd1vfX7pc",
+                    "time": 112,
+                    "duration": 11,
+                    "text": "Oh, an ass in my ass, of ",
+                    "index": 2925
+                },
+                {
+                    "vid": "0cyKc21rmeU",
+                    "time": 27062,
+                    "duration": 2,
+                    "text": "is this dank ass place?",
+                    "index": 3266
+                },
+                {
+                    "vid": "xycEp0h86xc",
+                    "time": 2098,
+                    "duration": 10,
+                    "text": "daily in the ass. [Music]",
+                    "index": 3741,
+                    "isMain": true
+                }
+            ],
+            "result": "NOT_PLAYED"
+        },
+        {
+            "mainClip": {
+                "vid": "sUWJBUezcNw",
+                "time": 23438,
+                "duration": 8,
+                "text": "the roof is ass, the floor is ",
+                "index": 2026,
+                "isMain": true
+            },
+            "clips": [
+                {
+                    "vid": "sUWJBUezcNw",
+                    "time": 23438,
+                    "duration": 21,
+                    "text": "the roof is ass, the floor is ",
+                    "index": 2026,
+                    "isMain": true
+                },
+                {
+                    "vid": "OzReXz5-b_4",
+                    "time": 167,
+                    "duration": 2,
+                    "text": "don't get your ass over here okay that ",
+                    "index": 8506
+                },
+                {
+                    "vid": "2zDlC27Kbos",
+                    "time": 34089,
+                    "duration": 18,
+                    "text": "25 it's ass though",
+                    "index": 5244
+                }
+            ],
+            "result": "NOT_PLAYED"
+        }
+    ],
     "2026-08-26": [
         {
             "mainClip": {
@@ -175,183 +352,5 @@ const fixedDailies = {
             ],
             "result": "NOT_PLAYED"
         },
-    ],
-    "2026-08-25": [
-        {
-            "mainClip": {
-                "vid": "SOZHY_e7ozY",
-                "time": 1963,
-                "duration": 2,
-                "text": "[__] Double ass.  Pass through that ",
-                "index": 3867,
-                "isMain": true
-            },
-            "clips": [
-                {
-                    "vid": "6HL_SzSoJU0",
-                    "time": 6107,
-                    "duration": 3,
-                    "text": "that's a weird ass looking Planet",
-                    "index": 7238
-                },
-                {
-                    "vid": "SOZHY_e7ozY",
-                    "time": 1963,
-                    "duration": 2,
-                    "text": "[__] Double ass.  Pass through that ",
-                    "index": 3867,
-                    "isMain": true
-                },
-                {
-                    "vid": "ieyyzgPTzJc",
-                    "time": 2069,
-                    "duration": 3,
-                    "text": "warp on your ass. Um,",
-                    "index": 2790
-                }
-            ],
-            "result": "NOT_PLAYED"
-        },
-        {
-            "mainClip": {
-                "vid": "OFv8qQtBCwk",
-                "time": 24092,
-                "duration": 6,
-                "text": "I mashed my ass. So now,",
-                "index": 2513,
-                "isMain": true
-            },
-            "clips": [
-                {
-                    "vid": "5xxIBJy6x18",
-                    "time": 13768,
-                    "duration": 6,
-                    "text": "barrel I just ass it all the",
-                    "index": 5230
-                },
-                {
-                    "vid": "OFv8qQtBCwk",
-                    "time": 24092,
-                    "duration": 6,
-                    "text": "I mashed my ass. So now,",
-                    "index": 2513,
-                    "isMain": true
-                },
-                {
-                    "vid": "mLWfTWAjvTg",
-                    "time": 20770,
-                    "duration": 18,
-                    "text": "horror game ass flashlight. I mean, it's ",
-                    "index": 4440
-                }
-            ],
-            "result": "NOT_PLAYED"
-        },
-        {
-            "mainClip": {
-                "vid": "R986ot4W2zI",
-                "time": 13537,
-                "duration": 4,
-                "text": "go play it ass okay",
-                "index": 6358,
-                "isMain": true
-            },
-            "clips": [
-                {
-                    "vid": "khd0J2K18HU",
-                    "time": 4751,
-                    "duration": 2,
-                    "text": "him in the ass but I feel like ",
-                    "index": 5538
-                },
-                {
-                    "vid": "7R7Is6MgHAM",
-                    "time": 3228,
-                    "duration": 3,
-                    "text": "on my ass and I can't [__] ",
-                    "index": 8088
-                },
-                {
-                    "vid": "R986ot4W2zI",
-                    "time": 13537,
-                    "duration": 4,
-                    "text": "go play it ass okay",
-                    "index": 6358,
-                    "isMain": true
-                }
-            ],
-            "result": "NOT_PLAYED"
-        },
-
-        {
-            "mainClip": {
-                "vid": "hU6ActM-66o",
-                "time": 11800,
-                "duration": 12,
-                "text": "was that baby ass jump dude oh",
-                "index": 8292,
-                "isMain": true
-            },
-            "clips": [
-                {
-                    "vid": "El2yKub4P_w",
-                    "time": 18235,
-                    "duration": 3,
-                    "text": "script is [__] ass I",
-                    "index": 6172
-                },
-                {
-                    "vid": "tc1gWZwp61M",
-                    "time": 5498,
-                    "duration": 5,
-                    "text": "runs a bit ass, I guess. But",
-                    "index": 4597
-                },
-                {
-                    "vid": "hU6ActM-66o",
-                    "time": 11800,
-                    "duration": 12,
-                    "text": "was that baby ass jump dude oh",
-                    "index": 8292,
-                    "isMain": true
-                }
-            ],
-            "result": "NOT_PLAYED"
-        },
-        {
-            "mainClip": {
-                "vid": "w3eXzeA_Nzc",
-                "time": 29771,
-                "duration": 5,
-                "text": "with a two-handed ass.",
-                "index": 2946,
-                "isMain": true
-            },
-            "clips": [
-                {
-                    "vid": "yrnzj06WFYY",
-                    "time": 3588,
-                    "duration": 5,
-                    "text": "segment is so ass.",
-                    "index": 3440
-                },
-                {
-                    "vid": "3hshPBVmyp0",
-                    "time": 3576,
-                    "duration": 3,
-                    "text": "happened? We hauled ass out through",
-                    "index": 6774
-                },
-                {
-                    "vid": "w3eXzeA_Nzc",
-                    "time": 29771,
-                    "duration": 19,
-                    "text": "with a two-handed ass.",
-                    "index": 2946,
-                    "isMain": true
-                }
-            ],
-            "result": "NOT_PLAYED"
-        }
     ],
 }
