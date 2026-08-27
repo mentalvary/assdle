@@ -1,4 +1,181 @@
 const fixedDailies = {
+    "2026-08-28": [
+        {
+            "mainClip": {
+                "vid": "F5cNcDELSTk",
+                "time": 1754,
+                "duration": 5,
+                "text": "Oh, and my ass. My ass is ",
+                "index": 2665,
+                "isMain": true
+            },
+            "clips": [
+                {
+                    "vid": "k3nw3K0TFqk",
+                    "time": 14919,
+                    "duration": 14,
+                    "text": "not yeah her ass is clipping through the ",
+                    "index": 5333
+                },
+                {
+                    "vid": "F5cNcDELSTk",
+                    "time": 1754,
+                    "duration": 5,
+                    "text": "Oh, and my ass. My ass is ",
+                    "index": 2665,
+                    "isMain": true
+                },
+                {
+                    "vid": "rmSX-fIe6r0",
+                    "time": 9841,
+                    "duration": 22,
+                    "text": "You bet your ass I'm bringing the",
+                    "index": 2340
+                }
+            ],
+            "result": "NOT_PLAYED"
+        },
+        {
+            "mainClip": {
+                "vid": "nNN4CuwoTDY",
+                "time": 18542,
+                "duration": 2,
+                "text": "soul out your ass.  I didn't know ",
+                "index": 1620,
+                "isMain": true
+            },
+            "clips": [
+                {
+                    "vid": "W3P41SUzG84",
+                    "time": 23047,
+                    "duration": 14,
+                    "text": "die. [__] ass.",
+                    "index": 778
+                },
+                {
+                    "vid": "CVzYBmUCd20",
+                    "time": 18895,
+                    "duration": 4,
+                    "text": "[Music] ass no Che I've only ",
+                    "index": 8213
+                },
+                {
+                    "vid": "nNN4CuwoTDY",
+                    "time": 18542,
+                    "duration": 2,
+                    "text": "soul out your ass.  I didn't know ",
+                    "index": 1620,
+                    "isMain": true
+                }
+            ],
+            "result": "NOT_PLAYED"
+        },
+        {
+            "mainClip": {
+                "vid": "Oc346mt07UE",
+                "time": 23296,
+                "duration": 2,
+                "text": "ass. No, I turned ",
+                "index": 661,
+                "isMain": true
+            },
+            "clips": [
+                {
+                    "vid": "Oc346mt07UE",
+                    "time": 23296,
+                    "duration": 2,
+                    "text": "ass. No, I turned ",
+                    "index": 661,
+                    "isMain": true
+                },
+                {
+                    "vid": "bQk0X7DGX4c",
+                    "time": 21416,
+                    "duration": 44,
+                    "text": "lasagna up his ass. Yeah. Nothing. Okay.",
+                    "index": 7473
+                },
+                {
+                    "vid": "kv_9-Zb5-js",
+                    "time": 6656,
+                    "duration": 13,
+                    "text": "Red pie is ass. How does it",
+                    "index": 8241
+                }
+            ],
+            "result": "NOT_PLAYED"
+        },
+        {
+            "mainClip": {
+                "vid": "GDNijf4DJaE",
+                "time": 15504,
+                "duration": 8,
+                "text": "we remove duck ass like why why is ",
+                "index": 8391,
+                "isMain": true
+            },
+            "clips": [
+                {
+                    "vid": "GDNijf4DJaE",
+                    "time": 15504,
+                    "duration": 6,
+                    "text": "we remove duck ass like why why is ",
+                    "index": 8391,
+                    "isMain": true
+                },
+                {
+                    "vid": "YgDDdEI0CjA",
+                    "time": 21904,
+                    "duration": 2,
+                    "text": "not doing my ass why am I not ",
+                    "index": 7038
+                },
+                {
+                    "vid": "EWMMS3jnotM",
+                    "time": 13840,
+                    "duration": 4,
+                    "text": "this get your ass back here get him ",
+                    "index": 5693
+                }
+            ],
+            "result": "NOT_PLAYED"
+        },
+        {
+            "mainClip": {
+                "vid": "Y6GJmYAGY8o",
+                "time": 27706,
+                "duration": 7,
+                "text": "my ass. [__]",
+                "index": 2192,
+                "isMain": true
+            },
+            "clips": [
+                {
+                    "vid": "bsrsenMB7P8",
+                    "time": 11142,
+                    "duration": 6,
+                    "text": "is a freaky ass enemy",
+                    "index": 5027
+                },
+                {
+                    "vid": "Y6GJmYAGY8o",
+                    "time": 27706,
+                    "duration": 34,
+                    "text": "my ass. [__]",
+                    "index": 2192,
+                    "isMain": true
+                },
+                {
+                    "vid": "Vk_PB4wYcmQ",
+                    "time": 33614,
+                    "duration": 5,
+                    "text": "go inside his ass to",
+                    "index": 3679
+                }
+            ],
+            "result": "NOT_PLAYED"
+        },
+    ],
     "2026-08-27": [
         {
             "mainClip": {
@@ -175,182 +352,5 @@ const fixedDailies = {
             ],
             "result": "NOT_PLAYED"
         }
-    ],
-    "2026-08-26": [
-        {
-            "mainClip": {
-                "vid": "0KPNMPLIdck",
-                "time": 18091,
-                "duration": 6,
-                "text": "I have my ass no okay just don't ",
-                "index": 8061,
-                "isMain": true
-            },
-            "clips": [
-                {
-                    "vid": "0KPNMPLIdck",
-                    "time": 18091,
-                    "duration": 6,
-                    "text": "I have my ass no okay just don't ",
-                    "index": 8061,
-                    "isMain": true
-                },
-                {
-                    "vid": "evVyaXUcb6w",
-                    "time": 5684,
-                    "duration": 3,
-                    "text": "to get your ass over here. Are all ",
-                    "index": 1640
-                },
-                {
-                    "vid": "kC70rKzdKEU",
-                    "time": 25294,
-                    "duration": 39,
-                    "text": "Whatever. [__] The ass roll doesn't need more",
-                    "index": 2804
-                }
-            ],
-            "result": "NOT_PLAYED"
-        },
-        {
-            "mainClip": {
-                "vid": "El2yKub4P_w",
-                "time": 18789,
-                "duration": 4,
-                "text": "doing get your ass down from here now",
-                "index": 5955,
-                "isMain": true
-            },
-            "clips": [
-                {
-                    "vid": "k3nw3K0TFqk",
-                    "time": 22518,
-                    "duration": 8,
-                    "text": "what uh holy ass gun yeah it is ",
-                    "index": 5339
-                },
-                {
-                    "vid": "_YonwaRR9so",
-                    "time": 14560,
-                    "duration": 34,
-                    "text": "is kicking my ass.",
-                    "index": 2432
-                },
-                {
-                    "vid": "El2yKub4P_w",
-                    "time": 18789,
-                    "duration": 4,
-                    "text": "doing get your ass down from here now",
-                    "index": 5955,
-                    "isMain": true
-                }
-            ],
-            "result": "NOT_PLAYED"
-        },
-        {
-            "mainClip": {
-                "vid": "XGnrMMmxfSQ",
-                "time": 7144,
-                "duration": 7,
-                "text": "class I my ass for [__] sake",
-                "index": 7873,
-                "isMain": true
-            },
-            "clips": [
-                {
-                    "vid": "WTp2aEiCAK0",
-                    "time": 3147,
-                    "duration": 4,
-                    "text": "can cover your ass with it. But other ",
-                    "index": 35
-                },
-                {
-                    "vid": "XGnrMMmxfSQ",
-                    "time": 7144,
-                    "duration": 7,
-                    "text": "class I my ass for [__] sake",
-                    "index": 7873,
-                    "isMain": true
-                },
-                {
-                    "vid": "oRxfiwvqxLw",
-                    "time": 27090,
-                    "duration": 10,
-                    "text": "be in the ass.",
-                    "index": 4359
-                }
-            ],
-            "result": "NOT_PLAYED"
-        },
-        {
-            "mainClip": {
-                "vid": "p7U7_lH3AnA",
-                "time": 8262,
-                "duration": 8,
-                "text": "I threw my ass. Ah.",
-                "index": 490,
-                "isMain": true
-            },
-            "clips": [
-                {
-                    "vid": "SuqcxJRHUHI",
-                    "time": 27574,
-                    "duration": 11,
-                    "text": "two soul like ass. Damn.",
-                    "index": 1876
-                },
-                {
-                    "vid": "p7U7_lH3AnA",
-                    "time": 8262,
-                    "duration": 12,
-                    "text": "I threw my ass. Ah.",
-                    "index": 490,
-                    "isMain": true
-                },
-                {
-                    "vid": "GBB-TkXYz1o",
-                    "time": 34318,
-                    "duration": 12,
-                    "text": "you leave my ass alone? Please.",
-                    "index": 1257
-                }
-            ],
-            "result": "NOT_PLAYED"
-        },
-        {
-            "mainClip": {
-                "vid": "6Wb2V7PED08",
-                "time": 1209,
-                "duration": 7,
-                "text": "fat ass? Oh.",
-                "index": 1589,
-                "isMain": true
-            },
-            "clips": [
-                {
-                    "vid": "Oc346mt07UE",
-                    "time": 23465,
-                    "duration": 4,
-                    "text": "pies in my ass. Yum, yum. Yeah, ",
-                    "index": 684
-                },
-                {
-                    "vid": "6Wb2V7PED08",
-                    "time": 1209,
-                    "duration": 9,
-                    "text": "fat ass? Oh.",
-                    "index": 1589,
-                    "isMain": true
-                },
-                {
-                    "vid": "jj65amhegnA",
-                    "time": 19441,
-                    "duration": 6,
-                    "text": "just kicked your ass like what what what ",
-                    "index": 4851
-                }
-            ],
-            "result": "NOT_PLAYED"
-        },
     ],
 }
