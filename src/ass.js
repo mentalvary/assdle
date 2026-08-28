@@ -23,6 +23,9 @@ const TITLE_REACTIONS = [
     ["rv there yet", 'media/rvhumping.webp'],
     ["gollum", 'media/pogollum.webp'],
     ["kingdom come", 'media/henrysmash.webp'],
+    ["lucky tower", 'media/princess.webp'],
+    ["harry potter", 'media/ps1ron.png'],
+    ["resident evil 4", 'media/leondance.webp'],    
 ]
 // #endregion
 
