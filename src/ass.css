@@ -315,3 +315,8 @@ section {
     height: 6px;
     background-color: lightgray;
 }
+
+#title-reaction {
+    max-width: 72px;
+    max-height: 64px;
+}

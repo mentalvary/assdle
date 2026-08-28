@@ -7,6 +7,23 @@ const STATE_SHOWING_PREVIEW = 'SHOWING_PREVIEW';
 const STATE_CHOOSING = 'CHOOSING';
 const STATE_SHOWING_ASS = 'SHOWING_ASS';
 const STATE_ROUND_RESULT = 'ROUND_RESULT';
+const TITLE_REACTIONS = [
+    ["garfield", 'media/garflex.webp'],
+    ["permadeath", 'media/pepew.webp'],
+    ["randomizer", 'media/pepew.webp'],
+    ["reforged", 'media/pepew.webp'],
+    ["the last of us", 'media/chatting.webp'],
+    ["stellar blade", 'media/lookege.webp'],
+    ["clair obscur", 'media/esquie.webp'],
+    ["incomplete playthrough", 'media/flushed.webp'],
+    ["first impressions", 'media/flushed.webp'],
+    ["sharks and minnows", 'media/soyhowl.webp'],
+    ["sea of thieves", 'media/soyhowl.webp'],
+    ["still wakes the deep", 'media/soyhowl.webp'],
+    ["rv there yet", 'media/rvhumping.webp'],
+    ["gollum", 'media/pogollum.webp'],
+    ["kingdom come", 'media/henrysmash.webp'],
+]
 // #endregion
 
 // #region game state
@@ -51,6 +68,7 @@ let dailyCountdown;
 let reportBtn;
 let choiceBtns;
 let countdownBar;
+let titleReaction;
 // #endregion
 
 // #region init
@@ -101,6 +119,9 @@ function onPreviewPlayerStateChange(event) {
     if (event.data === YT.PlayerState.ENDED && previewPlayerPrevState !== -1) {
         startChoosing();
     }
+    if (event.data === YT.PlayerState.PLAYING) {
+        showTitleReaction(event.target.getVideoData().title)
+    }
 
     previewPlayerPrevState = event.data;
 }
@@ -149,7 +170,7 @@ function initWebElements() {
             choose(null, TIMEOUT_CHOICE);
         }
     });
-
+    titleReaction = document.getElementById("title-reaction");
 }
 
 // #endregion init
@@ -281,6 +302,7 @@ function startRound(round) {
 
     hide(assPlayerContainer);
     show(previewPlayerContainer);
+    hide(titleReaction);
     stopCountdownBar();
 
     previewPlayer.loadVideoById({
@@ -308,6 +330,20 @@ function startRound(round) {
     choice3.value = '...' + round.clips[2].text + '...';
     num.textContent = `Clip #${round.mainClip.index + 1} / ${activeClipList.length}`;
     hide(link);
+}
+
+function showTitleReaction(title) {
+    if (!title) return;
+    const titleLower = title.toLowerCase();
+    const reaction = TITLE_REACTIONS.find(r => titleLower.includes(r[0]));
+    if (reaction) {
+        const newSrc = reaction[1];
+        if (titleReaction.src !== newSrc) {
+            titleReaction.src = '';
+            titleReaction.src = newSrc;
+        }
+        show(titleReaction);
+    }
 }
 
 function startChoosing() {
@@ -367,6 +403,7 @@ function endRound() {
     changeState(STATE_ROUND_RESULT);
     trackRoundResult(choicePicked !== TIMEOUT_CHOICE && currentRound.clips[choicePicked].isMain);
 
+    hide(titleReaction);
     show(next);
 
     link.href = `https://youtu.be/${currentRound.mainClip.vid}?t=${currentRound.mainClip.time - 10}`;
