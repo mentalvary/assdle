@@ -20,6 +20,7 @@
         <script src="dailies.js" defer></script>
         <script src="ass.js" defer></script>
         <script src="https://www.youtube.com/iframe_api" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/tmi.js/dist/tmi.min.js"></script>
     </head>
     <body>
         <header>
@@ -34,6 +35,11 @@
                     <span class="hint">Expect some rounds to be <span class="highlight">wonky</span> because of scuffed Youtube subtitles.</span><br/>
                     <span class="hint">For best experience, use <span class="highlight">ad-free</span> Youtube (Premium or <i>other</i> options).</span><br/>
                     <span class="hint"><span class="highlight"><span id="intro-clip-count">____</span> clips</span> and counting.</span><br/>
+                </div>
+                <div>
+                    <br/><input type="checkbox" id="activate-voting" name="activate-voting" />
+                    <label for="activate-voting">Chat voting</label><br/>
+                    <i>(type 1, 2, or 3 in Elajjaz chat to vote. Streamer still has to choose.)</i>
                 </div>
                 <button class="nav-btn play-btn" onclick="startRegular()">Play</button>
                 <button id="start-daily-btn" class="nav-btn play-btn" onclick="startDaily()">Daily ass</button>
@@ -71,9 +77,18 @@
                     </div>
                     <div id="choice-container">
                         <div id="countdown-bar"></div>
-                        <input type="button" id="choice1" class="choice-btn" onclick="choose(this, 0)" />
-                        <input type="button" id="choice2" class="choice-btn" onclick="choose(this, 1)" />
-                        <input type="button" id="choice3" class="choice-btn" onclick="choose(this, 2)" />
+                        <div class="choice-btn-container">
+                            <button id="choice1" class="choice-btn" onclick="choose(this, 0)"><span></span></button>
+                            <span id="choice1-votes" class="choice-vote">a</span>
+                        </div>
+                        <div class="choice-btn-container">
+                            <button id="choice2" class="choice-btn" onclick="choose(this, 1)"><span></span></button>
+                            <span id="choice2-votes" class="choice-vote">a</span>
+                        </div>
+                        <div class="choice-btn-container">
+                            <button id="choice3" class="choice-btn" onclick="choose(this, 2)"><span></span></button>
+                            <span id="choice3-votes" class="choice-vote">a</span>
+                        </div>
                     </div>
                 </section>
             </section>

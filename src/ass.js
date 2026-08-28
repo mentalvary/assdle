@@ -25,7 +25,7 @@ const TITLE_REACTIONS = [
     ["kingdom come", 'media/henrysmash.webp'],
     ["lucky tower", 'media/princess.webp'],
     ["harry potter", 'media/ps1ron.png'],
-    ["resident evil 4", 'media/leondance.webp'],    
+    ["resident evil 4", 'media/leondance.webp'],
 ]
 // #endregion
 
@@ -47,6 +47,9 @@ let today;
 let tomorrow;
 let previewPlayerPrevState;
 let assPlayerPrevState;
+let votingActive;
+let chatClient;
+let roundVotes;
 // #endregion
 
 // #region web elements
@@ -70,6 +73,7 @@ let dailyResult;
 let dailyCountdown;
 let reportBtn;
 let choiceBtns;
+let choiceVotes;
 let countdownBar;
 let titleReaction;
 // #endregion
@@ -81,6 +85,7 @@ function onYouTubeIframeAPIReady() {
     debugAllowed = window.location.hostname === 'localhost';
     initPlayers();
     initWebElements();
+    initChatClient();
     loadDailyStats();
     document.getElementById('intro-clip-count').textContent = clips.length;
 }
@@ -167,6 +172,7 @@ function initWebElements() {
     startDailyBtn = document.getElementById("start-daily-btn");
     reportBtn = document.getElementById("report-btn");
     choiceBtns = Array.from(document.getElementsByClassName('choice-btn'));
+    choiceVotes = Array.from(document.getElementsByClassName('choice-vote'));
     countdownBar = document.getElementById("countdown-bar");
     countdownBar.addEventListener("transitionend", () => {
         if (gameState === STATE_CHOOSING) {
@@ -201,12 +207,15 @@ function startRegular() {
 function startGame(_rounds, clipList) {
     hide(introSection);
     show(gameSection);
+    votingActive = document.getElementById('activate-voting').checked;
     rounds = _rounds
     activeClipList = clipList
     console.log('starting game', rounds)
     roundIndex = 0
     wins = 0
     resetResultBoxes();
+
+    connectChat();
 
     if (debugAllowed && queryParams.get("vid") && queryParams.get("time")) {
         startRound(makeDebugRound(queryParams.get("vid"), parseInt(queryParams.get("time"))))
@@ -303,6 +312,8 @@ function startRound(round) {
     currentRound = round;
     choicePicked = -1;
 
+    startVoting();
+
     hide(assPlayerContainer);
     show(previewPlayerContainer);
     hide(titleReaction);
@@ -328,9 +339,9 @@ function startRound(round) {
 
     document.getElementById('result' + roundIndex).classList.add('picked')
 
-    choice1.value = '...' + round.clips[0].text + '...';
-    choice2.value = '...' + round.clips[1].text + '...';
-    choice3.value = '...' + round.clips[2].text + '...';
+    choice1.firstElementChild.textContent = '...' + round.clips[0].text + '...';
+    choice2.firstElementChild.textContent = '...' + round.clips[1].text + '...';
+    choice3.firstElementChild.textContent = '...' + round.clips[2].text + '...';
     num.textContent = `Clip #${round.mainClip.index + 1} / ${activeClipList.length}`;
     hide(link);
 }
@@ -402,7 +413,7 @@ function stopCountdownBar() {
 
 function endRound() {
     if (gameState !== STATE_SHOWING_ASS) return;
-
+    stopVoting();
     changeState(STATE_ROUND_RESULT);
     trackRoundResult(choicePicked !== TIMEOUT_CHOICE && currentRound.clips[choicePicked].isMain);
 
@@ -459,6 +470,8 @@ function endGame() {
         loadDailyStats();
         playingDaily = false;
     }
+
+    disconnectChat();
 }
 
 function reportClip() {
@@ -545,6 +558,56 @@ function generateDailyRounds(clipList) {
 }
 
 // #endregion daily
+
+// #region chat integration
+function initChatClient() {
+    chatClient = new tmi.Client({
+        channels: ['elajjaz']
+    });
+
+    chatClient.on('message', (channel, tags, message, self) => handleChatMessage(tags['display-name'], message));
+}
+
+function handleChatMessage(user, message) {
+    if (gameState !== STATE_SHOWING_PREVIEW && gameState !== STATE_CHOOSING) return;
+    if (message !== '1' && message !== '2' && message !== '3') return;
+
+    const voteIndex = parseInt(message);
+    currentRound.clips[voteIndex].votes++;
+    roundVotes++;
+    choiceVotes.forEach((e, i) => {
+        const percentage = Math.round(100 * currentRound.clips[i].votes / roundVotes);
+        e.textContent = `${percentage}%`;
+        choiceBtns[i].style.setProperty("--vote-percent", `${percentage}%`);
+    });
+}
+
+function connectChat() {
+    if (!votingActive) return;
+    chatClient.connect();
+}
+
+function disconnectChat() {
+    if (!votingActive) return;
+    chatClient.disconnect();
+}
+
+function startVoting() {
+    choiceVotes.forEach(e => e.textContent = '');
+    choiceBtns.forEach(e => {
+        e.style.setProperty("--vote-percent", '0%');
+        e.classList.add('voting')
+    });
+    roundVotes = 0;
+    currentRound.clips.forEach(c => c.votes = 0);
+}
+
+function stopVoting() {
+    choiceBtns.forEach(e => e.classList.remove('voting'));
+    choiceVotes.forEach(e => e.textContent = '');
+}
+
+// #endregion chat integration
 
 // #region helpers
 function getRandomInt(max, rng) {
