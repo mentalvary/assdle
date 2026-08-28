@@ -1,4 +1,182 @@
 const fixedDailies = {
+    "2026-08-29": [
+        {
+            "mainClip": {
+                "vid": "akrAE56Epo8",
+                "time": 6389,
+                "duration": 7,
+                "text": "You grab his ass.",
+                "index": 3627,
+                "isMain": true
+            },
+            "clips": [
+                {
+                    "vid": "akrAE56Epo8",
+                    "time": 6389,
+                    "duration": 11,
+                    "text": "You grab his ass.",
+                    "index": 3627,
+                    "isMain": true
+                },
+                {
+                    "vid": "vr7Yc9aaFAI",
+                    "time": 2258,
+                    "duration": 53,
+                    "text": "get your Rascal ass over here",
+                    "index": 8702
+                },
+                {
+                    "vid": "1eaWAZuNF_w",
+                    "time": 15474,
+                    "duration": 25,
+                    "text": "dude. [__] gimmick ass smoke bomb. Crazy.",
+                    "index": 3938
+                }
+            ],
+            "result": "NOT_PLAYED"
+        },
+        {
+            "mainClip": {
+                "vid": "QKVu4e-9xmk",
+                "time": 29187,
+                "duration": 3,
+                "text": "I failed my ass a",
+                "index": 6719,
+                "isMain": true
+            },
+            "clips": [
+                {
+                    "vid": "yper5HVMNUw",
+                    "time": 21715,
+                    "duration": 5,
+                    "text": "Ain't no hidden ass door here. Beach",
+                    "index": 4694
+                },
+                {
+                    "vid": "R9pACZjcRQE",
+                    "time": 20994,
+                    "duration": 3,
+                    "text": "got my absolute ass destroyed last time I ",
+                    "index": 7790
+                },
+                {
+                    "vid": "QKVu4e-9xmk",
+                    "time": 29187,
+                    "duration": 3,
+                    "text": "I failed my ass a",
+                    "index": 6719,
+                    "isMain": true
+                }
+            ],
+            "result": "NOT_PLAYED"
+        },
+        {
+            "mainClip": {
+                "vid": "PgLdioH1iNc",
+                "time": 10671,
+                "duration": 5,
+                "text": "You suck ass at Garf, dude. You're ",
+                "index": 1679,
+                "isMain": true
+            },
+            "clips": [
+                {
+                    "vid": "PgLdioH1iNc",
+                    "time": 10671,
+                    "duration": 5,
+                    "text": "You suck ass at Garf, dude. You're ",
+                    "index": 1679,
+                    "isMain": true
+                },
+                {
+                    "vid": "M9ev26ntXfs",
+                    "time": 2974,
+                    "duration": 2,
+                    "text": "kick his ass. I ain't kicking, ",
+                    "index": 5270
+                },
+                {
+                    "vid": "wHkhwK5PBXs",
+                    "time": 27482,
+                    "duration": 19,
+                    "text": "Flamethrower is so ass.  Even Even when ",
+                    "index": 208
+                }
+            ],
+            "result": "NOT_PLAYED"
+        },
+
+        {
+            "mainClip": {
+                "vid": "WTp2aEiCAK0",
+                "time": 582,
+                "duration": 8,
+                "text": "song sucks myega ass.",
+                "index": 33,
+                "isMain": true
+            },
+            "clips": [
+                {
+                    "vid": "WTp2aEiCAK0",
+                    "time": 582,
+                    "duration": 6,
+                    "text": "song sucks myega ass.",
+                    "index": 33,
+                    "isMain": true
+                },
+                {
+                    "vid": "8J5FQFT8rWQ",
+                    "time": 11010,
+                    "duration": 14,
+                    "text": "to drill his ass let's go oh my ",
+                    "index": 6186
+                },
+                {
+                    "vid": "rg2jUX_v1ug",
+                    "time": 18211,
+                    "duration": 4,
+                    "text": "Slabs for my ass.  And then I'll ",
+                    "index": 855
+                }
+            ],
+            "result": "NOT_PLAYED"
+        },
+        {
+            "mainClip": {
+                "vid": "C2xiUu4Zlpg",
+                "time": 18235,
+                "duration": 8,
+                "text": "right up the ass. This is",
+                "index": 3554,
+                "isMain": true
+            },
+            "clips": [
+                {
+                    "vid": "6f0K0L7DVmE",
+                    "time": 15459,
+                    "duration": 5,
+                    "text": "tough ass wall. I got to ",
+                    "index": 1975
+                },
+                {
+                    "vid": "C2xiUu4Zlpg",
+                    "time": 18235,
+                    "duration": 4,
+                    "text": "right up the ass. This is",
+                    "index": 3554,
+                    "isMain": true
+                },
+                {
+                    "vid": "0E2DHFl7sRE",
+                    "time": 2938,
+                    "duration": 6,
+                    "text": "coming for that ass. Let's go.",
+                    "index": 922
+                }
+            ],
+            "result": "NOT_PLAYED"
+        }
+    ],
     "2026-08-28": [
         {
             "mainClip": {
@@ -175,182 +353,5 @@ const fixedDailies = {
             ],
             "result": "NOT_PLAYED"
         },
-    ],
-    "2026-08-27": [
-        {
-            "mainClip": {
-                "vid": "1HJoOLaGhzE",
-                "time": 7064,
-                "duration": 7,
-                "text": "plank in my ass oh my God",
-                "index": 7992,
-                "isMain": true
-            },
-            "clips": [
-                {
-                    "vid": "ZODPQFJWpqk",
-                    "time": 12448,
-                    "duration": 10,
-                    "text": "stabbed in the ass by orstein and I ",
-                    "index": 5817
-                },
-                {
-                    "vid": "1HJoOLaGhzE",
-                    "time": 7064,
-                    "duration": 7,
-                    "text": "plank in my ass oh my God",
-                    "index": 7992,
-                    "isMain": true
-                },
-                {
-                    "vid": "m33F2LZNgsA",
-                    "time": 13273,
-                    "duration": 5,
-                    "text": "like that. Goo ass.",
-                    "index": 8520
-                }
-            ],
-            "result": "NOT_PLAYED"
-        },
-        {
-            "mainClip": {
-                "vid": "dPAsvwxw4ys",
-                "time": 10951,
-                "duration": 6,
-                "text": "gonna burn my ass I gotta go faster",
-                "index": 8592,
-                "isMain": true
-            },
-            "clips": [
-                {
-                    "vid": "SOZHY_e7ozY",
-                    "time": 4412,
-                    "duration": 11,
-                    "text": "Just break his ass. HOLY.",
-                    "index": 3764
-                },
-                {
-                    "vid": "dPAsvwxw4ys",
-                    "time": 10951,
-                    "duration": 6,
-                    "text": "gonna burn my ass I gotta go faster",
-                    "index": 8592,
-                    "isMain": true
-                },
-                {
-                    "vid": "CexocQ9MrbA",
-                    "time": 9666,
-                    "duration": 4,
-                    "text": "I'm getting my ass handed to me just",
-                    "index": 1026
-                }
-            ],
-            "result": "NOT_PLAYED"
-        },
-        {
-            "mainClip": {
-                "vid": "TgPjTYy_DmM",
-                "time": 22615,
-                "duration": 4,
-                "text": "with uh my ass dude I was",
-                "index": 1234,
-                "isMain": true
-            },
-            "clips": [
-                {
-                    "vid": "BaLSG_mAH6E",
-                    "time": 767,
-                    "duration": 4,
-                    "text": "old ass games all right we're ",
-                    "index": 8284
-                },
-                {
-                    "vid": "TgPjTYy_DmM",
-                    "time": 22615,
-                    "duration": 4,
-                    "text": "with uh my ass dude I was",
-                    "index": 1234,
-                    "isMain": true
-                },
-                {
-                    "vid": "MZrUDCX7mEY",
-                    "time": 8314,
-                    "duration": 2,
-                    "text": "Move it, fat ass.",
-                    "index": 4064
-                }
-            ],
-            "result": "NOT_PLAYED"
-        },
-        {
-            "mainClip": {
-                "vid": "xycEp0h86xc",
-                "time": 2098,
-                "duration": 7,
-                "text": "daily in the ass. [Music]",
-                "index": 3741,
-                "isMain": true
-            },
-            "clips": [
-                {
-                    "vid": "3srd1vfX7pc",
-                    "time": 112,
-                    "duration": 11,
-                    "text": "Oh, an ass in my ass, of ",
-                    "index": 2925
-                },
-                {
-                    "vid": "0cyKc21rmeU",
-                    "time": 27062,
-                    "duration": 2,
-                    "text": "is this dank ass place?",
-                    "index": 3266
-                },
-                {
-                    "vid": "xycEp0h86xc",
-                    "time": 2098,
-                    "duration": 10,
-                    "text": "daily in the ass. [Music]",
-                    "index": 3741,
-                    "isMain": true
-                }
-            ],
-            "result": "NOT_PLAYED"
-        },
-        {
-            "mainClip": {
-                "vid": "sUWJBUezcNw",
-                "time": 23438,
-                "duration": 8,
-                "text": "the roof is ass, the floor is ",
-                "index": 2026,
-                "isMain": true
-            },
-            "clips": [
-                {
-                    "vid": "sUWJBUezcNw",
-                    "time": 23438,
-                    "duration": 21,
-                    "text": "the roof is ass, the floor is ",
-                    "index": 2026,
-                    "isMain": true
-                },
-                {
-                    "vid": "OzReXz5-b_4",
-                    "time": 167,
-                    "duration": 2,
-                    "text": "don't get your ass over here okay that ",
-                    "index": 8506
-                },
-                {
-                    "vid": "2zDlC27Kbos",
-                    "time": 34089,
-                    "duration": 18,
-                    "text": "25 it's ass though",
-                    "index": 5244
-                }
-            ],
-            "result": "NOT_PLAYED"
-        }
     ],
 }
