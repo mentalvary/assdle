@@ -50,6 +50,7 @@ let assPlayerPrevState;
 let votingActive;
 let chatClient;
 let roundVotes;
+let chatWins;
 // #endregion
 
 // #region web elements
@@ -213,6 +214,7 @@ function startGame(_rounds, clipList) {
     console.log('starting game', rounds)
     roundIndex = 0
     wins = 0
+    chatWins = 0;
     resetResultBoxes();
 
     connectChat();
@@ -394,6 +396,7 @@ function choose(ele, index) {
     hide(previewPlayerContainer);
     show(assPlayerContainer);
     toggleChoiceButtons(false);
+    stopVoting();
     assPlayer.playVideo();
 }
 
@@ -413,7 +416,6 @@ function stopCountdownBar() {
 
 function endRound() {
     if (gameState !== STATE_SHOWING_ASS) return;
-    stopVoting();
     changeState(STATE_ROUND_RESULT);
     trackRoundResult(choicePicked !== TIMEOUT_CHOICE && currentRound.clips[choicePicked].isMain);
 
@@ -454,6 +456,9 @@ function endGame() {
     hide(gameSection)
     show(introSection);
     endResults.textContent = `You got ${wins} / ${NUM_ROUNDS} asses right.`;
+    if (votingActive) {
+        endResults.textContent += ` And chat got ${chatWins} / ${NUM_ROUNDS} asses.`;
+    }
     endResults.classList.remove('good', 'bad');
     if (wins >= MIN_WINS_FOR_GOOD) {
         endResults.classList.add('good');
@@ -605,6 +610,22 @@ function startVoting() {
 function stopVoting() {
     choiceBtns.forEach(e => e.classList.remove('voting'));
     choiceVotes.forEach(e => e.textContent = '');
+
+    let maxVotes = 0;
+    let chatPick = -1;
+    currentRound.clips.forEach((c, i) => {
+        if (c.votes > maxVotes) {
+            maxVotes = c.votes;
+            chatPick = i;
+        }
+    });
+
+    if (chatPick > -1) {
+        choiceVotes[chatPick].textContent = "chat";
+        if (currentRound.clips[chatPick].isMain) {
+            chatWins++;
+        }
+    }
 }
 
 // #endregion chat integration
