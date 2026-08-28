@@ -2,7 +2,8 @@
 const NUM_ROUNDS = 5;
 const MIN_WINS_FOR_GOOD = 4;
 const TIMEOUT_CHOICE = 99;
-const CHOOSE_TIME_MILLIS = 7000;
+const DEFAULT_CHOOSE_TIME_MILLIS = 7000;
+const CHAT_CHOOSE_TIME_MILLIS = 12000;
 const STATE_SHOWING_PREVIEW = 'SHOWING_PREVIEW';
 const STATE_CHOOSING = 'CHOOSING';
 const STATE_SHOWING_ASS = 'SHOWING_ASS';
@@ -404,7 +405,7 @@ function startCountdownBar() {
     countdownBar.style.transition = "none";
     countdownBar.style.width = "100%";
     countdownBar.offsetWidth; // force layout/reflow
-    countdownBar.style.transition = `width ${CHOOSE_TIME_MILLIS}ms linear`;
+    countdownBar.style.transition = `width ${votingActive ? CHAT_CHOOSE_TIME_MILLIS : DEFAULT_CHOOSE_TIME_MILLIS}ms linear`;
     countdownBar.style.width = "0%";
 }
 
