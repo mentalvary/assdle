@@ -1,6 +1,7 @@
 // #region constants
 const NUM_ROUNDS = 5;
 const MIN_WINS_FOR_GOOD = 4;
+const NO_CHOICE = -1;
 const TIMEOUT_CHOICE = 99;
 const DEFAULT_CHOOSE_TIME_MILLIS = 7000;
 const CHAT_CHOOSE_TIME_MILLIS = 12000;
@@ -48,7 +49,7 @@ let today;
 let tomorrow;
 let previewPlayerPrevState;
 let assPlayerPrevState;
-let votingActive;
+let votingEnabled;
 let chatClient;
 let roundVotes;
 let usersWhoVoted;
@@ -210,7 +211,7 @@ function startRegular() {
 function startGame(_rounds, clipList) {
     hide(introSection);
     show(gameSection);
-    votingActive = document.getElementById('activate-voting').checked;
+    votingEnabled = document.getElementById('enable-voting').checked;
     rounds = _rounds
     activeClipList = clipList
     console.log('starting game', rounds)
@@ -314,7 +315,7 @@ function startRound(round) {
     console.log('starting round', round);
     changeState(STATE_SHOWING_PREVIEW);
     currentRound = round;
-    choicePicked = -1;
+    choicePicked = NO_CHOICE;
 
     startVoting();
 
@@ -388,16 +389,25 @@ function skipRound() {
 }
 
 function choose(ele, index) {
-    changeState(STATE_SHOWING_ASS);
-    stopCountdownBar();
     if (ele) {
         ele.classList.add('picked');
     }
-    choicePicked = index;
+    if (choicePicked === NO_CHOICE) {
+        choicePicked = index;
+    }
+
     hide(skip);
+    toggleChoiceButtons(false);
+    if (!votingEnabled || index === TIMEOUT_CHOICE) {
+        endChoosing();
+    }
+}
+
+function endChoosing() {
+    changeState(STATE_SHOWING_ASS);
+    stopCountdownBar();
     hide(previewPlayerContainer);
     show(assPlayerContainer);
-    toggleChoiceButtons(false);
     stopVoting();
     assPlayer.playVideo();
 }
@@ -406,7 +416,7 @@ function startCountdownBar() {
     countdownBar.style.transition = "none";
     countdownBar.style.width = "100%";
     countdownBar.offsetWidth; // force layout/reflow
-    countdownBar.style.transition = `width ${votingActive ? CHAT_CHOOSE_TIME_MILLIS : DEFAULT_CHOOSE_TIME_MILLIS}ms linear`;
+    countdownBar.style.transition = `width ${votingEnabled ? CHAT_CHOOSE_TIME_MILLIS : DEFAULT_CHOOSE_TIME_MILLIS}ms linear`;
     countdownBar.style.width = "0%";
 }
 
@@ -419,7 +429,7 @@ function stopCountdownBar() {
 function endRound() {
     if (gameState !== STATE_SHOWING_ASS) return;
     changeState(STATE_ROUND_RESULT);
-    trackRoundResult(choicePicked !== TIMEOUT_CHOICE && currentRound.clips[choicePicked].isMain);
+    trackRoundResult(choicePicked !== TIMEOUT_CHOICE && choicePicked !== NO_CHOICE && currentRound.clips[choicePicked].isMain);
 
     hide(titleReaction);
     show(next);
@@ -458,7 +468,7 @@ function endGame() {
     hide(gameSection)
     show(introSection);
     endResults.textContent = `You got ${wins} / ${NUM_ROUNDS} asses right.`;
-    if (votingActive) {
+    if (votingEnabled) {
         endResults.textContent += ` And chat got ${chatWins} / ${NUM_ROUNDS} asses.`;
     }
     endResults.classList.remove('good', 'bad');
@@ -592,12 +602,12 @@ function handleChatMessage(user, message) {
 }
 
 function connectChat() {
-    if (!votingActive) return;
+    if (!votingEnabled) return;
     chatClient.connect();
 }
 
 function disconnectChat() {
-    if (!votingActive) return;
+    if (!votingEnabled) return;
     chatClient.disconnect();
 }
 

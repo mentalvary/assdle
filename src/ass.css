@@ -365,3 +365,31 @@ section {
     max-width: 72px;
     max-height: 64px;
 }
+
+input[type=checkbox]
+{
+    /* https://stackoverflow.com/a/10415275/32727753 */
+    -ms-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    transform: scale(1.5);
+    padding: 10px;
+    margin-right: 0.5em;
+}
+
+label {
+    font-size: 1.3em;
+    line-height: 1.8em;
+}
+
+.new-tag {
+    vertical-align: super;
+    background-color: greenyellow;
+    border-radius: 4px;
+    padding: 0px 2px;
+    font-size: 0.5em;
+    color: black;
+    margin-left: 4px;
+    opacity: 0.5;
+}
