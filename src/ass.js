@@ -591,7 +591,7 @@ function handleChatMessage(user, message) {
     if (usersWhoVoted[user]) return;
 
     usersWhoVoted[user] = true;
-    const voteIndex = parseInt(message);
+    const voteIndex = parseInt(message) - 1;
     currentRound.clips[voteIndex].votes++;
     roundVotes++;
     choiceVotes.forEach((e, i) => {

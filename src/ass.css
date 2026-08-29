@@ -189,7 +189,7 @@ section {
   position: absolute;
   inset: 0;
   width: var(--vote-percent);
-  background: #db0cf930;
+  background: #8c45f740;
   z-index: 0;
   transition: width 0.4s ease;
 }
