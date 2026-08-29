@@ -51,6 +51,7 @@ let assPlayerPrevState;
 let votingActive;
 let chatClient;
 let roundVotes;
+let usersWhoVoted;
 let chatWins;
 // #endregion
 
@@ -577,7 +578,9 @@ function initChatClient() {
 function handleChatMessage(user, message) {
     if (gameState !== STATE_SHOWING_PREVIEW && gameState !== STATE_CHOOSING) return;
     if (message !== '1' && message !== '2' && message !== '3') return;
+    if (usersWhoVoted[user]) return;
 
+    usersWhoVoted[user] = true;
     const voteIndex = parseInt(message);
     currentRound.clips[voteIndex].votes++;
     roundVotes++;
@@ -605,6 +608,7 @@ function startVoting() {
         e.classList.add('voting')
     });
     roundVotes = 0;
+    usersWhoVoted = {};
     currentRound.clips.forEach(c => c.votes = 0);
 }
 
