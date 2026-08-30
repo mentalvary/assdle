@@ -1,4 +1,200 @@
 const fixedDailies = {
+    "2026-08-30": [
+        {
+            "mainClip": {
+                "vid": "SfFTg-D8oRI",
+                "time": 14203,
+                "duration": 3,
+                "text": "guns up ass. Guns up",
+                "index": 895,
+                "isMain": true,
+                "votes": 0
+            },
+            "clips": [
+                {
+                    "vid": "W3P41SUzG84",
+                    "time": 8720,
+                    "duration": 8,
+                    "text": "both sukor major ass?",
+                    "index": 767,
+                    "votes": 0
+                },
+                {
+                    "vid": "Ecyy6WMeeLY",
+                    "time": 4397,
+                    "duration": 4,
+                    "text": "Get your ass back here.",
+                    "index": 7408,
+                    "votes": 0
+                },
+                {
+                    "vid": "SfFTg-D8oRI",
+                    "time": 14203,
+                    "duration": 3,
+                    "text": "guns up ass. Guns up",
+                    "index": 895,
+                    "isMain": true,
+                    "votes": 0
+                }
+            ],
+            "result": "NOT_PLAYED"
+        },
+        {
+            "mainClip": {
+                "vid": "HsE_mUyG_GI",
+                "time": 8415,
+                "duration": 7,
+                "text": "climb this dumb ass [__] building again.",
+                "index": 1147,
+                "isMain": true,
+                "votes": 0
+            },
+            "clips": [
+                {
+                    "vid": "HsE_mUyG_GI",
+                    "time": 8415,
+                    "duration": 18,
+                    "text": "climb this dumb ass [__] building again.",
+                    "index": 1147,
+                    "isMain": true,
+                    "votes": 0
+                },
+                {
+                    "vid": "hYqT4ZMwrXU",
+                    "time": 1890,
+                    "duration": 9,
+                    "text": "my ass is fine my ass ",
+                    "index": 8946,
+                    "votes": 0
+                },
+                {
+                    "vid": "OnzLmLcx8-w",
+                    "time": 58666,
+                    "duration": 11,
+                    "text": "Brimstone from their ass I believe it to ",
+                    "index": 7356,
+                    "votes": 0
+                }
+            ],
+            "result": "NOT_PLAYED"
+        },
+        {
+            "mainClip": {
+                "vid": "iApix6jjuJ8",
+                "time": 719,
+                "duration": 15,
+                "text": "also an ass why is my face ",
+                "index": 1234,
+                "isMain": true
+            },
+            "clips": [
+                {
+                    "vid": "BaLSG_mAH6E",
+                    "time": 767,
+                    "duration": 4,
+                    "text": "old ass games all right we're ",
+                    "index": 8284,
+                    "votes": 0
+                },
+                {
+                    "vid": "iApix6jjuJ8",
+                    "time": 719,
+                    "duration": 15,
+                    "text": "also an ass why is my face ",
+                    "index": 1234,
+                    "isMain": true,
+                    "votes": 0
+                },
+                {
+                    "vid": "MZrUDCX7mEY",
+                    "time": 8314,
+                    "duration": 2,
+                    "text": "Move it, fat ass.",
+                    "index": 4064,
+                    "votes": 0
+                }
+            ],
+            "result": "NOT_PLAYED"
+        },
+        {
+            "mainClip": {
+                "vid": "Su1PTX9fDDs",
+                "time": 9012,
+                "duration": 38,
+                "text": "let him get ass. No, no, no, ",
+                "index": 1994,
+                "isMain": true,
+                "votes": 0
+            },
+            "clips": [
+                {
+                    "vid": "uvTr7r2MoeA",
+                    "time": 6954,
+                    "duration": 11,
+                    "text": "gear is so ass. This is so ",
+                    "index": 4278,
+                    "votes": 0
+                },
+                {
+                    "vid": "RVYx8kFXhfg",
+                    "time": 8014,
+                    "duration": 3,
+                    "text": "up to Swedish ass right another one the ",
+                    "index": 6898,
+                    "votes": 0
+                },
+                {
+                    "vid": "Su1PTX9fDDs",
+                    "time": 9012,
+                    "duration": 38,
+                    "text": "let him get ass. No, no, no, ",
+                    "index": 1994,
+                    "isMain": true,
+                    "votes": 0
+                }
+            ],
+            "result": "NOT_PLAYED"
+        },
+        {
+            "mainClip": {
+                "vid": "nfHHHGelE8M",
+                "time": 1764,
+                "duration": 6,
+                "text": "sucked ass. So inferior to ",
+                "index": 3355,
+                "isMain": true,
+                "votes": 0
+            },
+            "clips": [
+                {
+                    "vid": "-abF-v5iQ00",
+                    "time": 4829,
+                    "duration": 6,
+                    "text": "This damn IKEA ass [__] Okay, be careful. ",
+                    "index": 2687,
+                    "votes": 0
+                },
+                {
+                    "vid": "nfHHHGelE8M",
+                    "time": 1764,
+                    "duration": 6,
+                    "text": "sucked ass. So inferior to ",
+                    "index": 3355,
+                    "isMain": true,
+                    "votes": 0
+                },
+                {
+                    "vid": "8onIQi0tmKs",
+                    "time": 24671,
+                    "duration": 2,
+                    "text": "it any less ass to",
+                    "index": 5346,
+                    "votes": 0
+                }
+            ],
+            "result": "NOT_PLAYED"
+        }
+    ],
     "2026-08-29": [
         {
             "mainClip": {
