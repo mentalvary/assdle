@@ -52,7 +52,7 @@ section {
     display: none !important;
 }
 
-#intro {
+#intro, .play-section {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -266,7 +266,7 @@ section {
     background-color: #0f1110;
     text-shadow: 2px 2px 2px black;
     padding: 0.3em 0.3em;
-    margin-top: 1em;
+    margin-top: 0.7em;
 }
 
 #skip {
@@ -294,6 +294,10 @@ section {
 .highlight {
     color: var(--pick-color);
     font-style: oblique;
+}
+
+.result-highlight {
+    color: var(--pick-color);
 }
 
 .lds-dual-ring {
@@ -379,7 +383,7 @@ input[type=checkbox]
 }
 
 label {
-    font-size: 1.3em;
+    font-size: 1.2em;
     line-height: 1.8em;
 }
 
@@ -392,4 +396,33 @@ label {
     color: black;
     margin-left: 4px;
     opacity: 0.5;
+}
+
+.options-section {
+    border: dashed 2px;
+    margin-top: 1em;
+    padding: 0em 1em;
+}
+
+.options-section > h3 {
+    text-align: left;
+    margin: 0;
+    margin-top: 0.5em;
+}
+
+.options-container {
+    margin-bottom: 1em;
+}
+
+.options-container > h3 {
+    margin: 0;
+    text-decoration: underline;
+}
+
+.hcg-select {
+    min-width: 30em;
+}
+
+.hcg-select-list {
+    text-align: left;
 }

@@ -15,12 +15,15 @@
 
         <link rel="stylesheet" href="ass.css">
 
+        <script src="vids.js" defer></script>
         <script src="clips.js" defer></script>
-        <script src="daily-clips-2026-09-04.js" defer></script>
+        <script src="daily-clips-2026-09-04.js" defer></script>        
         <script src="dailies.js" defer></script>
         <script src="ass.js" defer></script>
         <script src="https://www.youtube.com/iframe_api" defer></script>
         <script src="https://cdn.jsdelivr.net/npm/tmi.js/dist/tmi.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hcg-searchable-select@1/hcg-select.css">
+        <script src="https://cdn.jsdelivr.net/npm/hcg-searchable-select@1/hcg-select.js"></script>
     </head>
     <body>
         <header>
@@ -36,22 +39,50 @@
                     <span class="hint">For best experience, use <span class="highlight">ad-free</span> Youtube (Premium or <i>other</i> options).</span><br/>
                     <span class="hint"><span class="highlight"><span id="intro-clip-count">____</span> clips</span> and counting.</span><br/>
                 </div>
-                <div>
-                    <br/><input type="checkbox" id="enable-voting" name="enable-voting" />
-                    <label for="enable-voting">Chat voting</label><br/>
-                    <span class="hint">
-                        (<span class="highlight">type 1, 2, or 3</span> in Elajjaz chat to vote.<br/>
-                        Streamer still has to make his own choice.<br/>
-                        Slower countdown that always runs to the end.)
-                    </span>
-                </div>
-                <button class="nav-btn play-btn" onclick="startRegular()">Play</button>
-                <button id="start-daily-btn" class="nav-btn play-btn" onclick="startDaily()">Daily ass</button>
-                <div id="daily-result-container" class="hidden">
-                    <span id="daily-result">You got 5/5 daily asses.</span><br/>
-                    <span>Next daily in </span><span id="daily-countdown">00:10:51</span><br/>
-                    <button class="nav-btn" id="share-btn" onclick="shareDaily()">Share</button>
-                </div>
+
+                <section class="play-section">
+                    <button class="nav-btn play-btn" onclick="startRegular()">Play</button>
+                    <button id="start-daily-btn" class="nav-btn play-btn" onclick="startDaily()">Daily ass</button>
+                    <div id="daily-result-container" class="hidden">
+                        <span>You got <span class="result-highlight" id="daily-result">5/5</span> daily asses.</span>
+                        <span>Next daily in </span><span class="result-highlight" id="daily-countdown">00:10:51</span><br/>
+                        <button class="nav-btn" id="share-btn" onclick="shareDaily()">Share</button>
+                    </div>
+                </section>
+
+                <section class="options-section">
+                    <h3>Options</h3>
+                    <div class="options-container">
+                        <input type="checkbox" id="enable-voting" name="enable-voting" />
+                        <label for="enable-voting">Chat voting</label><br/>
+                        <span class="hint">
+                            (<span class="highlight">type 1, 2, or 3</span> in Elajjaz chat to vote.<br/>
+                            Streamer still has to make his own choice.<br/>
+                            Slower countdown that always runs to the end.)
+                        </span>
+                    </div>
+                    <div class="options-container">
+                        <select id="vod-select" ></select>
+                        <span class="hint">
+                            Only VODs with at least 5 asses.<br/>
+                            Missing VODs = missing Youtube subtitles (VOD may be too new)<br/>
+                            No assception (no assdle VODs except if part of another VOD)<br/>
+                            Ignored for daily.
+                        </span>
+                    </div>
+                    <div class="options-container">
+                        <h3>Timer</h3>
+                        <input type="radio" id="countdown-type-none" name="countdown-type" value="none" />
+                        <label for="countdown-type-none">No timer</label>
+                        <input type="radio" id="countdown-type-default" name="countdown-type" value="default" checked />
+                        <label for="countdown-type-default">Default</label>
+                        <input type="radio" id="countdown-type-speedrun" name="countdown-type" value="speedrun" />
+                        <label for="countdown-type-speedrun">Speedrun (2s)</label>
+                        <span class="hint">
+                            <br/>Ignored for chat voting.
+                        </span>
+                    </div>
+                </section>
             </section>
 
             <section id="game" class="hidden">

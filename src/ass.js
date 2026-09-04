@@ -5,6 +5,7 @@ const NO_CHOICE = -1;
 const TIMEOUT_CHOICE = 99;
 const DEFAULT_CHOOSE_TIME_MILLIS = 7000;
 const CHAT_CHOOSE_TIME_MILLIS = 12000;
+const SPEEDRUN_CHOOSE_TIME_MILLIS = 2000;
 const STATE_SHOWING_PREVIEW = 'SHOWING_PREVIEW';
 const STATE_CHOOSING = 'CHOOSING';
 const STATE_SHOWING_ASS = 'SHOWING_ASS';
@@ -54,6 +55,7 @@ let chatClient;
 let roundVotes;
 let usersWhoVoted;
 let chatWins;
+let countdownTime;
 // #endregion
 
 // #region web elements
@@ -80,6 +82,11 @@ let choiceBtns;
 let choiceVotes;
 let countdownBar;
 let titleReaction;
+let vodSelect;
+let enableVoting;
+let countdownTypeNone;
+let countdownTypeDefault;
+let countdownTypeSpeedrun;
 // #endregion
 
 // #region init
@@ -184,6 +191,25 @@ function initWebElements() {
         }
     });
     titleReaction = document.getElementById("title-reaction");
+
+    enableVoting = document.getElementById('enable-voting')
+
+    vodSelect = document.getElementById("vod-select");
+    const opts = vids.map(v => {
+        var opt = document.createElement('option');
+        opt.value = v["vid"];
+        opt.innerText = `${v['date']} - ${v['title']} (${v['asses']} asses)`;
+        return opt;
+    });
+    const noneOpt = document.createElement('option');
+    noneOpt.value = null;
+    noneOpt.innerText = '- Play a specific VOD -';
+    vodSelect.replaceChildren(noneOpt, ...opts);
+    hcgSelect(vodSelect);
+
+    countdownTypeNone = document.getElementById('countdown-type-none');
+    countdownTypeDefault = document.getElementById('countdown-type-default');
+    countdownTypeSpeedrun = document.getElementById('countdown-type-speedrun');
 }
 
 // #endregion init
@@ -204,20 +230,38 @@ function startDaily() {
 
 function startRegular() {
     playingDaily = false;
-    const _rounds = generateRounds(NUM_ROUNDS, clips);
-    startGame(_rounds, clips);
+
+    let gameClips = clips;
+    const selectedVod = vodSelect.options[vodSelect.selectedIndex].value;
+    if (selectedVod && selectedVod !== 'null') {
+        gameClips = clips.filter(c => c.vid === selectedVod);
+    }
+
+    const _rounds = generateRounds(NUM_ROUNDS, gameClips);    
+    startGame(_rounds, gameClips);
 }
 
 function startGame(_rounds, clipList) {
     hide(introSection);
     show(gameSection);
-    votingEnabled = document.getElementById('enable-voting').checked;
+    votingEnabled = enableVoting.checked;
     rounds = _rounds
     activeClipList = clipList
     console.log('starting game', rounds)
     roundIndex = 0
     wins = 0
     chatWins = 0;
+
+    if (!votingEnabled && countdownTypeNone.checked) {
+        countdownTime = -1;
+    }
+    else if (!votingEnabled && countdownTypeSpeedrun.checked) {
+        countdownTime = SPEEDRUN_CHOOSE_TIME_MILLIS;
+    }
+    else {
+        countdownTime = votingEnabled ? CHAT_CHOOSE_TIME_MILLIS : DEFAULT_CHOOSE_TIME_MILLIS;
+    }
+
     resetResultBoxes();
 
     connectChat();
@@ -274,23 +318,29 @@ function resetResultBoxes() {
     }
 }
 
-function generateRounds(numRounds, clipList, rng = null) {
+function generateRounds(numRounds, clipList, rng = null) {    
+    // Make sure main clips don't repeat, and within a round the options don't repeat
+    // But across rounds, the options may repeat. This is so we can generate a full set of rounds
+    // even if there is only numRounds clips.
     const generatedRounds = [];
-    const usedClips = [];
+    const usedMainClips = [];
     for (let i = 0; i < numRounds; i++) {
+        const mainClip = {
+            ...pickRandomClip(usedMainClips, clipList, rng),
+            isMain: true,
+        }
+
+        const usedClips = [clipId(mainClip)];
         const roundClips = [
-            {
-                ...pickRandomClip(usedClips, clipList, rng),
-                isMain: true,
-            },
+            mainClip,
             pickRandomClip(usedClips, clipList, rng),
             pickRandomClip(usedClips, clipList, rng),
         ]
         generatedRounds.push({
-            mainClip: roundClips[0],
+            mainClip: mainClip,
             clips: shuffle(roundClips, rng),
             result: 'NOT_PLAYED',
-        });
+        });        
     }
     return generatedRounds
 }
@@ -302,13 +352,17 @@ function pickRandomClip(usedClips, clipList, rng) {
         chosenIndex = getRandomInt(clipList.length, rng);
         chosenClip = clipList[chosenIndex];
     }
-    while (usedClips.includes(chosenClip))
+    while (usedClips.includes(clipId(chosenClip)))
 
-    usedClips.push(chosenClip)
+    usedClips.push(clipId(chosenClip))
     return {
         ...chosenClip,
         index: chosenIndex
     }
+}
+
+function clipId(clip) {
+    return `${clip["vid"]}/${clip["time"]}`
 }
 
 function startRound(round) {
@@ -413,10 +467,13 @@ function endChoosing() {
 }
 
 function startCountdownBar() {
+    if (countdownTime < 0) {
+        return;
+    }
     countdownBar.style.transition = "none";
     countdownBar.style.width = "100%";
     countdownBar.offsetWidth; // force layout/reflow
-    countdownBar.style.transition = `width ${votingEnabled ? CHAT_CHOOSE_TIME_MILLIS : DEFAULT_CHOOSE_TIME_MILLIS}ms linear`;
+    countdownBar.style.transition = `width ${countdownTime}ms linear`;
     countdownBar.style.width = "0%";
 }
 
@@ -514,7 +571,7 @@ function loadDailyStats() {
 
     if (lastDaily === today) {
         startDailyBtn.disabled = true;
-        dailyResult.textContent = `You got ${dailyWins}/${NUM_ROUNDS} daily asses.`;
+        dailyResult.textContent = `${dailyWins}/${NUM_ROUNDS}`;
         updateDailyCountdown();
         setInterval(updateDailyCountdown, 200);
         show(dailyResultContainer);
