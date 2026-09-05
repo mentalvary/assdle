@@ -9779,4 +9779,6 @@ const clips = [
 {"vid": "WPVs5SejgoU", "time": 15142, "duration": 5, "text": "are kind of ass in this."},
 {"vid": "WPVs5SejgoU", "time": 19074, "duration": 9, "text": "here will be ass."},
 {"vid": "WPVs5SejgoU", "time": 19501, "duration": 5, "text": "entire ass. Yeah. I mean, "},
+{"vid": "NEpPe42S2HM", "time": 371, "duration": 6, "text": "still. Oh, my ass."},
+{"vid": "NEpPe42S2HM", "time": 4002, "duration": 4, "text": "Shield 2 an ass in my ass kind "},
 ];
