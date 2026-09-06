@@ -1,4 +1,173 @@
 const fixedDailies = {
+    "2026-09-07": [
+        {
+            "mainClip": {
+                "vid": "8jexcIeYB34",
+                "time": 7426,
+                "duration": 11,
+                "text": "can see her ass when you hit her",
+                "index": 4876,
+                "isMain": true,
+                "votes": 0
+            },
+            "clips": [
+                {
+                    "vid": "OSElPuAgXpk",
+                    "time": 23490,
+                    "duration": 2,
+                    "text": "ass, too. [music] What ",
+                    "index": 2307,
+                    "votes": 0
+                },
+                {
+                    "vid": "8jexcIeYB34",
+                    "time": 7426,
+                    "duration": 11,
+                    "text": "can see her ass when you hit her",
+                    "index": 4876,
+                    "isMain": true,
+                    "votes": 0
+                },
+                { "vid": "tVX-mmXbK4o", "time": 2260, "duration": 3, "text": "Castlevania 2D game ass or is that a", }
+            ],
+            "result": "NOT_PLAYED"
+        },
+        {
+            "mainClip": {
+                "vid": "y3VhuCdRxWo",
+                "time": 2230,
+                "duration": 2,
+                "text": "of ass in my ass. Oh, ",
+                "index": 2607,
+                "isMain": true,
+                "votes": 0
+            },
+            "clips": [
+                { "vid": "mJEHRVyQhoQ", "time": 29769, "duration": 6, "text": "man, it's so ass. Oh," },
+                {
+                    "vid": "y3VhuCdRxWo",
+                    "time": 2230,
+                    "duration": 2,
+                    "text": "of ass in my ass. Oh, ",
+                    "index": 2607,
+                    "isMain": true,
+                    "votes": 0
+                },
+                {
+                    "vid": "zGB8fJGefCc",
+                    "time": 586,
+                    "duration": 8,
+                    "text": "this is so ass wha how are you ",
+                    "index": 9608,
+                    "votes": 0
+                }
+            ],
+            "result": "NOT_PLAYED"
+        },
+        {
+            "mainClip": {
+                "vid": "iZfD4f_fUu8",
+                "time": 2748,
+                "duration": 20,
+                "text": "Eternal was [__] ass. I don't agree ",
+                "index": 521,
+                "isMain": true,
+                "votes": 0
+            },
+            "clips": [
+                {
+                    "vid": "THfPb_nYNLs",
+                    "time": 18000,
+                    "duration": 4,
+                    "text": "you ZA my ass I'll",
+                    "index": 8100,
+                    "votes": 0
+                },
+                {
+                    "vid": "iZfD4f_fUu8",
+                    "time": 2748,
+                    "duration": 20,
+                    "text": "Eternal was [__] ass. I don't agree ",
+                    "index": 521,
+                    "isMain": true,
+                    "votes": 0
+                },
+                {"vid": "EmjmGsVn-9Y", "time": 11582, "duration": 47, "text": "cannot jump my ass."},
+            ],
+            "result": "NOT_PLAYED"
+        },
+        {
+            "mainClip": {
+                "vid": "PybIooSB7Ow",
+                "time": 7778,
+                "duration": 4,
+                "text": "this to my ass.",
+                "index": 1923,
+                "isMain": true,
+                "votes": 0
+            },
+            "clips": [
+                {
+                    "vid": "quYui5vDTg0",
+                    "time": 5283,
+                    "duration": 2,
+                    "text": "not wrong with ass it was",
+                    "index": 7292,
+                    "votes": 0
+                },
+                {
+                    "vid": "PybIooSB7Ow",
+                    "time": 7778,
+                    "duration": 4,
+                    "text": "this to my ass.",
+                    "index": 1923,
+                    "isMain": true,
+                    "votes": 0
+                },
+                { "vid": "PxayNvWc10s", "time": 29461, "duration": 9, "text": "shotgun heals no ass.  I have no " },
+            ],
+            "result": "NOT_PLAYED"
+        },
+        {
+            "mainClip": {
+                "vid": "FYxxPy-FjiI",
+                "time": 31370,
+                "duration": 19,
+                "text": "every word into ass. This is so ",
+                "index": 7520,
+                "isMain": true,
+                "votes": 0
+            },
+            "clips": [
+                {
+                    "vid": "39LD4c_Mi2o",
+                    "time": 403,
+                    "duration": 3,
+                    "text": "We're going to ass. Yeah, give us ",
+                    "index": 1184,
+                    "votes": 0
+                },
+                {
+                    "vid": "FYxxPy-FjiI",
+                    "time": 31370,
+                    "duration": 19,
+                    "text": "every word into ass. This is so ",
+                    "index": 7520,
+                    "isMain": true,
+                    "votes": 0
+                },
+                {
+                    "vid": "mh_x9zMEFwQ",
+                    "time": 19857,
+                    "duration": 4,
+                    "text": "have the um ass.",
+                    "index": 183,
+                    "votes": 0
+                }
+            ],
+            "result": "NOT_PLAYED"
+        },
+    ],
     "2026-09-06": [
         {
             "mainClip": {
@@ -195,202 +364,5 @@ const fixedDailies = {
             ],
             "result": "NOT_PLAYED"
         }
-    ],
-    "2026-09-05": [
-        {
-            "mainClip": {
-                "vid": "1--SFAkcCjs",
-                "time": 9032,
-                "duration": 10,
-                "text": "shoved in my ass.",
-                "index": 1498,
-                "isMain": true,
-                "votes": 0
-            },
-            "clips": [
-                {
-                    "vid": "7Tds3r23VgU",
-                    "time": 7352,
-                    "duration": 3,
-                    "text": "comfortable so your ass won't hurt so you ",
-                    "index": 4866,
-                    "votes": 0
-                },
-                {
-                    "vid": "vS5riglxbnk",
-                    "time": 418,
-                    "duration": 3,
-                    "text": "Ants in my ass. Thanks for the ",
-                    "index": 935,
-                    "votes": 0
-                },
-                {
-                    "vid": "1--SFAkcCjs",
-                    "time": 9032,
-                    "duration": 10,
-                    "text": "shoved in my ass.",
-                    "index": 1498,
-                    "isMain": true,
-                    "votes": 0
-                }
-            ],
-            "result": "NOT_PLAYED"
-        },
-        {
-            "mainClip": {
-                "vid": "nl62PLIElqE",
-                "time": 1277,
-                "duration": 3,
-                "text": "Anonymous give Charlie's ass what's up thanks and ",
-                "index": 8858,
-                "isMain": true,
-                "votes": 0
-            },
-            "clips": [
-                {
-                    "vid": "nl62PLIElqE",
-                    "time": 1277,
-                    "duration": 3,
-                    "text": "Anonymous give Charlie's ass what's up thanks and ",
-                    "index": 8858,
-                    "isMain": true,
-                    "votes": 0
-                },
-                {
-                    "vid": "-cw8Kbb_TcA",
-                    "time": 4700,
-                    "duration": 7,
-                    "text": "battle song so ass and annoying to",
-                    "index": 3106,
-                    "votes": 0
-                },
-                {
-                    "vid": "XhZXkrhpqPw",
-                    "time": 19003,
-                    "duration": 3,
-                    "text": "absolute ass but also looks fun. ",
-                    "index": 3338,
-                    "votes": 0
-                }
-            ],
-            "result": "NOT_PLAYED"
-        },
-        {
-            "mainClip": {
-                "vid": "FyMSSCQQREo",
-                "time": 15304,
-                "duration": 4,
-                "text": "forward like an ass. I got to ",
-                "index": 3916,
-                "isMain": true,
-                "votes": 0
-            },
-            "clips": [
-                {
-                    "vid": "kTmUxK-H5g0",
-                    "time": 23651,
-                    "duration": 4,
-                    "text": "I canceled my ass.",
-                    "index": 2554,
-                    "votes": 0
-                },
-                {
-                    "vid": "FyMSSCQQREo",
-                    "time": 15304,
-                    "duration": 4,
-                    "text": "forward like an ass. I got to ",
-                    "index": 3916,
-                    "isMain": true,
-                    "votes": 0
-                },
-                {
-                    "vid": "sRVsI2ZSZ3k",
-                    "time": 2607,
-                    "duration": 3,
-                    "text": "this is so ass.",
-                    "index": 3172,
-                    "votes": 0
-                }
-            ],
-            "result": "NOT_PLAYED"
-        },
-        {
-            "mainClip": {
-                "vid": "96RdXCOSZpw",
-                "time": 9550,
-                "duration": 1,
-                "text": "Winston in the ass.",
-                "index": 565,
-                "isMain": true,
-                "votes": 0
-            },
-            "clips": [
-                {
-                    "vid": "96RdXCOSZpw",
-                    "time": 9550,
-                    "duration": 1,
-                    "text": "Winston in the ass.",
-                    "index": 565,
-                    "isMain": true,
-                    "votes": 0
-                },
-                {
-                    "vid": "4ubiq-7dOyw",
-                    "time": 7271,
-                    "duration": 3,
-                    "text": "I have absolute ass weapons.",
-                    "index": 5603,
-                    "votes": 0
-                },
-                {
-                    "vid": "a7Wecgh4-MQ",
-                    "time": 8296,
-                    "duration": 2,
-                    "text": "a roll it's ass it's",
-                    "index": 5854,
-                    "votes": 0
-                }
-            ],
-            "result": "NOT_PLAYED"
-        },
-        {
-            "mainClip": {
-                "vid": "f9VgVpqBvXQ",
-                "time": 4455,
-                "duration": 11,
-                "text": "to quench the ass.",
-                "index": 108,
-                "isMain": true,
-                "votes": 0
-            },
-            "clips": [
-                {
-                    "vid": "f9VgVpqBvXQ",
-                    "time": 4455,
-                    "duration": 11,
-                    "text": "to quench the ass.",
-                    "index": 108,
-                    "isMain": true,
-                    "votes": 0
-                },
-                {
-                    "vid": "lrO4vYKbW2w",
-                    "time": 11486,
-                    "duration": 7,
-                    "text": "submarine and all ass to",
-                    "index": 5003,
-                    "votes": 0
-                },
-                {
-                    "vid": "nFvojOo85iM",
-                    "time": 28533,
-                    "duration": 3,
-                    "text": "pain in the ass to even get a ",
-                    "index": 7364,
-                    "votes": 0
-                }
-            ],
-            "result": "NOT_PLAYED"
-        },
     ]
 }

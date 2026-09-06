@@ -535,7 +535,8 @@ function endGame() {
     }
     else {
         endResults.classList.add('bad');
-        playSound('media/megaassofhell.mp3');
+        const badSound = today === '2026-09-07' ? 'media/g3.mp3' : 'media/megaassofhell.mp3';
+        playSound(badSound);
     }
     show(endResults);
 
