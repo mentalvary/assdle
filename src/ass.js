@@ -98,7 +98,7 @@ function onYouTubeIframeAPIReady() {
     initWebElements();
     initChatClient();
     loadDailyStats();
-    document.getElementById('intro-clip-count').textContent = clips.length;
+    document.getElementById('intro-clip-count').textContent = prettyNumber(clips.length);
 }
 
 function initPlayers() {
@@ -401,7 +401,7 @@ function startRound(round) {
     choice1.firstElementChild.textContent = '...' + round.clips[0].text + '...';
     choice2.firstElementChild.textContent = '...' + round.clips[1].text + '...';
     choice3.firstElementChild.textContent = '...' + round.clips[2].text + '...';
-    num.textContent = `Clip #${round.mainClip.index + 1} / ${activeClipList.length}`;
+    num.textContent = `Clip #${prettyNumber(round.mainClip.index + 1)} / ${prettyNumber(activeClipList.length)}`;
     hide(link);
 }
 
@@ -744,6 +744,10 @@ function playSound(file) {
     var audio = new Audio(file);
     audio.volume = 0.6;
     audio.play();
+}
+
+function prettyNumber(num) {
+    return num.toLocaleString('en-US')
 }
 
 // Credit: https://stackoverflow.com/a/47593316
