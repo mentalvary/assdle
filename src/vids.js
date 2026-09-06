@@ -1,4 +1,5 @@
 const vids = [
+{"vid": "cit0Zj_hyFQ", "title": "Onimusha: Way of the Sword - Part 2", "date": "2026-09-05", "asses": 7},
 {"vid": "W4DSiMaXj7I", "title": "Breathedge 2 - First Impressions", "date": "2026-09-03", "asses": 11},
 {"vid": "jVyBnFxVzXU", "title": "Crimson Moon - First Impressions", "date": "2026-09-02", "asses": 10},
 {"vid": "lD37sr1FLUI", "title": "Resonance: A Plague Tale Legacy - Part 1", "date": "2026-09-01", "asses": 7},
@@ -818,4 +819,12 @@ const vids = [
 {"vid": "VWnt7HxeEsk", "title": "A Plague Tale: Requiem - Part 1", "date": "2022-10-19", "asses": 5},
 {"vid": "Du11lCpeXdA", "title": "Phasmophobia - 2022-10-18", "date": "2022-10-18", "asses": 9},
 {"vid": "189TkVDOcP8", "title": "Dread Hunger - 2022-10-18", "date": "2022-10-18", "asses": 9},
+{"vid": "uQpuamjBpRU", "title": "The Evil Within 2 - Part 1 - Nightmare", "date": "2022-10-14", "asses": 7},
+{"vid": "xjC7HC-rDW0", "title": "The Evil Within - Part 2 - Akumu Mode - 2022", "date": "2022-10-12", "asses": 5},
+{"vid": "cIvBfJBI-QQ", "title": "Dark Souls - Part 1 - Ascension Mod", "date": "2022-10-11", "asses": 5},
+{"vid": "sQDstOTtRxQ", "title": "Dark Souls II - Soulsbornekiro: All Bosses - 2020", "date": "2022-10-11", "asses": 7},
+{"vid": "BUPB4MievVs", "title": "Dark Souls III - Part 1 - Cinders Mod", "date": "2022-10-11", "asses": 6},
+{"vid": "GxfG7oa4_uU", "title": "Fable Anniversary - Part 2", "date": "2022-10-11", "asses": 5},
+{"vid": "8La7wy5Ovco", "title": "Demon's Souls - Part 1 - Randomizer", "date": "2022-10-11", "asses": 7},
+{"vid": "yxSXG3HWnbo", "title": "Dark Souls - Soulsbornekiro: All Bosses - 2020", "date": "2022-10-11", "asses": 5},
 ];
