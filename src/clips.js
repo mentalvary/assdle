@@ -10255,4 +10255,6 @@ const clips = [
 {"vid": "N998CF8KgsU", "time": 8355, "duration": 17, "text": "get your ass back here [Music]"},
 {"vid": "N998CF8KgsU", "time": 8850, "duration": 4, "text": "I forced his ass not a good idea "},
 {"vid": "N998CF8KgsU", "time": 13514, "duration": 4, "text": "already got her ass beat by me once "},
+{"vid": "Ojlo_y8kvEI", "time": 104, "duration": 8, "text": "No. Wagging his ass up. Okay, now it's"},
+{"vid": "Ojlo_y8kvEI", "time": 394, "duration": 5, "text": "incredibly ass."},
 ];
