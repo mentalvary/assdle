@@ -1,4 +1,200 @@
 const fixedDailies = {
+    "2026-09-10": [
+        {
+            "mainClip": {
+                "vid": "CDZJaCT1O2c",
+                "time": 13676,
+                "duration": 7,
+                "text": "DLC I'll be ass not going to be ",
+                "index": 6117,
+                "isMain": true,
+                "votes": 0
+            },
+            "clips": [
+                {
+                    "vid": "FPXGslg4Zdw",
+                    "time": 16533,
+                    "duration": 8,
+                    "text": "my ass.",
+                    "index": 3304,
+                    "votes": 0
+                },
+                {
+                    "vid": "CDZJaCT1O2c",
+                    "time": 13676,
+                    "duration": 7,
+                    "text": "DLC I'll be ass not going to be ",
+                    "index": 6117,
+                    "isMain": true,
+                    "votes": 0
+                },
+                {
+                    "vid": "lddkijPr3Po",
+                    "time": 10505,
+                    "duration": 7,
+                    "text": "tell where my ass on high yeah this ",
+                    "index": 5293,
+                    "votes": 0
+                }
+            ],
+            "result": "NOT_PLAYED"
+        },
+        {
+            "mainClip": {
+                "vid": "MhkWjROB_Lc",
+                "time": 19007,
+                "duration": 6,
+                "text": "[__] ass. Yeah.",
+                "index": 1662,
+                "isMain": true,
+                "votes": 0
+            },
+            "clips": [
+                {
+                    "vid": "juCkWVKgQTU",
+                    "time": 4818,
+                    "duration": 3,
+                    "text": "pup get your ass moving",
+                    "index": 9448,
+                    "votes": 0
+                },
+                {
+                    "vid": "aeXJlI2C7d8",
+                    "time": 2130,
+                    "duration": 7,
+                    "text": "Ow. My ass. Hey, eyes on ",
+                    "index": 5204,
+                    "votes": 0
+                },
+                {
+                    "vid": "MhkWjROB_Lc",
+                    "time": 19007,
+                    "duration": 6,
+                    "text": "[__] ass. Yeah.",
+                    "index": 1662,
+                    "isMain": true,
+                    "votes": 0
+                }
+            ],
+            "result": "NOT_PLAYED"
+        },
+        {
+            "mainClip": {
+                "vid": "rYNSbQIaOcY",
+                "time": 14885,
+                "duration": 11,
+                "text": "like some gimmick ass segment.  Sir,",
+                "index": 3086,
+                "isMain": true,
+                "votes": 0
+            },
+            "clips": [
+                {
+                    "vid": "xi0Bhxx9UUE",
+                    "time": 5217,
+                    "duration": 3,
+                    "text": "get your [__] ass together maybe if I",
+                    "index": 9350,
+                    "votes": 0
+                },
+                {
+                    "vid": "rYNSbQIaOcY",
+                    "time": 14885,
+                    "duration": 11,
+                    "text": "like some gimmick ass segment.  Sir,",
+                    "index": 3086,
+                    "isMain": true,
+                    "votes": 0
+                },
+                {
+                    "vid": "GDNijf4DJaE",
+                    "time": 15967,
+                    "duration": 3,
+                    "text": "that's all the ass that are",
+                    "index": 8393,
+                    "votes": 0
+                }
+            ],
+            "result": "NOT_PLAYED"
+        },
+        {
+            "mainClip": {
+                "vid": "HybRu4HDQ5A",
+                "time": 22838,
+                "duration": 5,
+                "text": "I need my ass. Are you kidding",
+                "index": 4144,
+                "isMain": true,
+                "votes": 0
+            },
+            "clips": [
+                {
+                    "vid": "QiKDqsJCwHM",
+                    "time": 1839,
+                    "duration": 5,
+                    "text": "everyone's ass I feel oh your ",
+                    "index": 5426,
+                    "votes": 0
+                },
+                {
+                    "vid": "94f5LDZO-Q0",
+                    "time": 18626,
+                    "duration": 6,
+                    "text": "yikes ass I wanted that oh ",
+                    "index": 6558,
+                    "votes": 0
+                },
+                {
+                    "vid": "HybRu4HDQ5A",
+                    "time": 22838,
+                    "duration": 5,
+                    "text": "I need my ass. Are you kidding",
+                    "index": 4144,
+                    "isMain": true,
+                    "votes": 0
+                }
+            ],
+            "result": "NOT_PLAYED"
+        },
+        {
+            "mainClip": {
+                "vid": "qDkl8F4tYY0",
+                "time": 11182,
+                "duration": 8,
+                "text": "myega ass. Not even worthy ",
+                "index": 1234,
+                "isMain": true
+            },
+            "clips": [
+                {
+                    "vid": "BaLSG_mAH6E",
+                    "time": 767,
+                    "duration": 4,
+                    "text": "old ass games all right we're ",
+                    "index": 8284,
+                    "votes": 0
+                },
+                {
+                    "vid": "qDkl8F4tYY0",
+                    "time": 11182,
+                    "duration": 8,
+                    "text": "myega ass. Not even worthy ",
+                    "index": 1234,
+                    "isMain": true,
+                    "votes": 0
+                },
+                {
+                    "vid": "MZrUDCX7mEY",
+                    "time": 8314,
+                    "duration": 2,
+                    "text": "Move it, fat ass.",
+                    "index": 4064,
+                    "votes": 0
+                }
+            ],
+            "result": "NOT_PLAYED"
+        }
+    ],
     "2026-09-09": [
         {
             "mainClip": {
