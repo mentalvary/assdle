@@ -910,4 +910,11 @@ const vids = [
 {"vid": "SwoLnnssRgo", "title": "Among Us - 2020-08-30", "date": "2022-09-24", "asses": 6},
 {"vid": "CLojn9rfqwk", "title": "Rayman - Complete Playthrough - Race", "date": "2022-09-24", "asses": 6},
 {"vid": "1WqAvP13RTw", "title": "Brotato - 2022-09-22", "date": "2022-09-23", "asses": 7},
+{"vid": "W_0j_JDUF0c", "title": "The Last Of Us Part II - Part 2 - Grounded", "date": "2022-09-21", "asses": 7},
+{"vid": "yaN-mft15Bs", "title": "Friday the 13th: The Game - 2017-05-29", "date": "2022-09-21", "asses": 9},
+{"vid": "gDnj1ueekZM", "title": "Dark Souls - Complete Playthrough - Randomizer", "date": "2022-09-21", "asses": 8},
+{"vid": "hMZYwO1Sk7Y", "title": "Enclave - Incomplete Playthrough", "date": "2022-09-20", "asses": 5},
+{"vid": "WH9LnsKFjuA", "title": "Friday the 13th: The Game - 2017-05-26", "date": "2022-09-04", "asses": 8},
+{"vid": "gov2JnZZFCA", "title": "Enclave - Complete Playthrough", "date": "2022-09-04", "asses": 9},
+{"vid": "DPhaiT-84ho", "title": "Friday the 13th: The Game - 2017-05-28", "date": "2022-09-04", "asses": 8},
 ];
