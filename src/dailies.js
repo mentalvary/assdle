@@ -1,39 +1,39 @@
 const fixedDailies = {
-    "2026-09-12": [
+    "2026-09-13": [
         {
             "mainClip": {
-                "vid": "Ya2hHPIiQBE",
-                "time": 34089,
-                "duration": 11,
-                "text": "enough in my ass.",
-                "index": 6654,
+                "vid": "Lm4m5MJ1Rmk",
+                "time": 8321,
+                "duration": 4,
+                "text": "[__] twitchy ass. We need base ",
+                "index": 11268,
                 "isMain": true,
                 "votes": 0
             },
             "clips": [
                 {
-                    "vid": "QX-QX6KLtG8",
-                    "time": 19,
-                    "duration": 6,
-                    "text": "is this cute ass game? Gucci Gucci.",
-                    "index": 1051,
+                    "vid": "k7KCBH_jRdU",
+                    "time": 6229,
+                    "duration": 17,
+                    "text": "wait ass it's the wrong one",
+                    "index": 10529,
                     "votes": 0
                 },
                 {
-                    "vid": "Ya2hHPIiQBE",
-                    "time": 34089,
-                    "duration": 11,
-                    "text": "enough in my ass.",
-                    "index": 6654,
+                    "vid": "Lm4m5MJ1Rmk",
+                    "time": 8321,
+                    "duration": 4,
+                    "text": "[__] twitchy ass. We need base ",
+                    "index": 11268,
                     "isMain": true,
                     "votes": 0
                 },
                 {
-                    "vid": "W9VtXxVo4LE",
-                    "time": 18218,
-                    "duration": 9,
-                    "text": "with a shitty ass sword this sword is ",
-                    "index": 9314,
+                    "vid": "auHpE95giZ4",
+                    "time": 2040,
+                    "duration": 23,
+                    "text": "yellow in the ass.",
+                    "index": 1129,
                     "votes": 0
                 }
             ],
@@ -41,159 +41,151 @@ const fixedDailies = {
         },
         {
             "mainClip": {
-                "vid": "aFKavQLgJMo",
-                "time": 24427,
-                "duration": 3,
-                "text": "you [__] your ass I'm gonna eat on ",
-                "index": 10420,
-                "isMain": true,
-                "votes": 0
-            },
-            "clips": [
-                {
-                    "vid": "aFKavQLgJMo",
-                    "time": 24427,
-                    "duration": 3,
-                    "text": "you [__] your ass I'm gonna eat on ",
-                    "index": 10420,
-                    "isMain": true,
-                    "votes": 0
-                },
-                {
-                    "vid": "5FUfJvBiWBc",
-                    "time": 2161,
-                    "duration": 9,
-                    "text": "truly is terrible ass damage.",
-                    "index": 11006,
-                    "votes": 0
-                },
-                {
-                    "vid": "AmfdoRXNDPk",
-                    "time": 5997,
-                    "duration": 7,
-                    "text": "completely obliterated his ass holy [__]",
-                    "index": 10116,
-                    "votes": 0
-                }
-            ],
-            "result": "NOT_PLAYED"
-        },
-        {
-            "mainClip": {
-                "vid": "NrNQ6R6A1iE",
-                "time": 15792,
-                "duration": 5,
-                "text": "challenge that mannered ass looking Manassas mad at ",
-                "index": 9493,
-                "isMain": true,
-                "votes": 0
-            },
-            "clips": [
-                {
-                    "vid": "SOZHY_e7ozY",
-                    "time": 14423,
-                    "duration": 1,
-                    "text": "Dude, throw the ass.  I'm trying to ",
-                    "index": 3782,
-                    "votes": 0
-                },
-                {
-                    "vid": "FYxxPy-FjiI",
-                    "time": 31283,
-                    "duration": 5,
-                    "text": "because there's no ass, maybe he means. ",
-                    "index": 7518,
-                    "votes": 0
-                },
-                {
-                    "vid": "NrNQ6R6A1iE",
-                    "time": 15792,
-                    "duration": 5,
-                    "text": "challenge that mannered ass looking Manassas mad at ",
-                    "index": 9493,
-                    "isMain": true,
-                    "votes": 0
-                }
-            ],
-            "result": "NOT_PLAYED"
-        },
-        {
-            "mainClip": {
-                "vid": "FYxxPy-FjiI",
-                "time": 25555,
-                "duration": 7,
-                "text": "not all about ass. Oh, yeah. I ",
-                "index": 7509,
-                "isMain": true,
-                "votes": 0
-            },
-            "clips": [
-                {
-                    "vid": "FYxxPy-FjiI",
-                    "time": 25555,
-                    "duration": 7,
-                    "text": "not all about ass. Oh, yeah. I ",
-                    "index": 7509,
-                    "isMain": true,
-                    "votes": 0
-                },
-                {
-                    "vid": "CVzYBmUCd20",
-                    "time": 10621,
-                    "duration": 11,
-                    "text": "here my ass will Pro will care ",
-                    "index": 8205,
-                    "votes": 0
-                },
-                {
-                    "vid": "wHkhwK5PBXs",
-                    "time": 27482,
-                    "duration": 19,
-                    "text": "Flamethrower is so ass.  Even Even when ",
-                    "index": 208,
-                    "votes": 0
-                }
-            ],
-            "result": "NOT_PLAYED"
-        },
-        {
-            "mainClip": {
-                "vid": "MhkWjROB_Lc",
-                "time": 4465,
+                "vid": "k4iD9Aum1Wo",
+                "time": 3945,
                 "duration": 2,
-                "text": "the absolute ass thing. This This one ",
-                "index": 1656,
+                "text": "like really any ass pain or",
+                "index": 9012,
                 "isMain": true,
                 "votes": 0
             },
             "clips": [
                 {
-                    "vid": "I8CeGtXoujQ",
-                    "time": 34914,
-                    "duration": 7,
-                    "text": "night in my ass I was popping",
-                    "index": 8186,
-                    "votes": 0
-                },
-                {
-                    "vid": "Nfvahzwdo-Q",
-                    "time": 10072,
-                    "duration": 3,
-                    "text": "last time my ass was up",
-                    "index": 10289,
-                    "votes": 0
-                },
-                {
-                    "vid": "MhkWjROB_Lc",
-                    "time": 4465,
+                    "vid": "k4iD9Aum1Wo",
+                    "time": 3945,
                     "duration": 2,
-                    "text": "the absolute ass thing. This This one ",
-                    "index": 1656,
+                    "text": "like really any ass pain or",
+                    "index": 9012,
+                    "isMain": true,
+                    "votes": 0
+                },
+                {
+                    "vid": "eo8fEjAfc68",
+                    "time": 10529,
+                    "duration": 18,
+                    "text": "don't have any ass.",
+                    "index": 2466,
+                    "votes": 0
+                },
+                {
+                    "vid": "RJ0g-xvc1Xw",
+                    "time": 38236,
+                    "duration": 10,
+                    "text": "[__] ass. I got to ",
+                    "index": 4325,
+                    "votes": 0
+                }
+            ],
+            "result": "NOT_PLAYED"
+        },
+        {
+            "mainClip": {
+                "vid": "WhLlwXOq1p0",
+                "time": 2868,
+                "duration": 3,
+                "text": "yesterday. Ah so ass.",
+                "index": 3030,
+                "isMain": true,
+                "votes": 0
+            },
+            "clips": [
+                {
+                    "vid": "WhLlwXOq1p0",
+                    "time": 2868,
+                    "duration": 3,
+                    "text": "yesterday. Ah so ass.",
+                    "index": 3030,
+                    "isMain": true,
+                    "votes": 0
+                },
+                {
+                    "vid": "R2AkGd7a0o4",
+                    "time": 14071,
+                    "duration": 3,
+                    "text": "Stupid ass [__] gimmick fight. This ",
+                    "index": 2159,
+                    "votes": 0
+                },
+                {
+                    "vid": "4_iAnXIztxA",
+                    "time": 4669,
+                    "duration": 2,
+                    "text": "fight is so ass. It's the",
+                    "index": 3300,
+                    "votes": 0
+                }
+            ],
+            "result": "NOT_PLAYED"
+        },
+        {
+            "mainClip": {
+                "vid": "SNevm-rm_bY",
+                "time": 24884,
+                "duration": 6,
+                "text": "[__] ass be chat yes yes ",
+                "index": 8253,
+                "isMain": true,
+                "votes": 0
+            },
+            "clips": [
+                {
+                    "vid": "kF9Hzb2n0sA",
+                    "time": 7516,
+                    "duration": 8,
+                    "text": "get your ass over here where you ",
+                    "index": 9627,
+                    "votes": 0
+                },
+                {
+                    "vid": "rrREr2Iz524",
+                    "time": 6193,
+                    "duration": 4,
+                    "text": "and Twiddly dumb ass.",
+                    "index": 4466,
+                    "votes": 0
+                },
+                {
+                    "vid": "SNevm-rm_bY",
+                    "time": 24884,
+                    "duration": 6,
+                    "text": "[__] ass be chat yes yes ",
+                    "index": 8253,
                     "isMain": true,
                     "votes": 0
                 }
+            ],
+            "result": "NOT_PLAYED"
+        },
+        {
+            "mainClip": {
+                "vid": "mh_x9zMEFwQ",
+                "time": 6526,
+                "duration": 4,
+                "text": "Lad ass. Lad ass. Lad ass. Lad ",
+                "index": 1234,
+                "isMain": true
+            },
+            "clips": [
+                {
+                    "vid": "BaLSG_mAH6E",
+                    "time": 767,
+                    "duration": 4,
+                    "text": "old ass games all right we're ",
+                    "index": 8284,
+                    "votes": 0
+                },
+                {
+                    "vid": "mh_x9zMEFwQ",
+                    "time": 6526,
+                    "duration": 4,
+                    "text": "Lad ass. Lad ass. Lad ass. Lad ",
+                    "index": 1234,
+                    "isMain": true,
+                    "votes": 0
+                },
+                { "vid": "udXJNBcteCk", "time": 9314, "duration": 5, "text": "just shoot the ass. Hello. [__] hitman " },
             ],
             "result": "NOT_PLAYED"
         }
-    ],
+    ]
 }
