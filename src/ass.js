@@ -106,7 +106,7 @@ function onYouTubeIframeAPIReady() {
     loadDailyStats();
     document.getElementById('intro-clip-count').textContent = prettyNumber(clips.length);
 
-    if (today === '2026-09-15' && !localStorage.getItem("nyt-popup")) {
+    if (today >= '2026-09-15' && today <= '2026-09-22' && !localStorage.getItem("nyt-popup")) {
         localStorage.setItem("nyt-popup", true);
         showPopup("We're moving!", "assdle™ has been bought by the <strong>New York Times</strong> and is joining the illustrious circle of high quality games such as Wordle, Connections, and Strands!",
              'Ok', 'Just kidding');
