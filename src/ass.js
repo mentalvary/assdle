@@ -87,6 +87,10 @@ let enableVoting;
 let countdownTypeNone;
 let countdownTypeDefault;
 let countdownTypeSpeedrun;
+let popupContainer;
+let popupTitle;
+let popupText;
+let popupBtn;
 // #endregion
 
 // #region init
@@ -94,11 +98,19 @@ let countdownTypeSpeedrun;
 function onYouTubeIframeAPIReady() {
     queryParams = new URLSearchParams(window.location.search);
     debugAllowed = window.location.hostname === 'localhost';
+    today = (debugAllowed && queryParams.get("today")) || new Date().toISOString().slice(0, 10);
+
     initPlayers();
     initWebElements();
     initChatClient();
     loadDailyStats();
     document.getElementById('intro-clip-count').textContent = prettyNumber(clips.length);
+
+    if (today === '2026-09-15' && !localStorage.getItem("nyt-popup")) {
+        localStorage.setItem("nyt-popup", true);
+        showPopup("We're moving!", "assdle™ has been bought by the <strong>New York Times</strong> and is joining the illustrious circle of high quality games such as Wordle, Connections, and Strands!",
+             'Ok', 'Just kidding');
+    }
 }
 
 function initPlayers() {
@@ -210,6 +222,10 @@ function initWebElements() {
     countdownTypeNone = document.getElementById('countdown-type-none');
     countdownTypeDefault = document.getElementById('countdown-type-default');
     countdownTypeSpeedrun = document.getElementById('countdown-type-speedrun');
+    popupContainer = document.getElementById('popup-container');
+    popupTitle = document.getElementById('popup-title');
+    popupText = document.getElementById('popup-text');
+    popupBtn = document.getElementById('popup-btn');
 }
 
 // #endregion init
@@ -559,7 +575,6 @@ function reportClip() {
 // #region daily
 
 function loadDailyStats() {
-    today = (debugAllowed && queryParams.get("today")) || new Date().toISOString().slice(0, 10);
     tomorrow = new Date();
     tomorrow.setUTCDate(tomorrow.getUTCDate() + 1);
     tomorrow.setUTCHours(0, 0, 0, 0);
@@ -780,6 +795,27 @@ function sfc32(a, b, c, d) {
         c = c + t | 0;
         return (t >>> 0) / 4294967296;
     }
+}
+
+function showPopup(title, text, buttonText, buttonAltText) {
+    popupTitle.textContent = title;
+    popupText.innerHTML = text;
+    popupBtn.textContent = buttonText;
+    popupBtn.dataset.text = buttonText;
+    popupBtn.dataset.altText = buttonAltText;
+    show(popupContainer);
+}
+
+function hidePopup() {
+    hide(popupContainer);
+}
+
+function handlePopupButtonEnter() {
+    popupBtn.textContent = popupBtn.dataset.altText;
+}
+
+function handlePopupButtonLeave() {
+    popupBtn.textContent = popupBtn.dataset.text;
 }
 
 // #endregion helpers

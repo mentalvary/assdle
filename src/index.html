@@ -26,6 +26,14 @@
         <script src="https://cdn.jsdelivr.net/npm/hcg-searchable-select@1/hcg-select.js"></script>
     </head>
     <body>
+        <div id="popup-container" class="hidden">
+            <div id="popup">
+                <h2 id="popup-title">Hello</h2>
+                <div id="popup-text">lorem ipsum</div>
+                <button id="popup-btn" class="nav-btn" onclick="hidePopup()" onmouseover="handlePopupButtonEnter()" onmouseout="handlePopupButtonLeave()"></button>
+            </div>
+        </div>
+
         <header>
             <h1><a href="/">assdle</a></h1>
         </header>
