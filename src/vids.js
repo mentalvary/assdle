@@ -1,4 +1,6 @@
 const vids = [
+{"vid": "szOaBKoodxQ", "title": "Wolverine - First Impressions", "date": "2026-09-16", "asses": 24},
+{"vid": "q_ba6gZgtx8", "title": "Into the Dead: Our Darkest Days - Part 4", "date": "2026-09-14", "asses": 30},
 {"vid": "gP1AxHVcbnQ", "title": "Into the Dead: Our Darkest Days - Part 3", "date": "2026-09-13", "asses": 10},
 {"vid": "Lm4m5MJ1Rmk", "title": "Into the Dead: Our Darkest Days - Part 2", "date": "2026-09-12", "asses": 20},
 {"vid": "5FUfJvBiWBc", "title": "Withering Realms - Part 3", "date": "2026-09-11", "asses": 18},
@@ -958,4 +960,12 @@ const vids = [
 {"vid": "qNSphD_he2Y", "title": "The Last Guardian - Complete Playthrough", "date": "2022-07-31", "asses": 5},
 {"vid": "QbmM11M_IVA", "title": "The Walking Dead: A New Frontier - Episode 1", "date": "2022-07-31", "asses": 5},
 {"vid": "mcz0x0BmIg4", "title": "DmC: Devil May Cry - Part 3", "date": "2022-07-29", "asses": 8},
+{"vid": "WC6Ny8DaQ-M", "title": "ARK: Survival Evolved - Part 3", "date": "2022-07-28", "asses": 5},
+{"vid": "H9OaGril2rQ", "title": "ARK: Aberration - Part 1", "date": "2022-07-28", "asses": 9},
+{"vid": "CSNDm_B8wGg", "title": "Mario Party 6 - 2017-04-23", "date": "2022-07-27", "asses": 12},
+{"vid": "J8VzDW10SuA", "title": "Hitman 3: Ambrose Island - Complete Playthrough", "date": "2022-07-27", "asses": 5},
+{"vid": "ZhWoaw2k1zA", "title": "Dread Hunger - 2022-07-25", "date": "2022-07-26", "asses": 8},
+{"vid": "Do0kDEL3Cm4", "title": "Resident Evil 2 - Part 1 - First Playthrough", "date": "2022-07-24", "asses": 10},
+{"vid": "SYRQIqbxJh0", "title": "Elden Ring - Part 2 - Randomizer", "date": "2022-07-13", "asses": 6},
+{"vid": "fXrWmteTyN4", "title": "Teardown - Part 3", "date": "2022-07-12", "asses": 6},
 ];
