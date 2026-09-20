@@ -1,4 +1,5 @@
 const vids = [
+{"vid": "OCGijt_Vn0M", "title": "Deadpool - Complete Playthrough", "date": "2026-09-19", "asses": 47},
 {"vid": "0mtzFArEFmM", "title": "Fright Train - First Impressions", "date": "2026-09-18", "asses": 21},
 {"vid": "-kg0nG149YQ", "title": "Rehaunted - Complete Playthrough", "date": "2026-09-18", "asses": 9},
 {"vid": "EbkTRazARiw", "title": "Wolverine - Part 2", "date": "2026-09-17", "asses": 21},
@@ -1043,4 +1044,13 @@ const vids = [
 {"vid": "hICOhDLZBh4", "title": "Hand Simulator: Horror - 2020-12-30", "date": "2022-01-09", "asses": 9},
 {"vid": "39Gwl0v2OY8", "title": "GTFO - 2021-02-14", "date": "2022-01-09", "asses": 6},
 {"vid": "kjhTT9zyRqk", "title": "Pummel Party - 2020-12-30", "date": "2022-01-09", "asses": 7},
+{"vid": "mT5ffT9PMJM", "title": "Metal Gear Solid 4: Guns of the Patriots - Part 3", "date": "2022-01-06", "asses": 5},
+{"vid": "qIXkGGPxAx0", "title": "Metal Gear Solid 4: Guns of the Patriots - Part 2", "date": "2022-01-05", "asses": 7},
+{"vid": "pgmkOUFH92w", "title": "Metal Gear Solid 3: Snake Eater - Part 1", "date": "2022-01-02", "asses": 6},
+{"vid": "wl_p7xqfE2A", "title": "Praey For The Gods - Complete Playthrough", "date": "2021-12-18", "asses": 6},
+{"vid": "FlVpm5X8kII", "title": "Hitman Trilogy Speedruns - Part 8", "date": "2021-12-15", "asses": 7},
+{"vid": "OQk0ku4pNVY", "title": "Hitman Trilogy Speedruns - Part 3", "date": "2021-12-10", "asses": 12},
+{"vid": "jy55bU4DVRk", "title": "Learning Hitman Trilogy Speedruns - Part 6", "date": "2021-12-07", "asses": 6},
+{"vid": "7MieV5ZyTsg", "title": "Elajjaz  - Tekken 7 - CEO 2021", "date": "2021-12-06", "asses": 8},
+{"vid": "ELkV3SY3kRg", "title": "Solar Ash - Part 1", "date": "2021-12-05", "asses": 7},
 ];
