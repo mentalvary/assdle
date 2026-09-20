@@ -157,37 +157,37 @@ const fixedDailies = {
         },
         {
             "mainClip": {
-                "vid": "s7Xy1ZxRlDg",
-                "time": 17134,
-                "duration": 7,
-                "text": "get your ass back here.",
-                "index": 166,
+                "vid": "OCGijt_Vn0M",
+                "time": 15684,
+                "duration": 12,
+                "text": "buttocks. Ass rear ass backside ass",
+                "index": 12918,
                 "isMain": true,
                 "votes": 0
             },
             "clips": [
                 {
-                    "vid": "XQmLGkyl_Tk",
-                    "time": 21163,
-                    "duration": 1,
-                    "text": "you throw my ass?",
-                    "index": 378,
+                    "vid": "OCGijt_Vn0M",
+                    "time": 643,
+                    "duration": 3,
+                    "text": "controller.  Sit your ass down and watch some ",
+                    "index": 2,
                     "votes": 0
                 },
                 {
-                    "vid": "ZGovtOKQ00s",
-                    "time": 4773,
-                    "duration": 5,
-                    "text": "monkey's ass [Music]",
-                    "index": 8803,
+                    "vid": "OCGijt_Vn0M",
+                    "time": 21238,
+                    "duration": 8,
+                    "text": "He said ass bub.",
+                    "index": 43,
                     "votes": 0
                 },
                 {
-                    "vid": "s7Xy1ZxRlDg",
-                    "time": 17134,
-                    "duration": 14,
-                    "text": "get your ass back here.",
-                    "index": 166,
+                    "vid": "OCGijt_Vn0M",
+                    "time": 15684,
+                    "duration": 8,
+                    "text": "buttocks. Ass rear ass backside ass",
+                    "index": 41,
                     "isMain": true,
                     "votes": 0
                 }
