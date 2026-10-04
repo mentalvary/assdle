@@ -1,4 +1,6 @@
 const vids = [
+{"vid": "7DKJGw2Mj1U", "title": "The Witcher 3: Wild Hunt Remastered - Part 4", "date": "2026-10-03", "asses": 7},
+{"vid": "8pIFPIm6TYA", "title": "The Witcher 3: Wild Hunt Remastered - Part 3", "date": "2026-10-02", "asses": 10},
 {"vid": "9EGr6acmlMo", "title": "The Witcher 3: Wild Hunt Remastered - Part 2", "date": "2026-10-01", "asses": 26},
 {"vid": "BTmUbIPZ-tE", "title": "The Witcher 3: Wild Hunt Remastered - Part 1", "date": "2026-09-30", "asses": 19},
 {"vid": "7fZ9XYUTMBU", "title": "Garfield: Escape From Monday - Complete Playthrough", "date": "2026-09-28", "asses": 6},
