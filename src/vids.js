@@ -1,4 +1,6 @@
 const vids = [
+{"vid": "LsuhnsSx80I", "title": "The Witcher 3: Wild Hunt Remastered - Part 6", "date": "2026-10-06", "asses": 23},
+{"vid": "OJLLBohJ-4w", "title": "The Witcher 3: Wild Hunt Remastered - Part 5", "date": "2026-10-05", "asses": 14},
 {"vid": "7DKJGw2Mj1U", "title": "The Witcher 3: Wild Hunt Remastered - Part 4", "date": "2026-10-03", "asses": 7},
 {"vid": "8pIFPIm6TYA", "title": "The Witcher 3: Wild Hunt Remastered - Part 3", "date": "2026-10-02", "asses": 10},
 {"vid": "9EGr6acmlMo", "title": "The Witcher 3: Wild Hunt Remastered - Part 2", "date": "2026-10-01", "asses": 26},
