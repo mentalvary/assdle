@@ -1,4 +1,7 @@
 const vids = [
+{"vid": "iEgRRREKBVk", "title": "Clive Barker's Hellraiser: Revival - Complete Playthrough", "date": "2026-10-09", "asses": 10},
+{"vid": "Jnn6xk0bWpo", "title": "The Witcher 3: Wild Hunt Remastered - Part 7", "date": "2026-10-08", "asses": 21},
+{"vid": "_r2w3LOFlog", "title": "Star Wars: Galactic Racer - First Impressions", "date": "2026-10-07", "asses": 18},
 {"vid": "LsuhnsSx80I", "title": "The Witcher 3: Wild Hunt Remastered - Part 6", "date": "2026-10-06", "asses": 23},
 {"vid": "OJLLBohJ-4w", "title": "The Witcher 3: Wild Hunt Remastered - Part 5", "date": "2026-10-05", "asses": 14},
 {"vid": "7DKJGw2Mj1U", "title": "The Witcher 3: Wild Hunt Remastered - Part 4", "date": "2026-10-03", "asses": 7},
