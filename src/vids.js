@@ -1,4 +1,12 @@
 const vids = [
+{"vid": "IfRR4G5ip2M", "title": "The Witcher 3: Wild Hunt Remastered - Part 9", "date": "2026-10-17", "asses": 5},
+{"vid": "beQASagh9WE", "title": "The Witcher 3: Wild Hunt Remastered - Part 8", "date": "2026-10-16", "asses": 6},
+{"vid": "k01ITcL-Lbo", "title": "Valor Mortis - Part 2", "date": "2026-10-15", "asses": 12},
+{"vid": "_LK22hmjDEk", "title": "Star Wars: Galactic Racer - Part 2", "date": "2026-10-14", "asses": 10},
+{"vid": "oxjs-bYWFT8", "title": "VESSELS: Noiret Mansion - Complete Playthrough", "date": "2026-10-12", "asses": 6},
+{"vid": "kBGadrwQWC0", "title": "Dragon's Dogma 2: Dark Arison Expansion - Part 3", "date": "2026-10-12", "asses": 17},
+{"vid": "CPXW9wI1L8Q", "title": "Dragon's Dogma 2: Dark Arison Expansion - Part 2", "date": "2026-10-11", "asses": 23},
+{"vid": "UbcnNK50jpE", "title": "Dragon's Dogma 2: Dark Arison Expansion - Part 1", "date": "2026-10-10", "asses": 19},
 {"vid": "iEgRRREKBVk", "title": "Clive Barker's Hellraiser: Revival - Complete Playthrough", "date": "2026-10-09", "asses": 10},
 {"vid": "Jnn6xk0bWpo", "title": "The Witcher 3: Wild Hunt Remastered - Part 7", "date": "2026-10-08", "asses": 21},
 {"vid": "_r2w3LOFlog", "title": "Star Wars: Galactic Racer - First Impressions", "date": "2026-10-07", "asses": 18},
