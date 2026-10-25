@@ -1,198 +1,185 @@
 const fixedDailies = {
-    "2026-09-20": [
-        {
-            "mainClip": {
-                "vid": "y3VhuCdRxWo",
-                "time": 11763,
-                "duration": 7,
-                "text": "yeah, dude. Gollum ass.",
-                "index": 1234,
-                "isMain": true
-            },
-            "clips": [
-                {
-                    "vid": "BaLSG_mAH6E",
-                    "time": 767,
+    "2026-10-25":
+        [
+            {
+                "mainClip": {
+                    "vid": "MElTOsge9RM",
+                    "time": 923,
                     "duration": 4,
-                    "text": "old ass games all right we're ",
-                    "index": 8284,
-                    "votes": 0
-                },
-                {
-                    "vid": "y3VhuCdRxWo",
-                    "time": 11763,
-                    "duration": 13,
-                    "text": "yeah, dude. Gollum ass.",
-                    "index": 1234,
+                    "text": "Driving to my ass,",
+                    "index": 13980,
                     "isMain": true,
                     "votes": 0
                 },
-                {
-                    "vid": "MZrUDCX7mEY",
-                    "time": 8314,
-                    "duration": 2,
-                    "text": "Move it, fat ass.",
-                    "index": 4064,
-                    "votes": 0
-                }
-            ],
-            "result": "NOT_PLAYED"
-        },
-        {
-            "mainClip": {
-                "vid": "D38QgEwJk1c",
-                "time": 7017,
-                "duration": 7,
-                "text": "yeah it was ass it was complete [__]",
-                "index": 5479,
-                "isMain": true,
-                "votes": 0
+                "clips": [
+                    {
+                        "vid": "MElTOsge9RM",
+                        "time": 923,
+                        "duration": 4,
+                        "text": "Driving to my ass,",
+                        "index": 13980,
+                        "isMain": true,
+                        "votes": 0
+                    },
+                    {
+                        "vid": "kMQqekxmehA",
+                        "time": 24399,
+                        "duration": 4,
+                        "text": "this is so ass I shouldn't have",
+                        "index": 4808,
+                        "votes": 0
+                    },
+                    {
+                        "vid": "CrIsGU9JNEM",
+                        "time": 6398,
+                        "duration": 13,
+                        "text": "think because they ass assumed I would",
+                        "index": 7040,
+                        "votes": 0
+                    }
+                ],
+                "result": "NOT_PLAYED"
             },
-            "clips": [
-                {
-                    "vid": "pqneyc9_cqo",
-                    "time": 323,
-                    "duration": 4,
-                    "text": "so ass Al why can't I ",
-                    "index": 6657,
-                    "votes": 0
+            {
+                "mainClip": {
+                    "vid": "wburrND6nYQ",
+                    "time": 6166,
+                    "duration": 3,
+                    "text": "right get your ass in there is these ",
+                    "index": 13927,
+                    "isMain": true
                 },
-                {
-                    "vid": "IGYfiXtuFVo",
-                    "time": 1739,
+                "clips": [
+                    {
+                        "vid": "wburrND6nYQ",
+                        "time": 6166,
+                        "duration": 3,
+                        "text": "right get your ass in there is these ",
+                        "index": 13927,
+                        "isMain": true
+                    },
+                    {
+                        "vid": "NiuU-dsRS1Y",
+                        "time": 1139,
+                        "duration": 14,
+                        "text": "Eat my ass. Molen and death ",
+                        "index": 356
+                    },
+                    {
+                        "vid": "Osf2hymTJdY",
+                        "time": 32,
+                        "duration": 3,
+                        "text": "watch this sick ass double slow-mo and Tekken ",
+                        "index": 7229
+                    }
+                ],
+                "result": "NOT_PLAYED"
+            },
+            {
+                "mainClip": {
+                    "vid": "PQfVR4X6D24",
+                    "time": 4612,
+                    "duration": 2,
+                    "text": "not wrong oh ass god damn",
+                    "index": 12269,
+                    "isMain": true
+                },
+                "clips": [
+                    {
+                        "vid": "xX6apleAjkM",
+                        "time": 9485,
+                        "duration": 7,
+                        "text": "to me your ass this Lord trash thanks ",
+                        "index": 14356
+                    },
+                    {
+                        "vid": "oR9wKw7MMXM",
+                        "time": 6979,
+                        "duration": 6,
+                        "text": "baby. Ooh, nasty ass gun this one.",
+                        "index": 2573
+                    },
+                    {
+                        "vid": "PQfVR4X6D24",
+                        "time": 4612,
+                        "duration": 2,
+                        "text": "not wrong oh ass god damn",
+                        "index": 12269,
+                        "isMain": true
+                    }
+                ],
+                "result": "NOT_PLAYED"
+            },
+            {
+                "mainClip": {
+                    "vid": "L4iLCcQz3vM",
+                    "time": 6922,
+                    "duration": 69,
+                    "text": "Dumb ass centipede.",
+                    "index": 1334,
+                    "isMain": true
+                },
+                "clips": [
+                    {
+                        "vid": "L4iLCcQz3vM",
+                        "time": 6922,
+                        "duration": 69,
+                        "text": "Dumb ass centipede.",
+                        "index": 1334,
+                        "isMain": true
+                    },
+                    {
+                        "vid": "k_CPOZe5-rw",
+                        "time": 16872,
+                        "duration": 9,
+                        "text": "demon bro lank ass artor is dude I ",
+                        "index": 6351
+                    },
+                    {
+                        "vid": "nfHHHGelE8M",
+                        "time": 6246,
+                        "duration": 5,
+                        "text": "is quite Omyega ass if I can",
+                        "index": 3360
+                    }
+                ],
+                "result": "NOT_PLAYED"
+            },
+            {
+                "mainClip": {
+                    "vid": "1Cs-AIV_0Ys",
+                    "time": 5407,
                     "duration": 6,
-                    "text": "your get your ass over here",
-                    "index": 10144,
-                    "votes": 0
+                    "text": "Hydroelectric ass.  New primary habitat ",
+                    "index": 705,
+                    "isMain": true
                 },
-                {
-                    "vid": "D38QgEwJk1c",
-                    "time": 7017,
-                    "duration": 23,
-                    "text": "yeah it was ass it was complete [__]",
-                    "index": 5479,
-                    "isMain": true,
-                    "votes": 0
-                }
-            ],
-            "result": "NOT_PLAYED"
-        },
-        {
-            "mainClip": {
-                "vid": "KEX4U-ctNYQ",
-                "time": 7816,
-                "duration": 5,
-                "text": "use it because ass unless do i have ",
-                "index": 12228,
-                "isMain": true,
-                "votes": 0
-            },
-            "clips": [
-                {
-                    "vid": "ombQ2B7Z_LE",
-                    "time": 6238,
-                    "duration": 13,
-                    "text": "it seems really ass. 0.2 per",
-                    "index": 1401,
-                    "votes": 0
-                },
-                {
-                    "vid": "8JGXcS_PbZY",
-                    "time": 25883,
-                    "duration": 3,
-                    "text": "slide on his ass when I when I ",
-                    "index": 8151,
-                    "votes": 0
-                },
-                {
-                    "vid": "KEX4U-ctNYQ",
-                    "time": 7816,
-                    "duration": 5,
-                    "text": "use it because ass unless do i have ",
-                    "index": 12228,
-                    "isMain": true,
-                    "votes": 0
-                }
-            ],
-            "result": "NOT_PLAYED"
-        },
-        {
-            "mainClip": {
-                "vid": "ISP4e1PICdc",
-                "time": 3321,
-                "duration": 2,
-                "text": "and uh my ass you come be here ",
-                "index": 7623,
-                "isMain": true,
-                "votes": 0
-            },
-            "clips": [
-                {
-                    "vid": "cvcElYbvcjo",
-                    "time": 2385,
-                    "duration": 3,
-                    "text": "with his brutal ass armor",
-                    "index": 7602,
-                    "votes": 0
-                },
-                {
-                    "vid": "ISP4e1PICdc",
-                    "time": 3321,
-                    "duration": 2,
-                    "text": "and uh my ass you come be here ",
-                    "index": 7623,
-                    "isMain": true,
-                    "votes": 0
-                },
-                {
-                    "vid": "locQT5eARAQ",
-                    "time": 18250,
-                    "duration": 9,
-                    "text": "reported the wrong ass.",
-                    "index": 157,
-                    "votes": 0
-                }
-            ],
-            "result": "NOT_PLAYED"
-        },
-        {
-            "mainClip": {
-                "vid": "OCGijt_Vn0M",
-                "time": 15684,
-                "duration": 12,
-                "text": "buttocks. Ass rear ass backside ass",
-                "index": 12918,
-                "isMain": true,
-                "votes": 0
-            },
-            "clips": [
-                {
-                    "vid": "OCGijt_Vn0M",
-                    "time": 643,
-                    "duration": 3,
-                    "text": "controller.  Sit your ass down and watch some ",
-                    "index": 2,
-                    "votes": 0
-                },
-                {
-                    "vid": "OCGijt_Vn0M",
-                    "time": 21238,
-                    "duration": 8,
-                    "text": "He said ass bub.",
-                    "index": 43,
-                    "votes": 0
-                },
-                {
-                    "vid": "OCGijt_Vn0M",
-                    "time": 15684,
-                    "duration": 8,
-                    "text": "buttocks. Ass rear ass backside ass",
-                    "index": 41,
-                    "isMain": true,
-                    "votes": 0
-                }
-            ],
-            "result": "NOT_PLAYED"
-        }
-    ],
+                "clips": [
+                    {
+                        "vid": "RrjuTPPuXQ0",
+                        "time": 6682,
+                        "duration": 5,
+                        "text": "lightning it's so ass I feel well I",
+                        "index": 5225
+                    },
+                    {
+                        "vid": "beQASagh9WE",
+                        "time": 5943,
+                        "duration": 8,
+                        "text": "I'm saying. Tight ass in keep waters.",
+                        "index": 14730
+                    },
+                    {
+                        "vid": "1Cs-AIV_0Ys",
+                        "time": 5407,
+                        "duration": 6,
+                        "text": "Hydroelectric ass.  New primary habitat ",
+                        "index": 705,
+                        "isMain": true
+                    }
+                ],
+                "result": "NOT_PLAYED"
+            }
+        ]
+
 }
