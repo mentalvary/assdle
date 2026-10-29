@@ -1,4 +1,9 @@
 const vids = [
+{"vid": "3pgWb9AbhDk", "title": "Bloodborne - 120FPS Playthrough", "date": "2026-10-29", "asses": 18},
+{"vid": "yL1Gl-oUQ20", "title": "Remothered: Red Nun's Legacy - Complete Playthrough", "date": "2026-10-28", "asses": 7},
+{"vid": "o21EcSCPV5k", "title": "End Of Abyss - Complete Playthrough", "date": "2026-10-26", "asses": 22},
+{"vid": "5rydZeZ5yFM", "title": "Souls Shuffler Charity Stream - Part 2", "date": "2026-10-25", "asses": 29},
+{"vid": "GzIKmBpqwR8", "title": "Souls Shuffler - Charity Stream", "date": "2026-10-24", "asses": 38},
 {"vid": "yhFwuiZPBys", "title": "The Witcher 3: Wild Hunt Remastered - Part 14", "date": "2026-10-23", "asses": 14},
 {"vid": "NuCh-XEeuaQ", "title": "The Witcher 3: Wild Hunt Remastered - Part 13", "date": "2026-10-21", "asses": 16},
 {"vid": "4MW8LwCuL44", "title": "The Witcher 3: Wild Hunt Remastered - Part 12", "date": "2026-10-20", "asses": 8},
