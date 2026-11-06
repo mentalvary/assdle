@@ -1,4 +1,11 @@
 const vids = [
+{"vid": "nepYV40NQ7Y", "title": "Phantom Blade Zero - Part 6", "date": "2026-11-05", "asses": 8},
+{"vid": "_4QM64YJzLE", "title": "Phantom Blade Zero - Part 5", "date": "2026-11-03", "asses": 15},
+{"vid": "5YJFmSgn4Cg", "title": "Phantom Blade Zero - Part 4", "date": "2026-11-02", "asses": 18},
+{"vid": "UGU_ZdcSVFI", "title": "Species: Unknown - Part 6", "date": "2026-11-01", "asses": 6},
+{"vid": "zC3M1WPH_kg", "title": "Phantom Blade Zero - Part 3", "date": "2026-11-01", "asses": 7},
+{"vid": "N3lRDRPvhiw", "title": "Phantom Blade Zero - Part 2", "date": "2026-10-31", "asses": 10},
+{"vid": "lLANKdKv8FY", "title": "Phantom Blade Zero - First Impressions", "date": "2026-10-30", "asses": 9},
 {"vid": "3pgWb9AbhDk", "title": "Bloodborne - 120FPS Playthrough", "date": "2026-10-29", "asses": 18},
 {"vid": "yL1Gl-oUQ20", "title": "Remothered: Red Nun's Legacy - Complete Playthrough", "date": "2026-10-28", "asses": 7},
 {"vid": "o21EcSCPV5k", "title": "End Of Abyss - Complete Playthrough", "date": "2026-10-26", "asses": 22},
