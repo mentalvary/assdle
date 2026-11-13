@@ -1,4 +1,9 @@
 const vids = [
+{"vid": "hXnL0HE3Qms", "title": "Silver Pines - Part 2", "date": "2026-11-13", "asses": 11},
+{"vid": "iAdeWjKMY3I", "title": "Deep Dish Dungeon w/ Friends", "date": "2026-11-12", "asses": 6},
+{"vid": "mB0tw8qron0", "title": "PILGRIM - Part 3", "date": "2026-11-12", "asses": 9},
+{"vid": "h3sb2l6cYBw", "title": "Shrek 2: Remastered - Complete Playthrough", "date": "2026-11-11", "asses": 6},
+{"vid": "wA9IGBF4MQE", "title": "Playrooms - Complete Playthrough", "date": "2026-11-09", "asses": 10},
 {"vid": "sBLWTAVcBsA", "title": "The Legend Of Zelda: Ocarina Of Time Remake - Part 2", "date": "2026-11-07", "asses": 5},
 {"vid": "nepYV40NQ7Y", "title": "Phantom Blade Zero - Part 6", "date": "2026-11-05", "asses": 8},
 {"vid": "_4QM64YJzLE", "title": "Phantom Blade Zero - Part 5", "date": "2026-11-03", "asses": 15},
